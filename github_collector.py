@@ -123,7 +123,7 @@ def collect_issues(repo, phase, phase_terms, max_results=100):
                 "stato": item["state"],
                 "numero_commenti": item["comments"],
                 "ruolo_autore": "apre il thread",
-                "autore": item["user"]["login"],
+                "autore": item["user"]["login"] if item.get("user") else "unknown",
                 "body": item["body"] or "",
                 # Per il coding iterativo (da compilare manualmente)
                 "codice_COSA": None,
