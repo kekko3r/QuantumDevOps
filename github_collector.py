@@ -19,7 +19,7 @@ import json
 import time
 import argparse
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 from queries import CONTEXT_TERMS, PHASE_QUERIES
 
@@ -138,7 +138,7 @@ def collect_issues(repo, phase, phase_terms, max_results=100):
         page += 1
         time.sleep(1)  # pausa tra pagine
 
-    return results
+    return results[:max_results]
 
 
 def collect_discussions(repo, phase, phase_terms, max_results=100):
@@ -228,7 +228,7 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
         variables["cursor"] = page_info["endCursor"]
         time.sleep(1)
 
-    return results
+    return results[:max_results]
 
 
 # ─── Deduplica ───
@@ -254,7 +254,6 @@ def main(token, output_file, max_per_query=50):
     }
 
     all_threads = []
-    total = 0
 
     print("=== QUANTUM DEVOPS MINING — GitHub ===\n")
 
@@ -287,7 +286,7 @@ def main(token, output_file, max_per_query=50):
     # Salva
     output = {
         "metadata": {
-            "data_mining": datetime.now().isoformat(),
+            "data_mining": datetime.now(tz=timezone.utc).isoformat(),
             "fonti": TARGET_REPOS,
             "fasi": list(PHASE_QUERIES.keys()),
             "totale_thread": after
