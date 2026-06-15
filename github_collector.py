@@ -10,6 +10,7 @@ Metadati raccolti (per ogni thread):
 - ruolo autore (apre / risponde)
 
 Uso:
+    python github_collector.py --output dataset.json          # legge token da .env
     python github_collector.py --token YOUR_TOKEN --output dataset.json
 """
 
@@ -17,8 +18,12 @@ import requests
 import json
 import time
 import argparse
+import os
 from datetime import datetime
+from dotenv import load_dotenv
 from queries import CONTEXT_TERMS, PHASE_QUERIES
+
+load_dotenv()
 
 
 # ─── Configurazione ───────────────────────────────────────────────────────────
@@ -140,11 +145,10 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
     """
     Raccoglie Discussions da un repository tramite GraphQL API.
     """
-    owner, repo_name = repo.split("/")
     terms_str = " OR ".join(phase_terms[:5])
 
     query = """
-    query($owner: String!, $repo: String!, $query: String!, $cursor: String) {
+    query($query: String!, $cursor: String) {
       search(query: $query, type: DISCUSSION, first: 30, after: $cursor) {
         nodes {
           ... on Discussion {
@@ -165,8 +169,6 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
     """
 
     variables = {
-        "owner": owner,
-        "repo": repo_name,
         "query": f"repo:{repo} {terms_str}",
         "cursor": None
     }
@@ -181,11 +183,18 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
             json={"query": query, "variables": variables}
         )
 
+        rate_limit_wait(response)
+
         if response.status_code != 200:
             print(f"  GraphQL errore {response.status_code}")
             break
 
         data = response.json()
+
+        if "errors" in data:
+            print(f"  GraphQL errori: {data['errors']}")
+            break
+
         nodes = data.get("data", {}).get("search", {}).get("nodes", [])
 
         for item in nodes:
@@ -294,9 +303,13 @@ def main(token, output_file, max_per_query=50):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Quantum DevOps GitHub Miner")
-    parser.add_argument("--token", required=True, help="GitHub Personal Access Token")
+    parser.add_argument("--token", default=None, help="GitHub Personal Access Token (default: GITHUB_PERSONAL_TOKEN)")
     parser.add_argument("--output", default="dataset_github.json", help="File di output")
     parser.add_argument("--max", type=int, default=50, help="Max thread per query")
     args = parser.parse_args()
 
-    main(args.token, args.output, args.max)
+    token = args.token or os.getenv("GITHUB_PERSONAL_TOKEN")
+    if not token:
+        raise SystemExit("Errore: token GitHub non trovato. Passa --token o GITHUB_PERSONAL_TOKEN non impostato")
+
+    main(token, args.output, args.max)
