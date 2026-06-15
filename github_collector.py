@@ -1,0 +1,302 @@
+"""
+Quantum DevOps Mining — GitHub Collector
+Raccoglie Issues e Discussions dai repository GitHub
+rilevanti per il dominio Quantum DevOps.
+
+Metadati raccolti (per ogni thread):
+- url, fonte, repository, titolo
+- data creazione e aggiornamento
+- stato, numero commenti
+- ruolo autore (apre / risponde)
+
+Uso:
+    python github_collector.py --token YOUR_TOKEN --output dataset.json
+"""
+
+import requests
+import json
+import time
+import argparse
+from datetime import datetime
+from queries import CONTEXT_TERMS, PHASE_QUERIES
+
+
+# ─── Configurazione ───────────────────────────────────────────────────────────
+
+BASE_URL = "https://api.github.com"
+HEADERS = {}  # impostato dopo con il token
+
+# Repository quantum rilevanti (il contesto è implicito)
+TARGET_REPOS = [
+    "Qiskit/qiskit",
+    "PennyLaneAI/pennylane",
+    "aws/amazon-braket-sdk-python",
+    "quantumlib/Cirq",
+    "NVIDIA/cuda-quantum",
+    "microsoft/qsharp",
+]
+
+# Per repository quantum il blocco CONTESTO è implicito —
+# usiamo solo le keyword di fase per le ricerche
+
+
+# ─── Utility ───
+
+def build_github_query(phase_terms, repo=None):
+    """
+    Costruisce la query GitHub per una fase del ciclo.
+    Su repository quantum il CONTESTO è implicito.
+    """
+    # Prende al massimo 5 keyword per fase (GitHub ha limiti sulla lunghezza)
+    terms = " OR ".join(f'"{t}"' for t in phase_terms[:5])
+    if repo:
+        return f"({terms}) repo:{repo}"
+    else:
+        # Se non c'è repo specifico, aggiunge il contesto quantum
+        context = " OR ".join(f'"{t}"' for t in CONTEXT_TERMS[:8])
+        return f"({terms}) ({context})"
+
+
+def rate_limit_wait(response):
+    """Gestisce il rate limiting di GitHub."""
+    remaining = int(response.headers.get("X-RateLimit-Remaining", 1))
+    if remaining < 5:
+        reset_time = int(response.headers.get("X-RateLimit-Reset", 0))
+        wait = max(0, reset_time - int(time.time())) + 5
+        print(f"  Rate limit: aspetto {wait} secondi...")
+        time.sleep(wait)
+
+
+def make_request(url, params=None):
+    """Esegue una richiesta GET con gestione errori e rate limit."""
+    response = requests.get(url, headers=HEADERS, params=params)
+    rate_limit_wait(response)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"  Errore {response.status_code}: {url}")
+        return None
+
+
+# ─── Raccolta Issues ───
+
+def collect_issues(repo, phase, phase_terms, max_results=100):
+    """
+    Raccoglie Issues da un repository per una fase del ciclo.
+    Restituisce lista di metadati normalizzati.
+    """
+    query = build_github_query(phase_terms, repo=repo)
+    url = f"{BASE_URL}/search/issues"
+    params = {
+        "q": f"{query} is:issue",
+        "per_page": 30,
+        "sort": "updated",
+        "order": "desc"
+    }
+
+    results = []
+    page = 1
+
+    while len(results) < max_results:
+        params["page"] = page
+        data = make_request(url, params)
+
+        if not data or not data.get("items"):
+            break
+
+        for item in data["items"]:
+            thread = {
+                # Metadati grezzi (da schema metodologia)
+                "url": item["html_url"],
+                "fonte": "GitHub",
+                "repository": repo,
+                "tipo": "Issue",
+                "fase_query": phase,
+                "titolo": item["title"],
+                "data_creazione": item["created_at"],
+                "data_aggiornamento": item["updated_at"],
+                "stato": item["state"],
+                "numero_commenti": item["comments"],
+                "ruolo_autore": "apre il thread",
+                "autore": item["user"]["login"],
+                "body": item["body"] or "",
+                # Per il coding iterativo (da compilare manualmente)
+                "codice_COSA": None,
+                "CHI": None,
+                "QUANDO": None,
+                "porzioni_codificate": []
+            }
+            results.append(thread)
+
+        if len(data["items"]) < 30:
+            break
+        page += 1
+        time.sleep(1)  # pausa tra pagine
+
+    return results
+
+
+def collect_discussions(repo, phase, phase_terms, max_results=100):
+    """
+    Raccoglie Discussions da un repository tramite GraphQL API.
+    """
+    owner, repo_name = repo.split("/")
+    terms_str = " OR ".join(phase_terms[:5])
+
+    query = """
+    query($owner: String!, $repo: String!, $query: String!, $cursor: String) {
+      search(query: $query, type: DISCUSSION, first: 30, after: $cursor) {
+        nodes {
+          ... on Discussion {
+            url
+            title
+            createdAt
+            updatedAt
+            comments { totalCount }
+            author { login }
+            body
+            answer { body }
+            category { name }
+          }
+        }
+        pageInfo { hasNextPage endCursor }
+      }
+    }
+    """
+
+    variables = {
+        "owner": owner,
+        "repo": repo_name,
+        "query": f"repo:{repo} {terms_str}",
+        "cursor": None
+    }
+
+    results = []
+    url = "https://api.github.com/graphql"
+
+    while len(results) < max_results:
+        response = requests.post(
+            url,
+            headers=HEADERS,
+            json={"query": query, "variables": variables}
+        )
+
+        if response.status_code != 200:
+            print(f"  GraphQL errore {response.status_code}")
+            break
+
+        data = response.json()
+        nodes = data.get("data", {}).get("search", {}).get("nodes", [])
+
+        for item in nodes:
+            if not item:
+                continue
+            thread = {
+                "url": item["url"],
+                "fonte": "GitHub",
+                "repository": repo,
+                "tipo": "Discussion",
+                "fase_query": phase,
+                "titolo": item["title"],
+                "data_creazione": item["createdAt"],
+                "data_aggiornamento": item["updatedAt"],
+                "stato": "answered" if item.get("answer") else "open",
+                "numero_commenti": item["comments"]["totalCount"],
+                "ruolo_autore": "apre il thread",
+                "autore": item["author"]["login"] if item.get("author") else "unknown",
+                "body": item["body"] or "",
+                "codice_COSA": None,
+                "CHI": None,
+                "QUANDO": None,
+                "porzioni_codificate": []
+            }
+            results.append(thread)
+
+        page_info = data.get("data", {}).get("search", {}).get("pageInfo", {})
+        if not page_info.get("hasNextPage") or len(results) >= max_results:
+            break
+
+        variables["cursor"] = page_info["endCursor"]
+        time.sleep(1)
+
+    return results
+
+
+# ─── Deduplica ───
+
+def deduplicate(threads):
+    """Rimuove duplicati basandosi sull'URL."""
+    seen = set()
+    unique = []
+    for t in threads:
+        if t["url"] not in seen:
+            seen.add(t["url"])
+            unique.append(t)
+    return unique
+
+
+# ─── Main ───
+
+def main(token, output_file, max_per_query=50):
+    global HEADERS
+    HEADERS = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+
+    all_threads = []
+    total = 0
+
+    print("=== QUANTUM DEVOPS MINING — GitHub ===\n")
+
+    for repo in TARGET_REPOS:
+        print(f"Repository: {repo}")
+
+        for phase, terms in PHASE_QUERIES.items():
+            print(f"  Fase: {phase} ({len(terms)} keyword)")
+
+            # Issues
+            issues = collect_issues(repo, phase, terms, max_results=max_per_query)
+            print(f"    Issues trovate: {len(issues)}")
+            all_threads.extend(issues)
+
+            # Discussions
+            discussions = collect_discussions(repo, phase, terms, max_results=max_per_query)
+            print(f"    Discussions trovate: {len(discussions)}")
+            all_threads.extend(discussions)
+
+            time.sleep(2)  # pausa tra fasi
+
+        print()
+
+    # Deduplica
+    before = len(all_threads)
+    all_threads = deduplicate(all_threads)
+    after = len(all_threads)
+    print(f"Totale thread: {before} → dopo deduplica: {after}")
+
+    # Salva
+    output = {
+        "metadata": {
+            "data_mining": datetime.now().isoformat(),
+            "fonti": TARGET_REPOS,
+            "fasi": list(PHASE_QUERIES.keys()),
+            "totale_thread": after
+        },
+        "threads": all_threads
+    }
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print(f"\nDataset salvato in: {output_file}")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Quantum DevOps GitHub Miner")
+    parser.add_argument("--token", required=True, help="GitHub Personal Access Token")
+    parser.add_argument("--output", default="dataset_github.json", help="File di output")
+    parser.add_argument("--max", type=int, default=50, help="Max thread per query")
+    args = parser.parse_args()
+
+    main(args.token, args.output, args.max)
