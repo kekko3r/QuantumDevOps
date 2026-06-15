@@ -26,7 +26,7 @@ from queries import CONTEXT_TERMS, PHASE_QUERIES
 load_dotenv()
 
 
-# ─── Configurazione ───────────────────────────────────────────────────────────
+# ─── Configurazione ───
 
 BASE_URL = "https://api.github.com"
 HEADERS = {}  # impostato dopo con il token
