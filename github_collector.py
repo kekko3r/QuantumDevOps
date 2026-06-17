@@ -32,13 +32,26 @@ BASE_URL = "https://api.github.com"
 HEADERS = {}  # impostato dopo con il token
 
 # Repository quantum rilevanti (il contesto è implicito)
+# Aggiornati per coprire tutte le community identificate nella metodologia
 TARGET_REPOS = [
+    # Qiskit / IBM Quantum
     "Qiskit/qiskit",
+    "Qiskit/qiskit-ibm-runtime",        # deployment, job submission, backend
+    "Qiskit/qiskit-aer",                # simulazione, fase TEST
+    # PennyLane / Xanadu
     "PennyLaneAI/pennylane",
-    "aws/amazon-braket-sdk-python",
+    # Cirq / Google
     "quantumlib/Cirq",
+    # CUDA-Q / NVIDIA
     "NVIDIA/cuda-quantum",
-    "microsoft/qsharp",
+    # Unitary Fund
+    "unitaryfund/mitiq",                # error mitigation, fase TEST
+    # Quantinuum / pytket
+    "CQCL/tket",                        # transpilazione, fase BUILD
+    # Amazon Braket
+    "amazon-braket/amazon-braket-examples",  # workflow ibridi
+    # Microsoft Azure Quantum
+    "microsoft/qdk-python",             # Azure Quantum workflow
 ]
 
 # Per repository quantum il blocco CONTESTO è implicito —
@@ -51,9 +64,10 @@ def build_github_query(phase_terms, repo=None):
     """
     Costruisce la query GitHub per una fase del ciclo.
     Su repository quantum il CONTESTO è implicito.
+    Usa max 3 keyword per evitare errore 422 (query troppo lunga).
     """
-    # Prende al massimo 5 keyword per fase (GitHub ha limiti sulla lunghezza)
-    terms = " OR ".join(f'"{t}"' for t in phase_terms[:5])
+    # Prende al massimo 3 keyword per fase — fix errore 422
+    terms = " OR ".join(f'"{t}"' for t in phase_terms[:3])
     if repo:
         return f"({terms}) repo:{repo}"
     else:
@@ -145,7 +159,7 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
     """
     Raccoglie Discussions da un repository tramite GraphQL API.
     """
-    terms_str = " OR ".join(phase_terms[:5])
+    terms_str = " OR ".join(phase_terms[:3])  # max 3 keyword, coerente con Issues
 
     query = """
     query($query: String!, $cursor: String) {
