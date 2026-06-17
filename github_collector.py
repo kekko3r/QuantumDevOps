@@ -60,14 +60,13 @@ TARGET_REPOS = [
 
 # ─── Utility ───
 
-def build_github_query(phase_terms, repo=None):
+def build_github_query(phase_terms, repo=None, max_terms=5):
     """
     Costruisce la query GitHub per una fase del ciclo.
     Su repository quantum il CONTESTO è implicito.
-    Usa max 3 keyword per evitare errore 422 (query troppo lunga).
+    max_terms: ridotto progressivamente in caso di errore 422.
     """
-    # Prende al massimo 3 keyword per fase — fix errore 422
-    terms = " OR ".join(f'"{t}"' for t in phase_terms[:3])
+    terms = " OR ".join(f'"{t}"' for t in phase_terms[:max_terms])
     if repo:
         return f"({terms}) repo:{repo}"
     else:
@@ -103,18 +102,42 @@ def collect_issues(repo, phase, phase_terms, max_results=100):
     """
     Raccoglie Issues da un repository per una fase del ciclo.
     Restituisce lista di metadati normalizzati.
+    In caso di errore 422 (query troppo lunga) riprova con meno keyword.
     """
-    query = build_github_query(phase_terms, repo=repo)
     url = f"{BASE_URL}/search/issues"
+    results = []
+    page = 1
+
+    # Retry progressivo: prova con 5 keyword, poi 3, poi 2
+    query = None
+    for max_terms in [5, 4, 3, 2, 1]:
+        q = build_github_query(phase_terms, repo=repo, max_terms=max_terms)
+        test_response = requests.get(
+            url, headers=HEADERS,
+            params={"q": f"{q} is:issue", "per_page": 1}
+        )
+        rate_limit_wait(test_response)
+        if test_response.status_code == 200:
+            query = q
+            break
+        elif test_response.status_code == 422:
+            print(f"  Query con {max_terms} keyword troppo lunga, riprovo...")
+            time.sleep(1)
+            continue
+        else:
+            print(f"  Errore {test_response.status_code}: {url}")
+            return []
+
+    if query is None:
+        print(f"  Impossibile costruire query valida per {repo} fase {phase}")
+        return []
+
     params = {
         "q": f"{query} is:issue",
         "per_page": 30,
         "sort": "updated",
         "order": "desc"
     }
-
-    results = []
-    page = 1
 
     while len(results) < max_results:
         params["page"] = page
@@ -159,7 +182,7 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
     """
     Raccoglie Discussions da un repository tramite GraphQL API.
     """
-    terms_str = " OR ".join(phase_terms[:3])  # max 3 keyword, coerente con Issues
+    terms_str = " OR ".join(phase_terms[:5])
 
     query = """
     query($query: String!, $cursor: String) {
