@@ -45,7 +45,7 @@ TARGET_REPOS = [
     # CUDA-Q / NVIDIA
     "NVIDIA/cuda-quantum",
     # Unitary Fund
-    "unitaryfund/mitiq",                # error mitigation, fase TEST
+    "unitaryfoundation/mitiq",          # error mitigation, fase TEST
     # Quantinuum / pytket
     "CQCL/tket",                        # transpilazione, fase BUILD
     # Amazon Braket
