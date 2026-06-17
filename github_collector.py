@@ -195,7 +195,7 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
             print(f"  GraphQL errori: {data['errors']}")
             break
 
-        nodes = data.get("data", {}).get("search", {}).get("nodes", [])
+        nodes = (data.get("data") or {}).get("search", {}).get("nodes", [])
 
         for item in nodes:
             if not item:
@@ -221,7 +221,7 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
             }
             results.append(thread)
 
-        page_info = data.get("data", {}).get("search", {}).get("pageInfo", {})
+        page_info = (data.get("data") or {}).get("search", {}).get("pageInfo", {})
         if not page_info.get("hasNextPage") or len(results) >= max_results:
             break
 
