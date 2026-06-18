@@ -34,6 +34,8 @@ HEADERS = {}  # impostato dopo con il token
 # Repository quantum rilevanti (il contesto è implicito)
 # Aggiornati per coprire tutte le community identificate nella metodologia
 TARGET_REPOS = [
+    # Amazon Braket
+    "amazon-braket/amazon-braket-sdk-python",  # SDK operativo, job submission, workflow ibridi
     # Qiskit / IBM Quantum
     "Qiskit/qiskit",
     "Qiskit/qiskit-ibm-runtime",        # deployment, job submission, backend
@@ -46,10 +48,8 @@ TARGET_REPOS = [
     "NVIDIA/cuda-quantum",
     # Unitary Fund
     "unitaryfoundation/mitiq",          # error mitigation, fase TEST
-    # Quantinuum / pytket
-    "CQCL/pytket-quantinuum",           # deployment su hardware Quantinuum
-    # Amazon Braket
-    "amazon-braket/amazon-braket-examples",  # workflow ibridi
+    # Rigetti
+    "rigetti/pyquil",                   # Rigetti Forest SDK, workflow ibridi
     # Microsoft Azure Quantum
     "microsoft/azure-quantum-python",   # Azure Quantum SDK, job submission
 ]
@@ -108,7 +108,7 @@ def collect_issues(repo, phase, phase_terms, max_results=100):
     results = []
     page = 1
 
-    # Retry progressivo: prova con 5 keyword, poi 3, poi 2
+    # Retry progressivo: riduce le keyword finché la query non è valida
     query = None
     for max_terms in [5, 4, 3, 2, 1]:
         q = build_github_query(phase_terms, repo=repo, max_terms=max_terms)

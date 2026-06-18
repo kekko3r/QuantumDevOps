@@ -1,0 +1,335 @@
+=== QUANTUM DEVOPS MINING — GitHub ===
+
+Repository: amazon-braket/amazon-braket-sdk-python
+  Fase: PLAN (5 keyword)
+    Issues trovate: 9
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: BUILD (9 keyword)
+    Issues trovate: 8
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 34
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 3
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 29
+    Discussions trovate: 0
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 11
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 9
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 3
+    Discussions trovate: 0
+
+Repository: Qiskit/qiskit
+  Fase: PLAN (5 keyword)
+  Rate limit: aspetto 17 secondi...
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+  Rate limit: aspetto 8 secondi...
+    Issues trovate: 50
+    Discussions trovate: 0
+
+Repository: Qiskit/qiskit-ibm-runtime
+  Fase: PLAN (5 keyword)
+    Issues trovate: 40
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+  Rate limit: aspetto 7 secondi...
+    Issues trovate: 31
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 29
+    Discussions trovate: 0
+
+Repository: Qiskit/qiskit-aer
+  Fase: PLAN (5 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 2
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 1
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 1
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 27
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 50
+    Discussions trovate: 3
+  Fase: MONITOR (7 keyword)
+  Rate limit: aspetto 10 secondi...
+    Issues trovate: 32
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 18
+    Discussions trovate: 0
+
+Repository: PennyLaneAI/pennylane
+  Fase: PLAN (5 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 2
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 1
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 14
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+  Rate limit: aspetto 11 secondi...
+    Issues trovate: 50
+    Discussions trovate: 1
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 50
+    Discussions trovate: 2
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+
+Repository: quantumlib/Cirq
+  Fase: PLAN (5 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: EVALUATE (8 keyword)
+  Rate limit: aspetto 8 secondi...
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 39
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 41
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+
+Repository: NVIDIA/cuda-quantum
+  Fase: PLAN (5 keyword)
+    Issues trovate: 41
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 33
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 1
+  Fase: TEST (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 2
+  Fase: RELEASE (6 keyword)
+  Rate limit: aspetto 7 secondi...
+    Issues trovate: 50
+    Discussions trovate: 24
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 16
+    Discussions trovate: 12
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 50
+    Discussions trovate: 6
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 38
+    Discussions trovate: 12
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+
+Repository: unitaryfoundation/mitiq
+  Fase: PLAN (5 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 32
+  Fase: BUILD (9 keyword)
+    Issues trovate: 28
+    Discussions trovate: 1
+  Fase: TEST (9 keyword)
+  Rate limit: aspetto 6 secondi...
+    Issues trovate: 50
+    Discussions trovate: 21
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 40
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 50
+    Discussions trovate: 8
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 50
+    Discussions trovate: 10
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 20
+    Discussions trovate: 24
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 27
+    Discussions trovate: 1
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 50
+    Discussions trovate: 12
+
+Repository: rigetti/pyquil
+  Fase: PLAN (5 keyword)
+    Issues trovate: 25
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: BUILD (9 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+  Rate limit: aspetto 5 secondi...
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+    Issues trovate: 50
+    Discussions trovate: 0
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 34
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 42
+    Discussions trovate: 0
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 19
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 5
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 8
+    Discussions trovate: 0
+
+Repository: microsoft/azure-quantum-python
+  Fase: PLAN (5 keyword)
+    Issues trovate: 6
+    Discussions trovate: 0
+  Fase: CODE (6 keyword)
+    Issues trovate: 12
+    Discussions trovate: 0
+  Fase: BUILD (9 keyword)
+    Issues trovate: 3
+    Discussions trovate: 0
+  Fase: TEST (9 keyword)
+    Issues trovate: 26
+    Discussions trovate: 0
+  Fase: RELEASE (6 keyword)
+  Rate limit: aspetto 15 secondi...
+    Issues trovate: 50
+    Discussions trovate: 1
+  Fase: EVALUATE (8 keyword)
+    Issues trovate: 1
+    Discussions trovate: 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Issues trovate: 29
+    Discussions trovate: 0
+  Fase: MONITOR (7 keyword)
+    Issues trovate: 13
+    Discussions trovate: 0
+  Fase: FEEDBACK (6 keyword)
+    Issues trovate: 10
+    Discussions trovate: 0
+  Fase: CROSS_CICD (12 keyword)
+    Issues trovate: 12
+    Discussions trovate: 0
+
+Totale thread: 4145 → dopo deduplica: 2673
+
+Dataset salvato in: dataset_github_v1.json
