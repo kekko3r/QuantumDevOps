@@ -47,11 +47,11 @@ TARGET_REPOS = [
     # Unitary Fund
     "unitaryfoundation/mitiq",          # error mitigation, fase TEST
     # Quantinuum / pytket
-    "CQCL/tket",                        # transpilazione, fase BUILD
+    "CQCL/pytket-quantinuum",           # deployment su hardware Quantinuum
     # Amazon Braket
     "amazon-braket/amazon-braket-examples",  # workflow ibridi
     # Microsoft Azure Quantum
-    "microsoft/qdk-python",             # Azure Quantum workflow
+    "microsoft/azure-quantum-python",   # Azure Quantum SDK, job submission
 ]
 
 # Per repository quantum il blocco CONTESTO è implicito —
