@@ -4,13 +4,23 @@ Fonte fasi: Gheorghe-Pop et al. (IEEE 2020)
 Fonte terminologia ibrida/servizi: Moguel et al. (arXiv 2309.11926)
 """
 
-# Blocco CONTESTO — comune a tutte le query
-CONTEXT_TERMS = [
-    "quantum", "qiskit", "pennylane", "cirq", "braket",
-    "cuda-q", "azure quantum", "quantum service",
-    "QCaaS", "QaaS", "hybrid", "classical-quantum",
-    "quantum-classical", "hybrid workflow",
-    "classical-quantum integration",
+# CONTEXT_TAGS — tool/community con un tag verosimilmente reale su Stack
+# Overflow. Usati come filtro tagged= (vedi stackoverflow_collector.py).
+CONTEXT_TAGS = [
+    "qiskit", "pennylane", "cirq",
+    "quantum-computing", "quantum-circuit",
+    "amazon-braket", "azure-quantum",
+    "cuda-quantum", "mitiq", "pyquil"
+]
+
+# CONTEXT_FREETEXT — concetti del paradigma ibrido senza un tag dedicato
+# su Stack Overflow. Usati come ricerca full-text aggiuntiva, senza filtro
+# tag: una chiamata per termine (combinato con l'ancora "quantum"), non
+# tutti insieme — vedi stackoverflow_collector.py.
+CONTEXT_FREETEXT = [
+    "quantum service", "QCaaS", "QaaS", "hybrid",
+    "classical-quantum", "quantum-classical",
+    "hybrid workflow", "classical-quantum integration",
     "quantum-classical communication"
 ]
 

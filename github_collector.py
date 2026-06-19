@@ -21,7 +21,7 @@ import argparse
 import os
 from datetime import datetime, timezone
 from dotenv import load_dotenv
-from queries import CONTEXT_TERMS, PHASE_QUERIES
+from queries import CONTEXT_TAGS, PHASE_QUERIES
 
 load_dotenv()
 
@@ -71,7 +71,7 @@ def build_github_query(phase_terms, repo=None, max_terms=5):
         return f"({terms}) repo:{repo}"
     else:
         # Se non c'è repo specifico, aggiunge il contesto quantum
-        context = " OR ".join(f'"{t}"' for t in CONTEXT_TERMS[:8])
+        context = " OR ".join(f'"{t}"' for t in CONTEXT_TAGS[:8])
         return f"({terms}) ({context})"
 
 

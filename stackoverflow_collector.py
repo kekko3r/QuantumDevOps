@@ -19,7 +19,7 @@ import argparse
 import os
 from datetime import datetime, timezone
 from dotenv import load_dotenv
-from queries import PHASE_QUERIES
+from queries import PHASE_QUERIES, CONTEXT_TAGS, CONTEXT_FREETEXT
 
 load_dotenv()
 
@@ -27,17 +27,10 @@ load_dotenv()
 
 BASE_URL = "https://api.stackexchange.com/2.3"
 
-# Tag quantum rilevanti su Stack Overflow
-# Su SO il tag garantisce il CONTESTO — le keyword di fase filtrano la FASE
-QUANTUM_TAGS = [
-    "qiskit",
-    "quantum-computing",
-    "pennylane",
-    "amazon-braket",
-    "quantum-circuit",
-    "cuda-quantum",          # NVIDIA CUDA-Q
-    "azure-quantum",         # Microsoft Azure Quantum
-]
+# Tag quantum rilevanti su Stack Overflow — da CONTEXT_TAGS (tool/community
+# con un tag verosimilmente reale). I concetti senza tag (CONTEXT_FREETEXT)
+# vengono cercati separatamente come testo libero, senza filtro tag.
+QUANTUM_TAGS = [t.replace(" ", "-") for t in CONTEXT_TAGS]
 
 
 # ─── Utility ───
@@ -150,6 +143,82 @@ def collect_questions(tag, phase, phase_terms, api_key=None, max_per_keyword=10)
     return results
 
 
+def collect_questions_for_keyword_freetext(context_term, phase, keyword, api_key=None, max_results=30):
+    """
+    Raccoglie domande per un concetto ibrido senza tag dedicato (CONTEXT_FREETEXT).
+    Nessun filtro tagged= — una chiamata per (context_term, keyword), ancorata
+    dalla parola "quantum" per evitare rumore su termini generici come "hybrid".
+    """
+    url = f"{BASE_URL}/search/advanced"
+    results = []
+    page = 1
+
+    while len(results) < max_results:
+        params = {
+            "site": "stackoverflow",
+            "q": f"{keyword} quantum {context_term}",
+            "filter": "withbody",
+            "pagesize": 30,
+            "page": page,
+            "order": "desc",
+            "sort": "activity"
+        }
+        if api_key:
+            params["key"] = api_key
+
+        data = make_request(url, params)
+        if not data or not data.get("items"):
+            break
+
+        for item in data["items"]:
+            thread = {
+                "url": item["link"],
+                "fonte": "Stack Overflow",
+                "repository": f"context:{context_term}",
+                "tipo": "Question",
+                "fase_query": phase,
+                "keyword_query": keyword,
+                "titolo": item["title"],
+                "data_creazione": datetime.fromtimestamp(item["creation_date"], tz=timezone.utc).isoformat(),
+                "data_aggiornamento": datetime.fromtimestamp(item["last_activity_date"], tz=timezone.utc).isoformat(),
+                "stato": "answered" if item.get("is_answered") else "open",
+                "numero_commenti": item.get("answer_count", 0),
+                "ruolo_autore": "apre il thread",
+                "autore": item.get("owner", {}).get("display_name", "unknown"),
+                "body": item.get("body", ""),
+                "tags": item.get("tags", []),
+                "codice_COSA": None,
+                "CHI": None,
+                "QUANDO": None,
+                "porzioni_codificate": []
+            }
+            results.append(thread)
+
+        if not data.get("has_more") or len(results) >= max_results:
+            break
+
+        page += 1
+        time.sleep(1)
+
+    return results[:max_results]
+
+
+def collect_questions_freetext(context_term, phase, phase_terms, api_key=None, max_per_keyword=10):
+    """
+    Raccoglie domande su un concetto ibrido senza tag, per tutte le keyword di una fase.
+    """
+    results = []
+    for keyword in phase_terms:
+        items = collect_questions_for_keyword_freetext(
+            context_term, phase, keyword,
+            api_key=api_key,
+            max_results=max_per_keyword
+        )
+        results.extend(items)
+        time.sleep(1)
+    return results
+
+
 # ─── Deduplica ───
 
 def deduplicate(threads):
@@ -189,6 +258,26 @@ def main(api_key, output_file, max_per_keyword=10):
 
         print()
 
+    # Ricerca aggiuntiva: concetti ibridi senza tag dedicato (CONTEXT_FREETEXT)
+    print("Contesto: ricerca freetext (concetti senza tag dedicato)")
+    for context_term in CONTEXT_FREETEXT:
+        print(f"Termine contesto: {context_term}")
+
+        for phase, terms in PHASE_QUERIES.items():
+            print(f"  Fase: {phase} ({len(terms)} keyword)")
+
+            questions = collect_questions_freetext(
+                context_term, phase, terms,
+                api_key=api_key,
+                max_per_keyword=max_per_keyword
+            )
+            print(f"    Domande trovate (pre-dedup): {len(questions)}")
+            all_threads.extend(questions)
+
+            time.sleep(2)
+
+        print()
+
     # Deduplica globale
     before = len(all_threads)
     all_threads = deduplicate(all_threads)
@@ -200,6 +289,7 @@ def main(api_key, output_file, max_per_keyword=10):
         "metadata": {
             "data_mining": datetime.now(tz=timezone.utc).isoformat(),
             "tag_usati": QUANTUM_TAGS,
+            "contesto_freetext": CONTEXT_FREETEXT,
             "fasi": list(PHASE_QUERIES.keys()),
             "totale_thread": after
         },

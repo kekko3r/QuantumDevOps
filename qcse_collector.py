@@ -6,6 +6,8 @@ rilevanti per il dominio Quantum DevOps.
 Differenza rispetto a stackoverflow_collector.py:
 - site = "quantumcomputing" invece di "stackoverflow"
 - Nessun tag necessario: il CONTESTO quantum è implicito nel sito
+  (a differenza di Stack Overflow, generalista, dove i tag servono
+  a isolare le domande quantum dal resto del sito)
 - Le keyword di fase vengono usate direttamente nel campo q
 
 Stessa API Stack Exchange, stessa API Key, stessi limiti di quota:
