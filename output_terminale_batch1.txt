@@ -1,0 +1,32 @@
+python sampler.py --corpus corpus_completo.json --output campione_01.json
+=== QUANTUM DEVOPS MINING — Sampler ===
+
+Corpus caricato: 16711 thread
+Nessun batch precedente trovato — primo campionamento.
+
+Seed automatico: 42 (batch #1)
+Estraggo campione di 100 thread...
+Thread disponibili (non ancora campionati): 16711
+Campione estratto: 100 thread
+
+Distribuzione campione per fonte:
+  GitHub: 67
+  Quantum Computing Stack Exchange: 30
+  Stack Overflow: 3
+
+Distribuzione campione per fase:
+  CODE: 42
+  TEST: 28
+  PLAN: 8
+  BUILD: 7
+  RELEASE: 6
+  EVALUATE: 2
+  MONITOR: 2
+  FEEDBACK: 2
+  DEPLOY_CONFIGURE: 2
+  CROSS_CICD: 1
+
+Thread con zero risposte: 17 (da valutare con attenzione)
+
+Campione salvato in: campione_01.json
+Batch #1 — seed 42
