@@ -64,7 +64,7 @@ def make_request(url, params):
 
 # ─── Raccolta Questions ───
 
-def collect_questions_for_keyword(tag, phase, keyword, api_key=None, max_results=30):
+def collect_questions_for_keyword(tag, phase, keyword, api_key=None, max_results=None):
     """
     Raccoglie domande da Stack Overflow per un singolo tag + keyword.
     Stack Exchange API non supporta OR in intitle/q — una chiamata per keyword.
@@ -73,7 +73,7 @@ def collect_questions_for_keyword(tag, phase, keyword, api_key=None, max_results
     results = []
     page = 1
 
-    while len(results) < max_results:
+    while max_results is None or len(results) < max_results:
         params = {
             "site": "stackoverflow",
             "tagged": tag,
@@ -117,7 +117,9 @@ def collect_questions_for_keyword(tag, phase, keyword, api_key=None, max_results
             }
             results.append(thread)
 
-        if not data.get("has_more") or len(results) >= max_results:
+        if not data.get("has_more"):
+            break
+        if max_results is not None and len(results) >= max_results:
             break
 
         page += 1
@@ -126,7 +128,7 @@ def collect_questions_for_keyword(tag, phase, keyword, api_key=None, max_results
     return results[:max_results]
 
 
-def collect_questions(tag, phase, phase_terms, api_key=None, max_per_keyword=10):
+def collect_questions(tag, phase, phase_terms, api_key=None, max_per_keyword=None):
     """
     Raccoglie domande per tutte le keyword di una fase.
     Una chiamata per keyword — i risultati vengono aggregati.
@@ -143,7 +145,7 @@ def collect_questions(tag, phase, phase_terms, api_key=None, max_per_keyword=10)
     return results
 
 
-def collect_questions_for_keyword_freetext(context_term, phase, keyword, api_key=None, max_results=30):
+def collect_questions_for_keyword_freetext(context_term, phase, keyword, api_key=None, max_results=None):
     """
     Raccoglie domande per un concetto ibrido senza tag dedicato (CONTEXT_FREETEXT).
     Nessun filtro tagged= — una chiamata per (context_term, keyword), ancorata
@@ -153,7 +155,7 @@ def collect_questions_for_keyword_freetext(context_term, phase, keyword, api_key
     results = []
     page = 1
 
-    while len(results) < max_results:
+    while max_results is None or len(results) < max_results:
         params = {
             "site": "stackoverflow",
             "q": f"{keyword} quantum {context_term}",
@@ -194,7 +196,9 @@ def collect_questions_for_keyword_freetext(context_term, phase, keyword, api_key
             }
             results.append(thread)
 
-        if not data.get("has_more") or len(results) >= max_results:
+        if not data.get("has_more"):
+            break
+        if max_results is not None and len(results) >= max_results:
             break
 
         page += 1
@@ -203,7 +207,7 @@ def collect_questions_for_keyword_freetext(context_term, phase, keyword, api_key
     return results[:max_results]
 
 
-def collect_questions_freetext(context_term, phase, phase_terms, api_key=None, max_per_keyword=10):
+def collect_questions_freetext(context_term, phase, phase_terms, api_key=None, max_per_keyword=None):
     """
     Raccoglie domande su un concetto ibrido senza tag, per tutte le keyword di una fase.
     """
@@ -234,7 +238,7 @@ def deduplicate(threads):
 
 # ─── Main ───
 
-def main(api_key, output_file, max_per_keyword=10):
+def main(api_key, output_file, max_per_keyword=None):
 
     all_threads = []
 
@@ -306,7 +310,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Quantum DevOps Stack Overflow Miner")
     parser.add_argument("--key", default=None, help="Stack Exchange API Key (opzionale, aumenta quota)")
     parser.add_argument("--output", default="dataset_stackoverflow.json")
-    parser.add_argument("--max", type=int, default=10, help="Max thread per keyword per tag")
+    parser.add_argument("--max", type=int, default=None, help="Max thread per keyword (default: nessun limite, prende tutto)")
     args = parser.parse_args()
 
     api_key = args.key or os.getenv("STACKEXCHANGE_API_KEY")

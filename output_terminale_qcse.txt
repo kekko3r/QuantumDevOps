@@ -1,0 +1,30 @@
+python qcse_collector.py --output dataset_qcse_v1.json
+=== QUANTUM DEVOPS MINING — Quantum Computing Stack Exchange ===
+
+Sito: quantumcomputing
+Nota: CONTESTO implicito nel sito — keyword di fase usate direttamente
+
+Fase: PLAN (5 keyword)
+  Domande trovate (pre-dedup): 604
+Fase: CODE (6 keyword)
+  Domande trovate (pre-dedup): 3954
+Fase: BUILD (9 keyword)
+  Domande trovate (pre-dedup): 603
+Fase: TEST (9 keyword)
+  Domande trovate (pre-dedup): 2559
+Fase: RELEASE (6 keyword)
+  Domande trovate (pre-dedup): 804
+Fase: EVALUATE (8 keyword)
+  Domande trovate (pre-dedup): 464
+Fase: DEPLOY_CONFIGURE (17 keyword)
+  Domande trovate (pre-dedup): 738
+Fase: MONITOR (7 keyword)
+  Domande trovate (pre-dedup): 171
+Fase: FEEDBACK (6 keyword)
+  Domande trovate (pre-dedup): 679
+Fase: CROSS_CICD (20 keyword)
+  Domande trovate (pre-dedup): 219
+
+Totale thread: 10795 → dopo deduplica: 6008
+
+Dataset salvato in: dataset_qcse_v1.json

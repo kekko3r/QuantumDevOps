@@ -74,6 +74,10 @@ PHASE_QUERIES = {
         "continuous deployment", "pipeline",
         "GitHub Actions", "quantum devops", "workflow",
         "orchestrate", "data exchange", "service",
-        "microservice", "distributed"
+        "microservice", "distributed",
+        # DevOps toolchain classica applicata al contesto quantum
+        "Jenkins", "Terraform", "GitOps",
+        "Kubernetes", "Ansible", "Helm",
+        "Docker", "containerize"
     ]
 }

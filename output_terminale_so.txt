@@ -1,0 +1,425 @@
+python stackoverflow_collector.py --output dataset_stackoverflow_v1.json
+=== QUANTUM DEVOPS MINING — Stack Overflow ===
+
+Tag: qiskit
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 39
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 62
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 63
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 132
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 97
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 10
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 74
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 15
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 28
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 13
+
+Tag: pennylane
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: cirq
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 6
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 3
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: quantum-computing
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 42
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 117
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 50
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 177
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 78
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 14
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 87
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 12
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 31
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 17
+
+Tag: quantum-circuit
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: amazon-braket
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: azure-quantum
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 1
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 3
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 4
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 3
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 4
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: cuda-quantum
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: mitiq
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Tag: pyquil
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Contesto: ricerca freetext (concetti senza tag dedicato)
+Termine contesto: quantum service
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 10
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 10
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 3
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 22
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 27
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 8
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 25
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 11
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 86
+
+Termine contesto: QCaaS
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Termine contesto: QaaS
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Termine contesto: hybrid
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 5
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 4
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Termine contesto: classical-quantum
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 11
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 23
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 6
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 33
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 8
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 7
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 11
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 8
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 5
+
+Termine contesto: quantum-classical
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 11
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 23
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 6
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 33
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 8
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 7
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 11
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 8
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 5
+
+Termine contesto: hybrid workflow
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Termine contesto: classical-quantum integration
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 2
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 1
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 1
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 3
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 1
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 3
+
+Termine contesto: quantum-classical communication
+  Fase: PLAN (5 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CODE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: BUILD (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: TEST (9 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: RELEASE (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: EVALUATE (8 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: DEPLOY_CONFIGURE (17 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: MONITOR (7 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: FEEDBACK (6 keyword)
+    Domande trovate (pre-dedup): 0
+  Fase: CROSS_CICD (20 keyword)
+    Domande trovate (pre-dedup): 0
+
+Totale thread: 1644 → dopo deduplica: 460
+
+Dataset salvato in: dataset_stackoverflow_v1.json

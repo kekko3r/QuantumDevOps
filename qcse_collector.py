@@ -72,7 +72,7 @@ def make_request(url, params):
 
 # ─── Raccolta Questions ───
 
-def collect_questions_for_keyword(phase, keyword, api_key=None, max_results=30):
+def collect_questions_for_keyword(phase, keyword, api_key=None, max_results=None):
     """
     Raccoglie domande da Quantum Computing SE per una singola keyword di fase.
     Nessun tag necessario — il CONTESTO è implicito nel sito.
@@ -82,7 +82,7 @@ def collect_questions_for_keyword(phase, keyword, api_key=None, max_results=30):
     results = []
     page = 1
 
-    while len(results) < max_results:
+    while max_results is None or len(results) < max_results:
         params = {
             "site": SITE,
             "q": keyword,          # ricerca full-text nel body e titolo
@@ -125,7 +125,9 @@ def collect_questions_for_keyword(phase, keyword, api_key=None, max_results=30):
             }
             results.append(thread)
 
-        if not data.get("has_more") or len(results) >= max_results:
+        if not data.get("has_more"):
+            break
+        if max_results is not None and len(results) >= max_results:
             break
 
         page += 1
@@ -134,7 +136,7 @@ def collect_questions_for_keyword(phase, keyword, api_key=None, max_results=30):
     return results[:max_results]
 
 
-def collect_questions(phase, phase_terms, api_key=None, max_per_keyword=10):
+def collect_questions(phase, phase_terms, api_key=None, max_per_keyword=None):
     """
     Raccoglie domande per tutte le keyword di una fase.
     Una chiamata per keyword — i risultati vengono aggregati.
@@ -166,7 +168,7 @@ def deduplicate(threads):
 
 # ─── Main ───
 
-def main(api_key, output_file, max_per_keyword=10):
+def main(api_key, output_file, max_per_keyword=None):
 
     all_threads = []
 
@@ -219,7 +221,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--key", default=None, help="Stack Exchange API Key (opzionale, aumenta quota)")
     parser.add_argument("--output", default="dataset_qcse.json")
-    parser.add_argument("--max", type=int, default=10, help="Max thread per keyword")
+    parser.add_argument("--max", type=int, default=None, help="Max thread per keyword (default: nessun limite, prende tutto)")
     args = parser.parse_args()
 
     api_key = args.key or os.getenv("STACKEXCHANGE_API_KEY")

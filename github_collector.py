@@ -98,7 +98,7 @@ def make_request(url, params=None):
 
 # ─── Raccolta Issues ───
 
-def collect_issues(repo, phase, phase_terms, max_results=100):
+def collect_issues(repo, phase, phase_terms, max_results=None):
     """
     Raccoglie Issues da un repository per una fase del ciclo.
     Restituisce lista di metadati normalizzati.
@@ -139,7 +139,7 @@ def collect_issues(repo, phase, phase_terms, max_results=100):
         "order": "desc"
     }
 
-    while len(results) < max_results:
+    while max_results is None or len(results) < max_results:
         params["page"] = page
         data = make_request(url, params)
 
@@ -178,7 +178,7 @@ def collect_issues(repo, phase, phase_terms, max_results=100):
     return results[:max_results]
 
 
-def collect_discussions(repo, phase, phase_terms, max_results=100):
+def collect_discussions(repo, phase, phase_terms, max_results=None):
     """
     Raccoglie Discussions da un repository tramite GraphQL API.
     """
@@ -213,7 +213,7 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
     results = []
     url = "https://api.github.com/graphql"
 
-    while len(results) < max_results:
+    while max_results is None or len(results) < max_results:
         response = requests.post(
             url,
             headers=HEADERS,
@@ -259,7 +259,9 @@ def collect_discussions(repo, phase, phase_terms, max_results=100):
             results.append(thread)
 
         page_info = (data.get("data") or {}).get("search", {}).get("pageInfo", {})
-        if not page_info.get("hasNextPage") or len(results) >= max_results:
+        if not page_info.get("hasNextPage"):
+            break
+        if max_results is not None and len(results) >= max_results:
             break
 
         variables["cursor"] = page_info["endCursor"]
@@ -283,7 +285,7 @@ def deduplicate(threads):
 
 # ─── Main ───
 
-def main(token, output_file, max_per_query=50):
+def main(token, output_file, max_per_query=None):
     global HEADERS
     HEADERS = {
         "Authorization": f"token {token}",
@@ -341,7 +343,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Quantum DevOps GitHub Miner")
     parser.add_argument("--token", default=None, help="GitHub Personal Access Token (default: GITHUB_PERSONAL_TOKEN)")
     parser.add_argument("--output", default="dataset_github.json", help="File di output")
-    parser.add_argument("--max", type=int, default=50, help="Max thread per query")
+    parser.add_argument("--max", type=int, default=None, help="Max thread per query (default: nessun limite, prende tutto)")
     args = parser.parse_args()
 
     token = args.token or os.getenv("GITHUB_PERSONAL_TOKEN")
