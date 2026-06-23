@@ -1,0 +1,42 @@
+python merge_datasets.py --inputs dataset_github_v1.json dataset_stackoverflow_v1.json dataset_qcse_v1.json --output corpus_completo.json
+=== QUANTUM DEVOPS MINING — Merge Dataset ===
+
+  dataset_github_v1.json: 10354 thread caricati
+  dataset_stackoverflow_v1.json: 460 thread caricati
+  dataset_qcse_v1.json: 6008 thread caricati
+
+Totale thread caricati: 16822
+Totale dopo deduplica: 16822
+
+Applico criteri tecnici automatizzabili...
+  Esclusi per titolo mancante: 0
+  Esclusi per body vuoto: 79
+  Esclusi per body troppo corto: 32
+  Totale esclusi (criteri tecnici): 111
+  Flaggati zero risposte (non esclusi, da rivedere manualmente): 3235
+Totale dopo filtri tecnici: 16711
+
+Distribuzione per fonte:
+  GitHub: 10243
+  Quantum Computing Stack Exchange: 6008
+  Stack Overflow: 460
+
+Distribuzione per fase:
+  CODE: 6252
+  TEST: 3786
+  RELEASE: 2384
+  PLAN: 1462
+  BUILD: 1433
+  DEPLOY_CONFIGURE: 367
+  FEEDBACK: 347
+  EVALUATE: 344
+  MONITOR: 170
+  CROSS_CICD: 166
+
+Distribuzione per tipo:
+  Issue: 10132
+  Question: 6468
+  Discussion: 111
+
+Corpus completo salvato in: corpus_completo.json
+Thread pronti per il campionamento: 16711
