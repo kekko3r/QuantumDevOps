@@ -3,7 +3,7 @@
     "ID_porzione": "cirq_4163_p1",
     "testo_verbatim": "having a way to get a classical distribution over outcomes instead might be useful",
     "riferimento_thread": "https://github.com/quantumlib/Cirq/issues/4163",
-    "codice_COSA": "need for understanding simulation output types to support hybrid workflow validation in DevOps pipelines",
+    "codice_COSA": "need for obtaining classical outcome distributions from noisy density-matrix simulators",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for classical outcome distribution from noisy density matrix simulator"
@@ -12,7 +12,7 @@
     "ID_porzione": "qiskit_ibm_runtime_1250_p1",
     "testo_verbatim": "it would make more sense to me if the current implementation were left in place and the API docs were changed to match. It seems odd that a session wouldn't have an ID until it completed a job; rather, I would expect the session to have an ID as soon as it's opened",
     "riferimento_thread": "https://github.com/Qiskit/qiskit-ibm-runtime/issues/1250",
-    "codice_COSA": "need for understanding session lifecycle management in quantum cloud runtime environments for reliable DevOps pipeline execution",
+    "codice_COSA": "need for understanding session lifecycle management and ID assignment in quantum cloud runtime environments",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for clarity on session lifecycle and ID assignment in IBM Runtime"
@@ -21,7 +21,7 @@
     "ID_porzione": "qcse_9310_p1",
     "testo_verbatim": "Does unit testing on real quantum computers make sense as any observation in the quantum system can cause the system to loose its superposition state?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/9310/unit-testing-for-quantum-programs",
-    "codice_COSA": "need for automated unit testing strategies for quantum programs in continuous integration pipelines",
+    "codice_COSA": "need for automated unit testing strategies for quantum programs",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for unit testing strategies for quantum programs"
@@ -30,7 +30,7 @@
     "ID_porzione": "qcse_9310_p2",
     "testo_verbatim": "From what I know, no testing framework exists yet for quantum computing. I searched approximately one year ago for one and did not find anything.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/9310/unit-testing-for-quantum-programs",
-    "codice_COSA": "need for dedicated quantum testing frameworks to support automated quality assurance in continuous integration pipelines",
+    "codice_COSA": "need for dedicated quantum-specific testing frameworks and methodologies",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for quantum-specific testing frameworks and methodologies"
@@ -39,7 +39,7 @@
     "ID_porzione": "qcse_9310_p3",
     "testo_verbatim": "Q# supports creating unit tests for quantum programs, and which can run as tests within the xUnit unit testing framework",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/9310/unit-testing-for-quantum-programs",
-    "codice_COSA": "need for integrating quantum tests into existing classical CI/CD testing frameworks",
+    "codice_COSA": "need for integrating quantum tests into existing classical unit-testing frameworks ",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for integration of quantum tests into classical testing frameworks"
@@ -48,7 +48,7 @@
     "ID_porzione": "qcse_23866_p1",
     "testo_verbatim": "I was wondering if I need to run the transpile function",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/23866/what-does-the-qiskit-transpile-function-do-on-an-azure-quantum-ionq-provider",
-    "codice_COSA": "need for understanding transpilation requirements for multi-provider quantum workflows in CI/CD pipelines",
+    "codice_COSA": "need for understanding transpilation requirements across quantum execution providers",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding transpilation requirements for cross-provider quantum execution"
@@ -57,7 +57,7 @@
     "ID_porzione": "qcse_23866_p2",
     "testo_verbatim": "If you have circuits that you'd like to run on IonQ backends that use other gates than this, you will either need to manually rewrite the circuit or use the Qiskit transpiler. Please note that not all circuits can be automatically transpiled.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/23866/what-does-the-qiskit-transpile-function-do-on-an-azure-quantum-ionq-provider",
-    "codice_COSA": "need for understanding gate set compatibility between quantum frameworks and target backends in CI/CD pipelines",
+    "codice_COSA": "need for understanding gate set compatibility between quantum frameworks when targeting specific backends",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding gate compatibility between frameworks when targeting specific backends"
@@ -66,7 +66,7 @@
     "ID_porzione": "qcse_23866_p3",
     "testo_verbatim": "The IonQ provider provides access to the full IonQ Cloud backend, which includes its own transpilation and compilation pipeline.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/23866/what-does-the-qiskit-transpile-function-do-on-an-azure-quantum-ionq-provider",
-    "codice_COSA": "need for understanding where transpilation occurs in cloud quantum provider CI/CD pipeline",
+    "codice_COSA": "need for understanding where transpilation occurs in a cloud quantum provider's compilation pipeline",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD;DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for understanding where transpilation occurs in cloud quantum provider pipeline"
@@ -75,7 +75,7 @@
     "ID_porzione": "qcse_21905_p1",
     "testo_verbatim": "How can I set up the noise model for readout errors?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/21905/simulating-readout-errors-on-aer-simulator",
-    "codice_COSA": "need for configuring noise models in quantum circuit simulators for DevOps testing pipelines",
+    "codice_COSA": "need for correct configuration of readout error noise models in quantum simulators",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for correct configuration of readout error noise models in quantum simulators"
@@ -84,7 +84,7 @@
     "ID_porzione": "qcse_16419_p1",
     "testo_verbatim": "I'm trying to work out how much memory is used for simulations of different sizes using the Aer simulator.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/16419/memory-requirements-for-qiskit-aer-simulator",
-    "codice_COSA": "need for understanding infrastructure resource requirements for quantum circuit simulation in DevOps workflows",
+    "codice_COSA": "need for understanding infrastructure resource requirements for quantum circuit simulation",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for understanding memory requirements for quantum circuit simulation"
@@ -93,7 +93,7 @@
     "ID_porzione": "qcse_16419_p2",
     "testo_verbatim": "if your circuit is made up of cliffords you can use the stabilizer simulation method and the memory requirements are much lower",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/16419/memory-requirements-for-qiskit-aer-simulator",
-    "codice_COSA": "need for selecting the appropriate simulation backend and method to optimize resource usage in DevOps pipelines",
+    "codice_COSA": "need for selecting the appropriate simulation backend and method to optimize resource usage",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for selecting appropriate simulation method based on resource constraints"
@@ -102,7 +102,7 @@
     "ID_porzione": "qcse_16419_p3",
     "testo_verbatim": "transpile() will be used under the covers when you go to execute a QAOAVarForm circuit. The transpiler is what takes a virtual user circuit and optimizes it and converts it to something that a backend (either a real device or a simulator) can run",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/16419/memory-requirements-for-qiskit-aer-simulator",
-    "codice_COSA": "need for understanding implicit transpilation steps and their resource impact in the quantum CI/CD execution pipeline",
+    "codice_COSA": "need for understanding implicit transpilation steps triggered during circuit execution and their resource impact",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding automatic transpilation triggered by circuit execution and its resource impact"
@@ -111,7 +111,7 @@
     "ID_porzione": "qcse_16419_p4",
     "testo_verbatim": "could this kick in when using the QAOAVariationalForm function ?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/16419/memory-requirements-for-qiskit-aer-simulator",
-    "codice_COSA": "need for understanding how variational hybrid algorithms interact with the quantum execution pipeline in DevOps workflows",
+    "codice_COSA": "need for understanding how variational hybrid algorithms interact with the quantum execution pipeline",
     "CHI": "Quantum Developer",
     "QUANDO": "CODE",
     "codice_COSA_originale": "need for understanding how variational hybrid algorithms interact with the execution pipeline"
@@ -120,7 +120,7 @@
     "ID_porzione": "qcse_14261_p1",
     "testo_verbatim": "Can someone help me with how the two are different, viz, depth and Trotter step?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14261/depth-for-ucc-ansatz",
-    "codice_COSA": "need for understanding circuit parametrization in variational hybrid algorithms for correct configuration in DevOps workflows",
+    "codice_COSA": "need for understanding circuit depth versus Trotter step semantics in variational hybrid algorithms",
     "CHI": "Quantum Developer",
     "QUANDO": "CODE",
     "codice_COSA_originale": "need for understanding circuit depth vs Trotter steps in variational hybrid algorithms"
@@ -129,7 +129,7 @@
     "ID_porzione": "qcse_14261_p2",
     "testo_verbatim": "in the new Qiskit release, \"depth\" is not called \"reps\" which, obviously, stands for repetition",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14261/depth-for-ucc-ansatz",
-    "codice_COSA": "need for managing code migration when quantum framework APIs introduce breaking changes in DevOps pipelines",
+    "codice_COSA": "need for managing code migration when quantum framework APIs introduce breaking changes across versions",
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE",
     "codice_COSA_originale": "need for understanding how to migrate code when quantum framework APIs change across versions"
@@ -138,7 +138,7 @@
     "ID_porzione": "qiskit_ibm_runtime_1297_p1",
     "testo_verbatim": "drop the memory argument and only expose the behavior of memory=True. Rationale: if you really want statistics, use the Sampler instead.",
     "riferimento_thread": "https://github.com/Qiskit/qiskit-ibm-runtime/issues/1297",
-    "codice_COSA": "need for understanding when to use modern quantum primitives vs legacy execution interfaces in hybrid DevOps workflows",
+    "codice_COSA": "need for understanding when to use modern quantum primitives versus legacy execution interfaces for hybrid quantum-classical workflows",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for understanding when to use Sampler primitive vs backend.run() for hybrid workflow execution"
@@ -147,7 +147,7 @@
     "ID_porzione": "qiskit_ibm_runtime_1297_p2",
     "testo_verbatim": "one can use backend.configuration().meas_levels to determine which levels are supported",
     "riferimento_thread": "https://github.com/Qiskit/qiskit-ibm-runtime/issues/1297",
-    "codice_COSA": "need for evaluating backend measurement capabilities before selecting a quantum execution target in DevOps workflows",
+    "codice_COSA": "need for evaluating backend measurement capabilities before selecting a quantum execution target",
     "CHI": "Quantum Developer",
     "QUANDO": "EVALUATE",
     "codice_COSA_originale": "need for checking backend measurement capabilities before selection"
@@ -156,7 +156,7 @@
     "ID_porzione": "qcse_37411_p1",
     "testo_verbatim": "How do I write a \"Hello world\" program in Qiskit 1.0, which should be run on IBM cloud and require less than 600 seconds for implementation?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/37411/hello-world-program-in-qiskit-1-0",
-    "codice_COSA": "need for understanding the end-to-end job submission workflow in quantum cloud DevOps pipelines",
+    "codice_COSA": "need for understanding the end-to-end job submission workflow on quantum clouds",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR",
     "codice_COSA_originale": "need for understanding the complete job submission workflow on IBM Quantum cloud"
@@ -165,7 +165,7 @@
     "ID_porzione": "qcse_37411_p2",
     "testo_verbatim": "if you want to run a simple circuit on one of the backends that requires minimum time to be executed",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/37411/hello-world-program-in-qiskit-1-0",
-    "codice_COSA": "need for understanding job execution time constraints in quantum cloud DevOps pipelines",
+    "codice_COSA": "need for understanding job execution time constraints when submitting to quantum cloud backends",
     "CHI": "Quantum Developer",
     "QUANDO": "MONITOR",
     "codice_COSA_originale": "need for understanding execution time constraints when submitting jobs to quantum cloud backends"
@@ -174,7 +174,7 @@
     "ID_porzione": "qiskit_13574_p1",
     "testo_verbatim": "I wonder about the best way to combine the UnitarySynthesis and BasisTranslator passes: What is the difference between the 'translator' and 'synthesis' options? Which one would be best here?",
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/13574",
-    "codice_COSA": "need for understanding how to compose and configure transpilation passes for custom gate sets in CI/CD pipelines",
+    "codice_COSA": "need for understanding how to compose and configure transpilation passes for custom gate sets",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding how to combine transpilation passes for non-standard gate basis"
@@ -183,7 +183,7 @@
     "ID_porzione": "qiskit_13574_p2",
     "testo_verbatim": "this can be stored locally, as doing this is expensive",
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/13574",
-    "codice_COSA": "need for understanding performance optimization and caching strategies in quantum circuit transpilation pipelines",
+    "codice_COSA": "need for understanding performance optimization and caching strategies in quantum circuit transpilation",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding performance and caching strategies in quantum circuit transpilation"
@@ -192,7 +192,7 @@
     "ID_porzione": "qiskit_13574_p3",
     "testo_verbatim": "adding a UnitarySynthesis(method='sk') pass should be equivalent to adding a SolovayKitaev pass ? or is there a reason to use one rather than the other ?",
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/13574",
-    "codice_COSA": "need for understanding performance tradeoffs between functionally equivalent transpilation passes in CI/CD pipelines",
+    "codice_COSA": "need for understanding performance tradeoffs between functionally equivalent transpilation passes",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding performance tradeoffs between equivalent transpilation passes"
@@ -201,7 +201,7 @@
     "ID_porzione": "qiskit_13574_p4",
     "testo_verbatim": "would [BasisTranslator(basis_gates=['u', 'cx']), UnitarySynthesis(method='sk'), HighLevelSynthesis] be an option as well for the translation stage? or do we necessarily need to apply [UnitarySynthesis, HighLevelSynthesis] before BasisTranslator?",
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/13574",
-    "codice_COSA": "need for understanding correct ordering of transpilation passes in a custom quantum CI/CD pipeline",
+    "codice_COSA": "need for understanding correct ordering of transpilation passes in a custom transpilation pipeline",
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD",
     "codice_COSA_originale": "need for understanding correct ordering of transpilation passes in a custom pipeline"
@@ -210,7 +210,7 @@
     "ID_porzione": "qcse_14659_p1",
     "testo_verbatim": "Is there some way to get the best of both worlds? For example, some way to say \"when testing correctness use this, when doing cost estimates use this\"? Some way to query \"Is the Hadamard available?\"?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14659/simulator-dependent-implementations-in-q",
-    "codice_COSA": "need for simulator-dependent code execution strategies to support both correctness testing and resource estimation in CI/CD pipelines",
+    "codice_COSA": "need for simulator-dependent code execution strategies to support both correctness testing and resource estimation",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST;EVALUATE",
     "codice_COSA_originale": "need for simulator-dependent implementations to support both correctness testing and resource estimation"
@@ -219,7 +219,7 @@
     "ID_porzione": "qcse_14659_p2",
     "testo_verbatim": "dotnet run will use default full state simulator, and print \"InitAnd body\" dotnet run -s ToffoliSimulator will use Toffoli with the substitution, and print \"InitAndToffoli\" dotnet run -s ResourcesEstimator will use resources estimator without substitution, print \"InitAnd body\" and the resources count.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14659/simulator-dependent-implementations-in-q",
-    "codice_COSA": "need for configuring and selecting the appropriate quantum simulator in DevOps execution pipelines",
+    "codice_COSA": "need for configuring and selecting the appropriate simulator selection in the quantum program execution workflow",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for configuring simulator selection in quantum program execution workflow"
@@ -228,7 +228,7 @@
     "ID_porzione": "qcse_14659_p3",
     "testo_verbatim": "I have a Q# file that defines an operation is_toffoli_simulator which is then overriden in a C# file",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14659/simulator-dependent-implementations-in-q",
-    "codice_COSA": "need for dynamically selecting quantum operation implementations based on execution context in DevOps pipelines",
+    "codice_COSA": "need for dynamically selecting quantum operation implementations based on execution context",
     "CHI": "Quantum Developer",
     "QUANDO": "CODE",
     "codice_COSA_originale": "need for querying simulator type at runtime to conditionally select quantum operation implementations"
@@ -237,7 +237,7 @@
     "ID_porzione": "qcse_41878_p1",
     "testo_verbatim": "I want to use the CPUs available and the memory available per node",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/41878/qiskit-aer-multi-cpu-node",
-    "codice_COSA": "need for scaling quantum circuit simulation across distributed infrastructure in quantum DevOps pipelines",
+    "codice_COSA": "need for scaling quantum circuit simulation across distributed HPC infrastructure",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST;EVALUATE",
     "codice_COSA_originale": "need for scaling quantum circuit simulation to multi-CPU HPC environments"
@@ -246,7 +246,7 @@
     "ID_porzione": "qcse_41878_p2",
     "testo_verbatim": "when choosing CPUs and defining with Slurm that n cores in m nodes, the simulation only uses one CPU per node... Are there any extra steps?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/41878/qiskit-aer-multi-cpu-node",
-    "codice_COSA": "need for configuring and monitoring distributed quantum workload execution in DevOps infrastructure pipelines",
+    "codice_COSA": "need for configuring and monitoring distributed quantum workload execution",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR",
     "codice_COSA_originale": "need for configuring and monitoring multi-node Slurm execution of quantum circuit simulation"
@@ -255,7 +255,7 @@
     "ID_porzione": "qiskit_6809_p1",
     "testo_verbatim": "I have an IBMQJob object that I call circuit = IBMQjob.circuits()[0] on. The problem is that circuit._layout returns None. What is the expected behavior? I should be able to call circuit._layout.get_virtual_bits() to get back a dictionary of the mapping of logical --> physical qubits, like {'q0': 0, 'q1': 9, 'q2': 13, 'q3': 14}.",
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/6809",
-    "codice_COSA": "need for retrieving qubit mapping information from executed quantum jobs to support result interpretation in hybrid DevOps pipelines",
+    "codice_COSA": "need for retrieving qubit mapping information from executed quantum jobs to support result interpretation",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR",
     "codice_COSA_originale": "need for retrieving logical to physical qubit mapping from executed jobs to interpret measurement results"
@@ -264,7 +264,7 @@
     "ID_porzione": "cuda_quantum_1393_p1",
     "testo_verbatim": "I expected pip install cuda-quantum to resolve all dependencies but I'm hitting the error below after installation >>> import cudaq Traceback (most recent call last): File \"<stdin>\", line 1, in <module> File \"/home/yangg/software/miniconda3/envs/cudaq/lib/python3.10/site-packages/cudaq/__init__.py\", line 28, in <module> from ._pycudaq import * ImportError: Invalid simulator requested: custatevec_fp32 >>> exit() I had to specifically install a few extra dependencies via pip install nvidia-cublas-cu11 nvidia-cuda-runtime-cu11 to be able to resolve this.",
     "riferimento_thread": "https://github.com/NVIDIA/cuda-quantum/issues/1393",
-    "codice_COSA": "need for managing external dependencies when setting up quantum computing development environments in DevOps workflows",
+    "codice_COSA": "need for managing external dependencies when setting up quantum computing development environments",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for understanding manual CUDA dependency installation when setting up CUDA-Q environment"
@@ -273,7 +273,7 @@
     "ID_porzione": "so_68919833_p1",
     "testo_verbatim": "I would like to get the vector state after applying the H gate and then again after applying the Z gate. I can not use the measurement gate, because I would lose the qubit state. Can I query the qubit/vector for each step in a circuit?",
     "riferimento_thread": "https://stackoverflow.com/questions/68919833/qiskit-simulator-intermediate-results",
-    "codice_COSA": "need for step-by-step inspection of quantum states during circuit simulation for testing and debugging in DevOps workflows",
+    "codice_COSA": "need for step-by-step inspection of quantum states during circuit simulation for testing and debugging",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for accessing intermediate statevector during quantum circuit simulation for debugging"
@@ -282,7 +282,7 @@
     "ID_porzione": "qcse_12183_p1",
     "testo_verbatim": "After a successful first run without problems, I found that I cannot connect any longer. Code: from qiskit import IBMQ IBMQ.load_account() #previously enabled and saved, even updated IBMQ.providers()  # returns empty why??? provider = IBMQ.get_provider() backend = provider.get_backend('ibmq_16_melbourne') I re-added the token, overwrite the saved token and could successfully activate my account, but it seems that no provider can be found now. I get this error ibmqfactory.load_account:WARNING:2020-05-25 22:08:25,390: Credentials are already in use. The existing account in the session will be replaced. ibmqfactory._initialize_providers:WARNING:2020-05-25 22:08:29,324: Unable to instantiate provider for {'hub': 'ibm-q', 'group': 'open', 'project': 'main'}: \"{'online_date': ['Not a valid datetime.']}\" ibmqfactory.load_account:WARNING:2020-05-25 22:08:29,325: No Hub/Group/Projects could be found for this account.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/12183/ibmqfactory-initialize-providers-error",
-    "codice_COSA": "need for managing authentication and connectivity to quantum cloud providers in DevOps workflows",
+    "codice_COSA": "need for managing authentication and connectivity to quantum cloud providers",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for understanding and resolving IBM Quantum provider authentication and connection issues"
@@ -291,7 +291,7 @@
     "ID_porzione": "qcse_12183_p2",
     "testo_verbatim": "This is likely due to a mismatch of qiskit-terra and qiskit-ibmq-provider versions. If you're using qiskit-ibmq-provider 0.7 it requires qiskit-terra 0.14.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/12183/ibmqfactory-initialize-providers-error",
-    "codice_COSA": "need for managing version compatibility between quantum framework packages in DevOps environments",
+    "codice_COSA": "need for understanding how managing version compatibility between quantum framework packages",
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE",
     "codice_COSA_originale": "need for understanding version compatibility between Qiskit packages"
@@ -300,7 +300,7 @@
     "ID_porzione": "qcse_9966_p1",
     "testo_verbatim": "While executing the following circuit (consisting 16 qubit and 4 classical bits) I am getting 'Error in transpilation process. [1003]' error.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/9966/why-i-am-getting-transpilation-error-while-executing-the-following-ibm-quantum-e",
-    "codice_COSA": "need for understanding backend hardware constraints before circuit transpilation and execution in CI/CD pipelines",
+    "codice_COSA": "need for understanding backend hardware constraints before circuit transpilation and execution",
     "CHI": "Quantum Developer",
     "QUANDO": "EVALUATE;BUILD",
     "codice_COSA_originale": "need for understanding backend qubit constraints when submitting circuits for transpilation"
@@ -318,7 +318,7 @@
     "ID_porzione": "qcse_22090_p1",
     "testo_verbatim": "What should I pass as the state_preparation parameter? I just need one specific QuantumRegister to be passed, but I do not have a circuit or operator for only that register",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/22090/setting-the-textttstate-preparation-for-textttamplificationproblem-i",
-    "codice_COSA": "need for understanding how to structure quantum circuit inputs for hybrid algorithm components in DevOps workflows",
+    "codice_COSA": "need for understanding how to structure partial circuit states as inputs to hybrid algorithm components",
     "CHI": "Quantum Developer",
     "QUANDO": "PLAN;CODE",
     "codice_COSA_originale": "need for understanding how to pass partial circuit state as input to quantum amplitude amplification"
@@ -327,7 +327,7 @@
     "ID_porzione": "qcse_22090_p2",
     "testo_verbatim": "the state_preparation operator A should be invertible - but the Initialize() method introduces a qubit reset, which is non-unitary. How can I circumvent this?",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/22090/setting-the-textttstate-preparation-for-textttamplificationproblem-i",
-    "codice_COSA": "need for handling non-unitary operations in quantum circuit state preparation within hybrid DevOps workflows",
+    "codice_COSA": "need for handling non-unitary operations in quantum circuit state preparation for hybrid algorithms",
     "CHI": "Quantum Developer",
     "QUANDO": "PLAN;CODE",
     "codice_COSA_originale": "need for handling non-unitary operations in quantum circuit state preparation for hybrid algorithms"
