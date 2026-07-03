@@ -39,7 +39,7 @@
     "ID_porzione": "qcse_9310_p3",
     "testo_verbatim": "Q# supports creating unit tests for quantum programs, and which can run as tests within the xUnit unit testing framework",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/9310/unit-testing-for-quantum-programs",
-    "codice_COSA": "need for integrating quantum tests into existing classical unit-testing frameworks ",
+    "codice_COSA": "need for integrating quantum tests into existing classical unit-testing frameworks",
     "CHI": "Quantum Developer",
     "QUANDO": "TEST",
     "codice_COSA_originale": "need for integration of quantum tests into classical testing frameworks"
@@ -219,7 +219,7 @@
     "ID_porzione": "qcse_14659_p2",
     "testo_verbatim": "dotnet run will use default full state simulator, and print \"InitAnd body\" dotnet run -s ToffoliSimulator will use Toffoli with the substitution, and print \"InitAndToffoli\" dotnet run -s ResourcesEstimator will use resources estimator without substitution, print \"InitAnd body\" and the resources count.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14659/simulator-dependent-implementations-in-q",
-    "codice_COSA": "need for configuring and selecting the appropriate simulator selection in the quantum program execution workflow",
+    "codice_COSA": "need for configuring and selecting the appropriate simulator in the quantum program execution workflow",
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE",
     "codice_COSA_originale": "need for configuring simulator selection in quantum program execution workflow"
@@ -291,7 +291,7 @@
     "ID_porzione": "qcse_12183_p2",
     "testo_verbatim": "This is likely due to a mismatch of qiskit-terra and qiskit-ibmq-provider versions. If you're using qiskit-ibmq-provider 0.7 it requires qiskit-terra 0.14.",
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/12183/ibmqfactory-initialize-providers-error",
-    "codice_COSA": "need for understanding how managing version compatibility between quantum framework packages",
+    "codice_COSA": "need for managing version compatibility between quantum framework packages",
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE",
     "codice_COSA_originale": "need for understanding version compatibility between Qiskit packages"

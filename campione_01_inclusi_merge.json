@@ -1,0 +1,122 @@
+[
+  {
+    "fase_devops": "PLAN",
+    "macro_categoria": "Progettazione di componenti per algoritmi ibridi",
+    "descrizione": "Bisogni relativi alla fase di pianificazione del ciclo DevOps quantistico: come strutturare stati parziali, registri e input non standard per componenti di algoritmi ibridi quantistico-classici, prima ancora che il codice esecutivo venga scritto.",
+    "need_aggregato": "Need for correctly structuring and preparing hybrid algorithm inputs (partial quantum states, non-unitary state preparation) during the planning stage of the quantum-classical pipeline, prior to implementation.",
+    "n_porzioni_aggregate": 2,
+    "ID_porzioni_associate": [
+      "qcse_22090_p1",
+      "qcse_22090_p2"
+    ]
+  },
+  {
+    "fase_devops": "CODE",
+    "macro_categoria": "Implementazione di logica quantistica condizionale e parametrica",
+    "descrizione": "Bisogni relativi alla fase di scrittura del codice: implementare logica che si adatta al contesto di esecuzione (simulatore vs hardware) e gestire correttamente parametri specifici degli algoritmi variazionali (depth, reps, Trotter step), inclusi i bisogni di progettazione che si estendono anche a questa fase.",
+    "need_aggregato": "Need for implementing quantum program logic that correctly handles algorithm-specific parametrization and adapts implementation choices to the target execution context (simulator vs. real hardware) during the coding stage.",
+    "n_porzioni_aggregate": 5,
+    "ID_porzioni_associate": [
+      "qcse_16419_p4",
+      "qcse_14261_p1",
+      "qcse_14659_p3",
+      "qcse_22090_p1",
+      "qcse_22090_p2"
+    ]
+  },
+  {
+    "fase_devops": "BUILD",
+    "macro_categoria": "Transpilazione e compilazione verso il backend target",
+    "descrizione": "Bisogni relativi alla fase di build/compilazione del ciclo DevOps: comprendere, comporre e ordinare correttamente le passate di transpilazione che trasformano un circuito virtuale in una forma eseguibile su un backend specifico, gestendo vincoli hardware e strategie di validazione tramite backend simulati.",
+    "need_aggregato": "Need for correctly composing, ordering, and validating the transpilation passes that compile a quantum circuit into a backend-executable artifact, functioning as the build/compilation stage of the quantum development pipeline.",
+    "n_porzioni_aggregate": 10,
+    "ID_porzioni_associate": [
+      "qcse_23866_p1",
+      "qcse_23866_p2",
+      "qcse_23866_p3",
+      "qcse_16419_p3",
+      "qiskit_13574_p1",
+      "qiskit_13574_p2",
+      "qiskit_13574_p3",
+      "qiskit_13574_p4",
+      "qcse_9966_p1",
+      "qcse_9966_p2"
+    ]
+  },
+  {
+    "fase_devops": "TEST",
+    "macro_categoria": "Verifica e simulazione della correttezza",
+    "descrizione": "Bisogni relativi alla fase di test: validare il comportamento di un circuito tramite simulazione (inclusa la modellazione del rumore), ispezionare stati intermedi per il debugging, e colmare l'assenza di framework di unit testing maturi per programmi quantistici. E' la fase con il maggior numero di porzioni associate in questo campione.",
+    "need_aggregato": "Need for validating quantum circuit correctness through simulation, noise modeling, and intermediate-state inspection, in a context where dedicated quantum testing frameworks are still immature or absent.",
+    "n_porzioni_aggregate": 11,
+    "ID_porzioni_associate": [
+      "cirq_4163_p1",
+      "qcse_9310_p1",
+      "qcse_9310_p2",
+      "qcse_9310_p3",
+      "qcse_21905_p1",
+      "qcse_16419_p1",
+      "qcse_16419_p2",
+      "qcse_14659_p1",
+      "qcse_41878_p1",
+      "so_68919833_p1",
+      "qcse_9966_p2"
+    ]
+  },
+  {
+    "fase_devops": "EVALUATE",
+    "macro_categoria": "Valutazione di capacità e costo dei backend",
+    "descrizione": "Bisogni relativi alla fase di valutazione: confrontare backend e metodi di simulazione in termini di capacità supportate, costo computazionale e vincoli hardware, per decidere dove e come eseguire un circuito prima di impegnare risorse reali.",
+    "need_aggregato": "Need for evaluating backend capabilities, resource costs, and hardware constraints ahead of execution-target selection, to inform go/no-go decisions before committing a circuit to a real quantum device.",
+    "n_porzioni_aggregate": 5,
+    "ID_porzioni_associate": [
+      "qiskit_ibm_runtime_1297_p2",
+      "qcse_14659_p1",
+      "qcse_41878_p1",
+      "qcse_9966_p1",
+      "qcse_9966_p2"
+    ]
+  },
+  {
+    "fase_devops": "DEPLOY_CONFIGURE",
+    "macro_categoria": "Configurazione dell'ambiente e della sessione di esecuzione",
+    "descrizione": "Bisogni relativi alla fase di deploy/configurazione: provisioning dell'ambiente (dipendenze, autenticazione al provider cloud), gestione del ciclo di vita delle sessioni runtime, e selezione del simulatore o del primitive di esecuzione da utilizzare — la componente infrastrutturale del pipeline quantistico.",
+    "need_aggregato": "Need for provisioning and configuring the quantum execution environment — cloud provider authentication, dependency management, runtime session lifecycle, and execution primitive selection — required to reliably deploy a quantum workload.",
+    "n_porzioni_aggregate": 9,
+    "ID_porzioni_associate": [
+      "qiskit_ibm_runtime_1250_p1",
+      "qcse_23866_p3",
+      "qiskit_ibm_runtime_1297_p1",
+      "qcse_37411_p1",
+      "qcse_14659_p2",
+      "qcse_41878_p2",
+      "qiskit_6809_p1",
+      "cuda_quantum_1393_p1",
+      "qcse_12183_p1"
+    ]
+  },
+  {
+    "fase_devops": "MONITOR",
+    "macro_categoria": "Osservabilità dell'esecuzione e dei risultati",
+    "descrizione": "Bisogni relativi alla fase di monitoraggio: tracciare tempi di esecuzione, stato dei job distribuiti e mapping tra qubit logici e fisici per interpretare correttamente i risultati durante e dopo l'esecuzione sul backend reale.",
+    "need_aggregato": "Need for monitoring job execution behavior post-submission (execution timing, distributed workload status, logical-to-physical qubit mapping) to correctly interpret and troubleshoot quantum execution results.",
+    "n_porzioni_aggregate": 4,
+    "ID_porzioni_associate": [
+      "qcse_37411_p1",
+      "qcse_37411_p2",
+      "qcse_41878_p2",
+      "qiskit_6809_p1"
+    ]
+  },
+  {
+    "fase_devops": "RELEASE",
+    "macro_categoria": "Gestione della compatibilità tra versioni",
+    "descrizione": "Bisogni relativi alla fase di release: gestire la migrazione del codice e la compatibilità tra versioni dei framework quantistici quando le API introducono breaking change, per mantenere stabile il pipeline nel tempo.",
+    "need_aggregato": "Need for managing version compatibility and code migration across quantum framework releases, ensuring pipeline stability as dependent APIs evolve.",
+    "n_porzioni_aggregate": 2,
+    "ID_porzioni_associate": [
+      "qcse_14261_p2",
+      "qcse_12183_p2"
+    ]
+  }
+]
