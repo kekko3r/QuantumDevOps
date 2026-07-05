@@ -1,0 +1,33 @@
+=== QUANTUM DEVOPS MINING — Sampler ===
+
+Corpus caricato: 16711 thread
+
+Batch precedenti trovati (1):
+  campione_01.json: 100 URL già campionati
+Totale URL già campionati: 100
+
+Seed automatico: 43 (batch #2)
+Estraggo campione di 100 thread...
+Campione estratto: 100 thread
+
+Distribuzione campione per fonte:
+  GitHub: 62
+  Quantum Computing Stack Exchange: 37
+  Stack Overflow: 1
+
+Distribuzione campione per fase:
+  CODE: 40
+  TEST: 15
+  RELEASE: 14
+  BUILD: 12
+  PLAN: 6
+  DEPLOY_CONFIGURE: 5
+  FEEDBACK: 3
+  EVALUATE: 2
+  CROSS_CICD: 2
+  MONITOR: 1
+
+Thread con zero risposte: 29 (da valutare con attenzione)
+
+Campione salvato in: campione_02.json
+Batch #2 — seed 43

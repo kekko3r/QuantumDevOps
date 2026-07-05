@@ -26,6 +26,7 @@ Uso:
 import json
 import argparse
 import os
+import re
 import random
 import glob
 from datetime import datetime, timezone
@@ -51,6 +52,8 @@ def find_previous_batches(output_file):
     output_dir = os.path.dirname(os.path.abspath(output_file))
     pattern = os.path.join(output_dir, "campione_*.json")
     found = sorted(glob.glob(pattern))
+    # Mantieni solo batch reali: campione_NN.json (solo cifre dopo underscore)
+    found = [f for f in found if re.match(r"campione_\d+\.json$", os.path.basename(f))]
     # Esclude il file di output corrente se già esiste
     found = [f for f in found if os.path.abspath(f) != os.path.abspath(output_file)]
     return found
