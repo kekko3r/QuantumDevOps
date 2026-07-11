@@ -3,8 +3,7 @@
     "versione": "v1_batch1_final",
     "batch_di_riferimento": "campione_01",
     "totale_porzioni": 37,
-    "totale_categorie": 9,
-    "note": "Tassonomia parziale stabile emersa dal Batch 1 (37 porzioni, 9 categorie). Da usare come draft categorization (cfr. Pascarella, Iteration 2) per i batch successivi: le porzioni nuove vengono assegnate a queste categorie; se una porzione non è assegnabile, si crea una nuova categoria (segnale di non-saturazione). Decisioni documentate: qcse_16419_p3 assegnata a CAT1 (dimensione decisionale/consapevolezza della transpilazione, criterio decisionale-vs-meccanico); qcse_14659_p1 assegnata a CAT4 (la motivazione del need è la stima di costo/risorse, cfr. verbatim 'cost estimates')."
+    "totale_categorie": 9
   },
   "categorie": [
     {
