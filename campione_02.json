@@ -264,6 +264,7 @@
     },
     {
       "url": "https://quantumcomputing.stackexchange.com/questions/9961/regarding-quantum-support-vector-machine-using-qiskit",
+      "redirect_url_automatico": "https://quantumcomputing.stackexchange.com/questions/9967/how-to-use-external-csv-data-file-in-quantum-support-vector-machine-qiskit-pyth",
       "fonte": "Quantum Computing Stack Exchange",
       "repository": "site:quantumcomputing",
       "tipo": "Question",
