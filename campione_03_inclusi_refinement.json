@@ -105,7 +105,7 @@
   },
   {
     "ID_porzione": "mitiq_2583_p1",
-    "testo_verbatim": "I meant execute_with_noise uses one shot and why? I am working on OrganAMNIST dataset for class of 11. My expectation values are changing but the classification accuracy doesn't have an improvement. [...] when I tried it with one shots it was giving less validation accuracy like 18 and when i used 1024 it is giving 56.5.",
+    "testo_verbatim": "I meant execute_with_noise uses one shot and why? I am working on OrganAMNIST dataset for class of 11. My expectation values are changing but the classification accuracy doesn't have an improvement. I expected a better result when I am using long computational time to just validate it with pec with trained weights. [...] when I tried it with one shots it was giving less validation accuracy like 18 and when i used 1024 it is giving 56.5.",
     "riferimento_thread": "https://github.com/unitaryfoundation/mitiq/discussions/2583",
     "codice_COSA": "need for understanding how the shot count in noise simulation functions affects error mitigation results in a hybrid classification workflow",
     "CHI": "Quantum Developer",
