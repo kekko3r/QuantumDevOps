@@ -1,0 +1,146 @@
+[
+  {
+    "ID_porzione": "qcse_33566_p1",
+    "testo_verbatim": "Is there a simple way to represent the quantum circuit associated to AlgoTest in a standard quantum circuit diagram? I found these refs, but they seem to assume the full program is in Q# (while I am using Python+Q#). For instance the command: %trace AlgoTest Doesn't return me anything.",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/33566/displaying-the-circuit-diagram-associated-to-a-circuit-in-qpython",
+    "codice_COSA": "need for displaying circuit diagrams of quantum programs in mixed Python and Q# environments",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+  },
+  {
+    "ID_porzione": "qcse_27878_p1",
+    "testo_verbatim": "It seems to me that it's possible to compute an expected error rate for a specific circuit design given some characterization data (T1, T2, gate error rates, measurement error rates..). But I haven't saw any practical example of this so far. The question is - are there any systematic tools to asses an expected overall error rate when running a specific circuit on a specific quantum computer?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/27878/are-there-any-systematic-tools-for-estimating-expected-error-rate",
+    "codice_COSA": "need for systematically estimating the expected error rate of a circuit on a target quantum device from hardware characterization data",
+    "CHI": "Quantum Developer",
+    "QUANDO": "EVALUATE"
+  },
+  {
+    "ID_porzione": "pennylane_2916_p1",
+    "testo_verbatim": "Operations not supported by a device should be decomposed by PennyLane. [...] The expected behavior is displayed under v0.24.0 [...] Under v0.25.0-rc0 I get: [...] This breaks pretty much all my custom devices... [...] The fix proposed above does not capture inverse gates. What is the recommended course of action? Should I just remove the '.inv' suffix from obj.name in the line return obj.name in self.observables.union(self.operations)? Or is there a better solution?",
+    "riferimento_thread": "https://github.com/PennyLaneAI/pennylane/issues/2916",
+    "codice_COSA": "need for correctly adapting custom device implementations to changed operation handling behavior across framework versions",
+    "CHI": "Quantum Developer",
+    "QUANDO": "RELEASE"
+  },
+  {
+    "ID_porzione": "so_71100198_p1",
+    "testo_verbatim": "I have devised the following steps to create my first quantum Hello World based on a few tutorials [...] However, as soon as this is all done, I get the following load of errors [...] What am I doing wrong? What am I missing? [...] It was not possible to find any compatible framework version. The framework 'Microsoft.NETCore.App', version '2.0.0' was not found.",
+    "riferimento_thread": "https://stackoverflow.com/questions/71100198/missing-types-namespaces-directives-and-assembly-references",
+    "codice_COSA": "need for diagnosing SDK version incompatibility errors when setting up a quantum development environment",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+  },
+  {
+    "ID_porzione": "qcse_9824_p1",
+    "testo_verbatim": "I implemented in Qiskit and apriori I know that a period is 3 in my example. However, unless I know about period, how to obtain this period only according to seeing diagram? [...] This is a probability diagram. How to obtain a period from it?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/9824/shor-algorithm-how-to-obtain-a-period-from-diagram",
+    "codice_COSA": "need for interpreting measured output distributions to extract the algorithm's period",
+    "CHI": "Quantum Developer",
+    "QUANDO": "MONITOR"
+  },
+  {
+    "ID_porzione": "cuda_quantum_3663_p1",
+    "testo_verbatim": "I tried altering the probabilities and noticed the strange circumstances under which the kernel works and crashes. [...] the kernel crashes when the probabilities for either of the errors to occur are set to 1. If I change it to 0.8 for example, it works [...] I would need to see the source code to know exactly what the code does and why this happens [...] But I want to be able to set the probability of one error to be 0, while defining the other two to be between 0 and 1 for example.",
+    "riferimento_thread": "https://github.com/NVIDIA/cuda-quantum/issues/3663",
+    "codice_COSA": "need for understanding valid probability configurations when applying noise channels in quantum simulators",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+  },
+  {
+    "ID_porzione": "cuda_quantum_3104_p1",
+    "testo_verbatim": "I tried to install CUDA-Q on our school's HPC. Everything looks fine without any error or warning, but when I try to validate my installation, I cannot even import CUDA-Q and I got a 'Segmentation Fault (core dumped)'. [...] >>> import cudaq Segmentation fault (core dumped) Any idea on what happend?",
+    "riferimento_thread": "https://github.com/NVIDIA/cuda-quantum/issues/3104",
+    "codice_COSA": "need for diagnosing import/installation failures when setting up a quantum SDK in an HPC environment",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+  },
+  {
+    "ID_porzione": "qcse_6418_p1",
+    "testo_verbatim": "I am trying to reproduce the Figure 10: Bloch sphere representation of the Landau-Zener transition. The code they used is given in the appendix of the paper. But when I am trying to plot this, I am getting an error: AttributeError: 'numpy.ndarray' object has no attribute 'indices'. Can anyone please help me to correct this one to get the exact Bloch sphere plot?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/6418/plotting-bloch-sphere-in-qutip",
+    "codice_COSA": "need for correcting example code from a publication that produces a runtime error",
+    "CHI": "Quantum Developer",
+    "QUANDO": "RELEASE"
+  },
+  {
+    "ID_porzione": "qcse_38513_p1",
+    "testo_verbatim": "I'm working on a portfolio optimization problem using Qiskit and I'm encountering an error when trying to solve a quadratic program using MinimumEigenOptimizer with SamplingVQE (V1 Primitives). Any insights on what might be causing this error or how to fix it would be greatly appreciated! When I run the code below, I get the following error: AlgorithmError: 'The number of qubits of the ansatz does not match the operator, and the ansatz does not allow setting the number of qubits using num_qubits.'",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/38513/portfolio-optimization-with-vqe-qiskit",
+    "codice_COSA": "need for resolving a qubit count mismatch error between the ansatz and the operator when configuring a variational eigensolver",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;DEPLOY_CONFIGURE"
+  },
+  {
+    "ID_porzione": "qcse_41146_p1",
+    "testo_verbatim": "I have the following code block implementing e−itP where P is a Pauli string: [...] I expected Qiskit to apply the σz rotation operator on qubit q2, followed by the CNOT gates on q0,1 and q1,2. What is happening? Is there a way to instruct Qiskit to implement the gates in the specified order?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/41146/qiskit-circuit-construction",
+    "codice_COSA": "need for controlling the gate ordering in circuits generated by a Hamiltonian simulation circuit builder",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+  },
+  {
+    "ID_porzione": "cirq_2840_p1",
+    "testo_verbatim": "When I import cirq on my computer locally, I am able to run simulations and all of it works fine. However when I put the same folder onto the cluster, I find that I get an error referring to circular imports. [...] Does anyone know what might be causing this?",
+    "riferimento_thread": "https://github.com/quantumlib/Cirq/issues/2840",
+    "codice_COSA": "need for diagnosing environment-specific import failures when deploying a quantum framework to a compute cluster",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+  },
+  {
+    "ID_porzione": "qiskit_11898_p1",
+    "testo_verbatim": "When i use quantum lab by default it import some libraries [...] When i run this getting error [...] ModuleNotFoundError: No module named 'qiskit.tools'. help me to solve it",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/11898",
+    "codice_COSA": "need for resolving module import errors in the default code provided by a quantum development platform",
+    "CHI": "Quantum Developer",
+    "QUANDO": "RELEASE"
+  },
+  {
+    "ID_porzione": "qiskit_aer_1286_p1",
+    "testo_verbatim": "It's quite possible that this is due to a mistake on my end, but either way I would like to know what is responsible for this error and how it can be remedied. Attempting to run the following snippet of code results in the following ImportError for installations of Aer built from source for MacOS arm64 [...] ImportError: dlopen(...): Symbol not found",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit-aer/issues/1286",
+    "codice_COSA": "need for resolving build and import failures when building a quantum simulator from source for a specific platform architecture",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+  },
+  {
+    "ID_porzione": "mitiq_2583_p1",
+    "testo_verbatim": "I meant execute_with_noise uses one shot and why? I am working on OrganAMNIST dataset for class of 11. My expectation values are changing but the classification accuracy doesn't have an improvement. [...] when I tried it with one shots it was giving less validation accuracy like 18 and when i used 1024 it is giving 56.5.",
+    "riferimento_thread": "https://github.com/unitaryfoundation/mitiq/discussions/2583",
+    "codice_COSA": "need for understanding how the shot count in noise simulation functions affects error mitigation results in a hybrid classification workflow",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST;EVALUATE"
+  },
+  {
+    "ID_porzione": "qcse_33208_p1",
+    "testo_verbatim": "In the code below, I am using VQE without noise to calculate the minimum expectation value of the two-qubit operator X^X. [...] I get the correct result when I use statevector_simulator but do not get the correct result most of the time with qasm_simulator. Please help me understand why that is the case.",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/33208/why-is-qiskits-qasm-simulator-giving-me-incorrect-result-with-vqe",
+    "codice_COSA": "need for understanding why a variational algorithm converges differently across exact and shot-based simulators",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+  },
+  {
+    "ID_porzione": "qcse_39389_p1",
+    "testo_verbatim": "The qiskit==0.46 gives eigenstate but the qiskit==1.0 do not give eigenstate. [...] I am really not sure how to get the eigenstate now?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/39389/eigenstate-is-missing-in-the-solution-of-vqe-compute-minimum-eigenvalue-api-in-q",
+    "codice_COSA": "need for retrieving a result field that is no longer returned across framework versions",
+    "CHI": "Quantum Developer",
+    "QUANDO": "RELEASE"
+  },
+  {
+    "ID_porzione": "pyquil_1224_p1",
+    "testo_verbatim": "I try to install pyquil by pip, but it always appears that 'Running setup.py install for immutables ... error', even I try another pc it still happens. Does anyone know what's wrong?",
+    "riferimento_thread": "https://github.com/rigetti/pyquil/issues/1224",
+    "codice_COSA": "need for diagnosing native dependency build failures when installing a quantum SDK via pip",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+  },
+  {
+    "ID_porzione": "so_49579153_p1",
+    "testo_verbatim": "Getting Unable to load DLL 'Microsoft.Quantum.Simulator.Runtime.dll' error while trying to validate my Q# environment by running the teleport sample program. [...] Unhandled Exception: System.DllNotFoundException: Unable to load DLL 'Microsoft.Quantum.Simulator.Runtime.dll': The specified module could not be found.",
+    "riferimento_thread": "https://stackoverflow.com/questions/49579153/unable-to-load-dll-microsoft-quantum-simulator-runtime-dll",
+    "codice_COSA": "need for resolving native runtime dependency errors when validating a quantum development environment",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+  }
+]
