@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "versione": "v3_batch3",
+    "batch_di_riferimento": [
+      "campione_01",
+      "campione_02",
+      "campione_03"
+    ],
+    "totale_porzioni": 83,
+    "totale_categorie": 14,
+    "verdetto_saturazione": "NON SATURO: dal merge del Batch 3 (18 porzioni) emergono 2 nuove categorie a singola porzione (CAT13: qcse_27878_p1; CAT14: qcse_33566_p1). Zero ridefinizioni delle categorie esistenti, zero riassegnazioni di porzioni pregresse, zero split: 16 porzioni su 18 si assegnano a categorie esistenti con definizioni invariate. Densita delle modifiche strutturali per batch: Batch 2 = 3 nuove categorie + 1 split + 2 riassegnazioni + ridefinizioni/estensioni di 6 categorie; Batch 3 = 2 nuove categorie a singola porzione. Necessario Batch 4 secondo il protocollo.",
+    "riassegnazioni_in_sede_di_merge_v2": [
+      "qcse_16419_p4: CAT8 -> CAT1. Verbatim verificato ('could this kick in when using the QAOAVariationalForm function?'): è la domanda dell'utente sulla transpilazione implicita (stessa questione di qcse_16419_p3, che è la risposta). L'assegnazione v1 a CAT8 nobilitava la domanda a 'logica variazionale'.",
+      "qcse_14659_p3: CAT8 -> CAT6. La porzione riguarda l'adattamento del codice al simulatore selezionato (meccanismo Q#/C# is_toffoli_simulator), non logica variazionale/ibrida; ricongiunta a qcse_14659_p2 (stesso thread). CAT6 estesa di conseguenza ('selezione e adattamento')."
+    ],
+    "note": "Tassonomia parziale stabile v3 dopo il merge del Batch 3 (18 porzioni) sulla v2 (65 porzioni). Ereditata dalla v2 la chiusura del caso qcse_12846_p1 (assegnazione CAT1 su precedente 16419_p3/p4, anima ex-post; la menzione ibmq_london/coupling_map in screening fu contaminazione con thread escluso del Batch 1, verificata su tutti i file e transcript). BATCH 3 — crescita zero: CAT1 (per la prima volta; lo split dell'anima ex-post ipotizzato nella v2 non ha ricevuto nuove porzioni), CAT2 e CAT4 (secondo batch consecutivo), CAT6, CAT10, CAT11 (resta a 1 porzione). Borderline Batch 3 flaggati per inter-rater: qcse_41146_p1 (critico, inclusione e categoria), qcse_33566_p1 (inclusione fascia medio-bassa; assegnazione CAT14 dopo revisione dell'iniziale CAT3), qcse_9824_p1, qcse_6418_p1, pyquil_1224_p1 (fascia bassa), cirq_2840_p1 (causa finale: modifiche locali dell'utente; non declassante — debugging cooperativo di 9 giorni).",
+    "assegnazioni_batch_3": [
+      "CAT3 +3 (cuda_quantum_3663_p1: modellazione rumore, cfr. 12645; qcse_33208_p1: validazione su simulatori; mitiq_2583_p1: semantica della funzione di noise simulation — vs CAT8: il verbatim non chiede come parametrizzare il modello QML)",
+      "CAT5 +6 (so_71100198_p1, cuda_quantum_3104_p1, cirq_2840_p1, qiskit_aer_1286_p1 — entra nella clausola 'disponibilità di pacchetti per piattaforme specifiche' scritta per 1872 —, pyquil_1224_p1, so_49579153_p1)",
+      "CAT7 +1 (qcse_9824_p1: 'interpretazione di risultati post-esecuzione' letterale; famiglia 6809/37634/40890_p2; vs CAT10: il verbatim non rende la componente classica a valle oggetto del bisogno — cfr. 28266_p1 — e la fase e MONITOR, non CODE)",
+      "CAT8 +1 (qcse_38513_p1: ansatz non conforme al contratto del framework — 'componenti conformi ai contratti' letterale; fasi di categoria estese con DEPLOY_CONFIGURE)",
+      "CAT9 +4 (pennylane_2916_p1 e qcse_39389_p1: ancora di versione nel verbatim; qiskit_11898_p1 e qcse_6418_p1: ancora RELEASE documentata in ancore_RELEASE_batch_3)",
+      "CAT12 +1 (qcse_41146_p1: convenzione di ordinamento della piattaforma tra intento algoritmico e circuito prodotto, cfr. segni stabilizer di 27396; vs CAT6: PauliEvolutionGate non e una primitive di esecuzione. BORDERLINE CRITICO del Batch 3, flaggato per inter-rater)",
+      "CAT13 NUOVA +1 (qcse_27878_p1: triplo test di esclusione — vs CAT1: zero transpilazione/compatibilita nel bisogno; vs CAT3: stima analitica da dati di caratterizzazione, non validazione empirica via test/simulazione; vs CAT4: hardware reale, non risorse di simulazione)",
+      "CAT14 NUOVA +1 (qcse_33566_p1: vs CAT3 — la definizione richiede la validazione del comportamento via test/simulazione, mentre il diagramma di circuito e generabile senza alcuna esecuzione; coerente con QUANDO=CODE assegnato in screening per assenza di intento di verifica; vs CAT13: bisogno diverso — tooling di visualizzazione in CODE vs stima predittiva in EVALUATE)"
+    ],
+    "ancore_RELEASE_batch_3": [
+      "qcse_6418_p1: QUANDO=RELEASE e CAT9 ancorati alla risposta di Paul Nation (creatore di QuTiP) nel thread: 'That is a very old paper, corresponding to version one of the software. It is now on version 4.x.' Il codice_COSA resta privo del riferimento di versione (vincolo verbatim).",
+      "qiskit_11898_p1: QUANDO=RELEASE e CAT9 ancorati alla risposta del Member 1ucian0: 'cell was not updated to Qiskit 1.0, released on Feb 15th' + Environment del post (dato dell'utente): 'Qiskit version: v1.0.0'."
+    ],
+    "convenzioni_di_codifica_esplicitate": [
+      "Normalizzazione nome proprio -> categoria generica nei codici_COSA (CUDA-Q/pyquil -> 'quantum SDK', Cirq -> 'quantum framework', Aer -> 'quantum simulator', IBM Quantum Lab -> 'quantum development platform'): convenzione sistematica dal Batch 1 (cuda_quantum_1393_p1).",
+      "Espansione di acronimi presenti nel verbatim (SamplingVQE -> 'variational eigensolver', pec -> 'error mitigation', e^-itP -> 'Hamiltonian simulation'): ancorata per definizione.",
+      "Vincolo copertura-verbatim sul codice_COSA; estensioni di verbatim solo con parole dell'utente; il QUANDO si giudica dal thread completo con ancora documentata quando essa risiede nella risposta."
+    ],
+    "revisione_editoriale_v3": "Le definizioni di CAT1, CAT3, CAT5, CAT6, CAT7, CAT8, CAT12 sono state riformulate per uniformità editoriale: frase di intensione + membri paralleli; parentetiche ammesse solo se enumerazioni dirette dell'estensione di un termine (criterio meccanico: le parentetiche introdotte da 'es.' sono esemplificazioni decorative e sono state rimosse — CAT2, CAT10; le enumerazioni senza 'es.' sono discriminanti e conservate — CAT1, CAT5, CAT13); clausole di demarcazione implicite tra categorie adiacenti (CAT2 vs CAT1: 'una volta stabilito che la transpilazione è necessaria'; CAT6 vs CAT5: 'una volta che l'ambiente è già configurato'; CAT13 vs CAT3: 'per via analitica e senza ricorso a simulazione o test empirici'). Revisione a confini semantici invariati: nessuna delle 83 porzioni cambia categoria (verificato programmaticamente porzione per porzione contro la v2). CAT4, CAT9, CAT11, CAT14 invariate: già conformi allo standard.",
+    "audit_strutturale_v3": "Audit programmatico eseguito sui tre file di refinement sorgente (campione_01/02/03_inclusi_refinement.json): (1) conteggi — 83 porzioni, zero duplicati, n_porzioni_aggregate coerente con le liste per tutte le 14 categorie; (2) tracciabilità bidirezionale — ogni ID della tassonomia esiste nei file sorgente e ogni porzione sorgente è assegnata a esattamente una categoria; (3) regola di aggregazione delle fasi — per tutte le 14 categorie, fasi_devops_associate coincide esattamente con l'unione dei QUANDO delle porzioni associate (verificate anche le eredità da tag compositi: CAT5/MONITOR da qiskit_1712_p1 DEPLOY_CONFIGURE;MONITOR, CAT8/DEPLOY_CONFIGURE da qcse_38513_p1 CODE;DEPLOY_CONFIGURE, CAT3/EVALUATE da mitiq_2583_p1 TEST;EVALUATE). Esito: zero errori, zero warning."
+  },
+  "categorie": [
+    {
+      "id_categoria": "CAT1",
+      "macro_categoria": "Compatibilità del circuito con provider e backend target",
+      "descrizione": "Bisogni relativi a capire se, dove e quando un circuito debba essere transpilato per rispettare i vincoli di un provider/backend target (gate set, vincoli hardware, backend simulati), e a comprendere che cosa la transpilazione comporta quando scatta, anche implicitamente: impatto sulle risorse, rimappatura dei qubit, effetti osservabili sui risultati.",
+      "need_aggregato": "Need for determining whether, where, and when a circuit must be transpiled to satisfy the constraints of a target provider/backend, and for understanding what transpilation entails when triggered, including implicitly: resource impact, qubit remapping, and observable effects on results.",
+      "n_porzioni_aggregate": 8,
+      "fasi_devops_associate": [
+        "CODE",
+        "BUILD",
+        "TEST",
+        "EVALUATE",
+        "DEPLOY_CONFIGURE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_23866_p1",
+        "qcse_23866_p2",
+        "qcse_23866_p3",
+        "qcse_9966_p1",
+        "qcse_9966_p2",
+        "qcse_16419_p3",
+        "qcse_16419_p4",
+        "qcse_12846_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT2",
+      "macro_categoria": "Composizione e ottimizzazione delle passate di transpilazione",
+      "descrizione": "Bisogni relativi alla meccanica interna del processo di transpilazione: quali passate combinare, in che ordine applicarle, e come ottimizzarne le prestazioni, una volta stabilito che la transpilazione è necessaria.",
+      "need_aggregato": "Need for correctly composing, ordering, and optimizing the internal transpilation passes once transpilation has been determined to be required.",
+      "n_porzioni_aggregate": 4,
+      "fasi_devops_associate": [
+        "BUILD"
+      ],
+      "ID_porzioni_associate": [
+        "qiskit_13574_p1",
+        "qiskit_13574_p2",
+        "qiskit_13574_p3",
+        "qiskit_13574_p4"
+      ]
+    },
+    {
+      "id_categoria": "CAT3",
+      "macro_categoria": "Verifica della correttezza tramite test e simulazione",
+      "descrizione": "Bisogni relativi alla validazione del comportamento di un circuito prima dell'esecuzione reale: unit testing, modellazione del rumore, ispezione degli stati intermedi per il debugging.",
+      "need_aggregato": "Need for validating quantum circuit behavior before real execution through unit testing, noise modeling, and intermediate-state inspection.",
+      "n_porzioni_aggregate": 13,
+      "fasi_devops_associate": [
+        "CODE",
+        "TEST",
+        "EVALUATE"
+      ],
+      "ID_porzioni_associate": [
+        "cirq_4163_p1",
+        "qcse_9310_p1",
+        "qcse_9310_p2",
+        "qcse_9310_p3",
+        "qcse_21905_p1",
+        "so_68919833_p1",
+        "qcse_12645_p1",
+        "qiskit_13172_p1",
+        "qcse_13421_p1",
+        "qcse_21395_p1",
+        "cuda_quantum_3663_p1",
+        "qcse_33208_p1",
+        "mitiq_2583_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT4",
+      "macro_categoria": "Gestione delle risorse computazionali e scalabilità della simulazione",
+      "descrizione": "Bisogni relativi al dimensionamento e all'ottimizzazione delle risorse di calcolo necessarie per simulare circuiti quantistici: requisiti di memoria, scelta del metodo di simulazione in funzione delle risorse disponibili, scalabilità su infrastrutture HPC distribuite.",
+      "need_aggregato": "Need for understanding and optimizing the computational resources (memory, simulation method, distributed infrastructure) required to scale quantum circuit simulation.",
+      "n_porzioni_aggregate": 4,
+      "fasi_devops_associate": [
+        "TEST",
+        "EVALUATE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_16419_p1",
+        "qcse_16419_p2",
+        "qcse_14659_p1",
+        "qcse_41878_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT5",
+      "macro_categoria": "Setup e autenticazione dell'ambiente di sviluppo",
+      "descrizione": "Bisogni relativi al provisioning e alla configurazione iniziale dell'ambiente di sviluppo: installazione e risoluzione delle dipendenze (inclusa la disponibilità dei pacchetti per piattaforme e ambienti specifici), autenticazione verso il provider quantum cloud, e configurazione dell'ambiente di lavoro necessaria al funzionamento degli strumenti.",
+      "need_aggregato": "Need for installing and resolving software dependencies (including package availability for specific platforms and environments), authenticating to a quantum cloud provider, and configuring the working environment required for tooling during initial setup.",
+      "n_porzioni_aggregate": 10,
+      "fasi_devops_associate": [
+        "DEPLOY_CONFIGURE",
+        "MONITOR"
+      ],
+      "ID_porzioni_associate": [
+        "cuda_quantum_1393_p1",
+        "qcse_12183_p1",
+        "qiskit_aer_1872_p1",
+        "qiskit_1712_p1",
+        "so_71100198_p1",
+        "cuda_quantum_3104_p1",
+        "cirq_2840_p1",
+        "qiskit_aer_1286_p1",
+        "pyquil_1224_p1",
+        "so_49579153_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT6",
+      "macro_categoria": "Selezione della primitive di esecuzione e adattamento ad essa",
+      "descrizione": "Bisogni relativi alla scelta della primitive o interfaccia di esecuzione, alla configurazione delle sue opzioni, alla comprensione del suo ciclo di vita e delle capacità supportate, e all'adattamento del proprio codice alla primitive selezionata, una volta che l'ambiente è già configurato.",
+      "need_aggregato": "Need for selecting and configuring the execution primitive/interface, understanding its lifecycle and supported capabilities, and adapting one's code to the selected primitive, once the environment is already configured.",
+      "n_porzioni_aggregate": 6,
+      "fasi_devops_associate": [
+        "CODE",
+        "EVALUATE",
+        "DEPLOY_CONFIGURE"
+      ],
+      "ID_porzioni_associate": [
+        "qiskit_ibm_runtime_1250_p1",
+        "qiskit_ibm_runtime_1297_p1",
+        "qiskit_ibm_runtime_1297_p2",
+        "qcse_14659_p2",
+        "qcse_14659_p3",
+        "qcse_8269_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT7",
+      "macro_categoria": "Orchestrazione ed esecuzione distribuita dei job",
+      "descrizione": "Bisogni relativi alla gestione operativa dei job inviati in esecuzione: affidabilità della submission, vincoli di tempo e di shots, esecuzione distribuita, e recupero e interpretazione di risultati e metadati post-esecuzione.",
+      "need_aggregato": "Need for reliably orchestrating job submission and execution on distributed or cloud-based quantum infrastructure, and for retrieving and interpreting results and execution metadata after execution.",
+      "n_porzioni_aggregate": 11,
+      "fasi_devops_associate": [
+        "DEPLOY_CONFIGURE",
+        "MONITOR"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_37411_p1",
+        "qcse_37411_p2",
+        "qcse_41878_p2",
+        "qiskit_6809_p1",
+        "qcse_13669_p1",
+        "qcse_34739_p1",
+        "pyquil_387_p1",
+        "qcse_17371_p1",
+        "qcse_40890_p2",
+        "qcse_37634_p1",
+        "qcse_9824_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT8",
+      "macro_categoria": "Parametrizzazione e componenti custom dei modelli variazionali e QML",
+      "descrizione": "Bisogni relativi alla costruzione e parametrizzazione dei componenti dei modelli variazionali e di quantum machine learning: semantica dei parametri variazionali, componenti custom conformi ai contratti dei framework, e dimensionamento del modello rispetto ai dati.",
+      "need_aggregato": "Need for building and parametrizing the components of variational/QML models: variational parameter semantics, custom components conforming to framework contracts, and model sizing with respect to the data.",
+      "n_porzioni_aggregate": 5,
+      "fasi_devops_associate": [
+        "PLAN",
+        "CODE",
+        "DEPLOY_CONFIGURE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_14261_p1",
+        "qcse_21051_p1",
+        "qcse_40509_p1",
+        "qcse_28266_p2",
+        "qcse_38513_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT9",
+      "macro_categoria": "Compatibilità e migrazione tra versioni dei framework",
+      "descrizione": "Bisogni relativi alla gestione dei breaking change e delle deprecazioni nelle API dei framework quantistici: compatibilità tra versioni dei pacchetti, migrazione del codice verso nuove API non equivalenti, e risoluzione degli errori indotti dagli aggiornamenti.",
+      "need_aggregato": "Need for managing version compatibility, deprecations, and code migration across successive releases of quantum computing frameworks, including resolving errors induced by breaking API changes.",
+      "n_porzioni_aggregate": 10,
+      "fasi_devops_associate": [
+        "RELEASE",
+        "DEPLOY_CONFIGURE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_14261_p2",
+        "qcse_12183_p2",
+        "qcse_40890_p1",
+        "qcse_41003_p1",
+        "qcse_37220_p1",
+        "pennylane_1242_p1",
+        "pennylane_2916_p1",
+        "qcse_6418_p1",
+        "qiskit_11898_p1",
+        "qcse_39389_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT10",
+      "macro_categoria": "Interfacciamento dei dati tra componenti classiche e quantistiche",
+      "descrizione": "Bisogni relativi al passaggio dei dati attraverso il confine classico-quantistico nei workflow ibridi: caricamento e strutturazione di dataset classici esterni come input di algoritmi quantum, ed estrazione degli output di misura multi-qubit come input di componenti classiche a valle.",
+      "need_aggregato": "Need for moving data across the classical-quantum boundary in hybrid workflows: loading external classical datasets as inputs to quantum algorithms, and extracting multi-qubit measurement outputs as inputs to downstream classical components.",
+      "n_porzioni_aggregate": 2,
+      "fasi_devops_associate": [
+        "CODE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_9967_p1",
+        "qcse_28266_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT11",
+      "macro_categoria": "Interoperabilità e conversione tra framework quantum",
+      "descrizione": "Bisogni relativi all'interoperabilità tra framework quantum diversi nello stesso workflow: conversione di rappresentazioni di circuiti e operatori tra i formati/object model di librerie differenti.",
+      "need_aggregato": "Need for converting circuit and operator representations between the formats of different quantum frameworks in multi-framework workflows.",
+      "n_porzioni_aggregate": 1,
+      "fasi_devops_associate": [
+        "CODE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_24324_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT12",
+      "macro_categoria": "Progettazione della logica algoritmica sotto vincoli del formalismo e della piattaforma",
+      "descrizione": "Bisogni relativi a esprimere la logica del proprio algoritmo o componente entro i vincoli espressivi del formalismo quantistico e della piattaforma: sintesi di stati e operatori dai costrutti disponibili, formulazione del problema per i risolutori quantum, e rispetto delle convenzioni del formalismo e della piattaforma nella costruzione del circuito.",
+      "need_aggregato": "Need for expressing the intended algorithm or component logic within the constraints of the quantum formalism and the platform: synthesizing states and operators from the available constructs, formulating problems for quantum solvers, and complying with formalism and platform conventions in circuit construction.",
+      "n_porzioni_aggregate": 7,
+      "fasi_devops_associate": [
+        "PLAN",
+        "CODE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_22090_p1",
+        "qcse_22090_p2",
+        "qcse_28649_p1",
+        "qcse_18001_p1",
+        "qcse_27396_p1",
+        "qcse_33735_p1",
+        "qcse_41146_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT13",
+      "macro_categoria": "Stima preventiva della qualità dell'esecuzione su hardware rumoroso",
+      "descrizione": "Bisogni relativi alla valutazione ex-ante, prima dell'esecuzione, della qualità attesa di un circuito su un dispositivo quantistico reale: stima sistematica dell'error rate complessivo atteso a partire dai dati di caratterizzazione hardware (T1, T2, tassi d'errore di gate e misura), per via analitica e senza ricorso a simulazione o test empirici.",
+      "need_aggregato": "Need for systematically estimating, prior to execution, the expected overall error rate of a specific circuit on a specific noisy quantum device from hardware characterization data, analytically and without resorting to empirical simulation or testing.",
+      "n_porzioni_aggregate": 1,
+      "fasi_devops_associate": [
+        "EVALUATE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_27878_p1"
+      ]
+    },
+    {
+      "id_categoria": "CAT14",
+      "macro_categoria": "Visualizzazione della struttura del circuito nell'ambiente di sviluppo",
+      "descrizione": "Bisogni relativi alla visualizzazione della rappresentazione a diagramma del circuito quantistico associato al proprio programma, con gli strumenti disponibili nell'ambiente di sviluppo in uso.",
+      "need_aggregato": "Need for displaying the circuit-diagram representation of quantum programs within the tooling of the development environment in use.",
+      "n_porzioni_aggregate": 1,
+      "fasi_devops_associate": [
+        "CODE"
+      ],
+      "ID_porzioni_associate": [
+        "qcse_33566_p1"
+      ]
+    }
+  ]
+}
