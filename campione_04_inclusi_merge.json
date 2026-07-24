@@ -27,181 +27,181 @@
       "ID_porzione": "qcse_18371_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT14",
-      "motivazione": "Etichettatura degli elementi nel disegno del circuito: copertura letterale."
+      "motivazione": "L'utente sta disegnando il proprio circuito e vuole che gli elementi compaiano con etichette proprie invece del nome generico: e' esattamente il tipo di bisogno che CAT14 raccoglie, cioe' vedere e personalizzare il diagramma del circuito con gli strumenti dell'ambiente in cui si sviluppa. Non c'entra la verifica del comportamento (CAT3): qui non si esegue nulla, si cura la resa visiva."
     },
     {
       "ID_porzione": "cuda_quantum_3573_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT3",
-      "motivazione": "Validazione del comportamento simulato contro le predizioni attese (famiglia 12645/33208)."
+      "motivazione": "Qui il circuito e' gia' scritto e l'utente lo ha gia' controllato senza trovare errori: il suo problema e' che la simulazione da' numeri diversi da quelli che la fisica prevede. Sta quindi validando il comportamento del programma tramite simulazione, che e' il cuore di CAT3. Non e' un problema di costruzione (CAT12): la costruzione per lui e' finita, e' l'output che non torna."
     },
     {
       "ID_porzione": "pyquil_136_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Convenzioni della piattaforma nella costruzione del programma (sintassi delle istruzioni)."
+      "motivazione": "L'utente non riesce a scrivere le istruzioni nel modo che la libreria si aspetta: prova senza virgolette e viene rifiutato, prova con le virgolette e il parser da' errore. E' la situazione tipica di CAT12, dove il bisogno e' rispettare le convenzioni della piattaforma quando si costruisce il programma. Non riguarda l'esecuzione o le sue opzioni (CAT6): il programma non arriva nemmeno a esistere."
     },
     {
       "ID_porzione": "qcse_33901_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT5",
-      "motivazione": "Configurazione dell'ambiente di lavoro necessaria al funzionamento degli strumenti (clausola letterale di CAT5): far funzionare il framework con il proprio setup di laboratorio; fase DEPLOY_CONFIGURE coincidente. Lettura ampia della clausola, flaggata per inter-rater."
+      "motivazione": "Il laboratorio ha il proprio hardware e vuole farlo funzionare con Qiskit: in sostanza, deve configurare il proprio ambiente di lavoro perche' lo strumento (il framework) ci giri sopra — ed e' proprio la clausola di CAT5 sulla configurazione dell'ambiente necessaria al funzionamento degli strumenti. Non puo' essere CAT6 (non c'e' ancora nessuna primitive da scegliere: il backend va prima reso operativo) ne' CAT7 (nessun job su un'infrastruttura gia' funzionante). E' la lettura piu' ampia di CAT5 fatta nel corpus, perche' qui l'ambiente include hardware fisico: per questo e' flaggata per l'inter-rater."
     },
     {
       "ID_porzione": "so_64717329_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT8",
-      "motivazione": "Componente QML custom conforme al contratto di differenziabilita' del framework ML."
+      "motivazione": "L'utente vuole addestrare un circuito Qiskit dentro TensorFlow, ma l'addestramento si blocca perche' il circuito non fornisce i gradienti che il framework classico si aspetta. Sta costruendo un componente QML che deve rispettare il contratto (la differenziabilita') del framework che lo ospita: e' la definizione di CAT8. Non e' CAT10, che riguarda il passaggio dei dati tra classico e quantistico: qui i dati passano, e' il meccanismo di training che manca."
     },
     {
       "ID_porzione": "qiskit_aer_1520_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT4",
-      "motivazione": "Scalabilita' su infrastrutture HPC distribuite: copertura letterale (MPI, blocking_qubits)."
+      "motivazione": "L'utente vuole distribuire la sua simulazione su piu' processi con MPI e non capisce il parametro che governa il partizionamento (blocking_qubits) rispetto ai qubit totali: e' la scalabilita' della simulazione su infrastrutture distribuite, che CAT4 nomina letteralmente. Non e' CAT7 (li' si parla di job inviati a infrastrutture cloud): qui e' la simulazione stessa che va divisa. E' anche la prima porzione che CAT4 riceve dopo due batch a crescita zero."
     },
     {
       "ID_porzione": "qcse_13626_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT6",
-      "motivazione": "Capacita' dell'interfaccia di esecuzione (equivalente shots) e adattamento del codice."
+      "motivazione": "L'utente lavora in Q# e cerca l'equivalente degli shots di Qiskit: vuole capire cosa la sua interfaccia di esecuzione sa fare e come adattarci il codice, con l'ambiente gia' funzionante. E' il bisogno che CAT6 descrive: comprendere le capacita' della primitive di esecuzione e adattarvisi. Non e' CAT7 perche' l'esecuzione e' locale, non ci sono job da orchestrare su infrastrutture remote."
     },
     {
       "ID_porzione": "qcse_17363_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT14",
-      "motivazione": "Stile del disegno del circuito nell'ambiente di sviluppo: copertura letterale."
+      "motivazione": "L'utente disegna il circuito in Qiskit e vorrebbe lo stesso stile visivo (simboli e colori) del Composer: e' di nuovo il diagramma del circuito e come renderlo nell'ambiente di sviluppo, dentro CAT14 in modo letterale. Stessa famiglia di 33566 e 18371: cura della visualizzazione durante lo sviluppo, senza alcuna dimensione di verifica."
     },
     {
       "ID_porzione": "qcse_14236_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT3",
-      "motivazione": "Validazione via simulazione, confronto tra metodi (famiglia 12645)."
+      "motivazione": "L'utente ha implementato Grover e nota che un metodo di simulazione (MPS) da' un output diverso dagli altri metodi sullo stesso identico circuito: sta validando il comportamento confrontando sistematicamente i simulatori, che e' il lavoro descritto da CAT3 (famiglia del precedente 12645). Non e' CAT4: non gli interessano memoria o scalabilita' del metodo, gli interessa che il risultato sia giusto."
     },
     {
       "ID_porzione": "cuda_quantum_3471_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT5",
-      "motivazione": "Disponibilita' dei pacchetti per piattaforme specifiche: clausola letterale (1872/1286)."
+      "motivazione": "Il team e' bloccato perche' i pacchetti ufficiali non esistono per la versione della piattaforma che usa (CUDA 13) e il vincolo su CuPy impedisce l'alternativa: e' la clausola di CAT5 sulla disponibilita' dei pacchetti per piattaforme specifiche, gia' scritta per il caso 1872 e riusata per 1286. Non e' CAT9: non c'e' nessun breaking change delle API del framework, e' la disponibilita' dei build a mancare."
     },
     {
       "ID_porzione": "qcse_34047_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Sintesi di operatori e formulazione per risolutori quantum (problem unitary da Ising)."
+      "motivazione": "L'utente parte dall'Hamiltoniano di Ising del suo problema e costruisce a mano il circuito della problem unitary, chiedendo se ha sbagliato qualcosa nella costruzione: e' la sintesi di operatori dai costrutti disponibili e la formulazione del problema per un risolutore quantum, cioe' CAT12. La verifica dell'output c'e', ma e' al servizio della domanda che l'utente pone davvero, che e' costruttiva ('Have I done anything wrong... building the circuit')."
     },
     {
       "ID_porzione": "qiskit_1682_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT14",
-      "motivazione": "Caso isolato mergiato via estensione di CAT14 all'output di visualizzazione dei risultati."
+      "motivazione": "Il problema e' che i plot non si vedono in modo affidabile a seconda di dove il codice gira (notebook si', script si', dentro certe strutture no): e' un bisogno di visualizzazione nell'ambiente di sviluppo, lo stesso genere delle porzioni gia' in CAT14 — con la differenza che l'oggetto e' l'output dei risultati e non il diagramma del circuito. Per questo la categoria e' stata estesa in questo merge (estensione dichiarata nei metadata) invece di forzare la definizione vecchia o creare una categoria nuova per due casi dello stesso fenomeno."
     },
     {
       "ID_porzione": "qcse_29113_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT11",
-      "motivazione": "Conversione di operatori/circuiti tra formati di framework diversi: copertura letterale, 2° esemplare."
+      "motivazione": "L'utente ha un calcolo funzionante in Cirq e lo sta riscrivendo in Qiskit, ma i numeri non tornano piu' nonostante abbia gia' gestito la differenza di convenzione che conosceva: e' la conversione tra i formati di framework diversi con tutte le sue frizioni, cioe' CAT11 alla lettera. Non e' CAT12 perche' la logica dell'algoritmo e' gia' espressa e corretta nel framework di partenza: il problema sta tutto nella traduzione. Secondo esemplare della categoria dopo 24324."
     },
     {
       "ID_porzione": "qcse_6365_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Formulazione del problema per risolutori quantum (oracolo per MST), fase PLAN prevista."
+      "motivazione": "L'utente ha un problema concreto (il minimum spanning tree) e vuole capire come tradurlo in pratica in un oracolo per Grover, su processore reale o simulatore: e' la formulazione di un problema per un risolutore quantum, che CAT12 prevede espressamente insieme alla fase PLAN. Non e' una domanda teorica: chiede come si implementa, non come funziona l'algoritmo."
     },
     {
       "ID_porzione": "qcse_37901_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT8",
-      "motivazione": "Training loop variazionale e semantica dei gradienti: cuore della definizione."
+      "motivazione": "L'utente ha costruito da solo il training loop del suo classificatore variazionale e ottiene risultati peggiori della classe pronta del framework, scoprendo indagando che quella calcola i gradienti in un modo che lui non replicava: siamo nel cuore di CAT8, la costruzione dei componenti dei modelli variazionali e la semantica del loro addestramento. Non e' CAT6: VQC non e' una primitive di esecuzione ma un componente di modello di cui vuole eguagliare il comportamento."
     },
     {
       "ID_porzione": "qcse_15048_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT1",
-      "motivazione": "Effetti osservabili della transpilazione sui risultati: copertura letterale (gemello 12846)."
+      "motivazione": "L'utente costruisce una sequenza di gate voluta e se la ritrova sparita: il circuito arriva vuoto sul backend perche' la transpilazione, ottimizzando, lo riduce all'identita' senza che lui l'abbia chiesto. E' l'effetto implicito e osservabile della transpilazione sui risultati, che CAT1 descrive alla lettera — gemello del caso 12846 gia' in categoria. Non e' CAT2: l'utente non sta componendo passate, sta subendo il comportamento del pipeline di default."
     },
     {
       "ID_porzione": "pyquil_1762_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT9",
-      "motivazione": "Errore indotto da aggiornamento e compatibilita' di versione: copertura letterale."
+      "motivazione": "La domanda dell'utente e' esplicitamente di versione ('pyquil v3 e' ancora compatibile con la QVM?') e la causa si rivela un breaking change silenzioso introdotto proprio dalla v3: e' la gestione della compatibilita' tra versioni e degli errori indotti dagli aggiornamenti, cioe' CAT9, con le stesse identiche fasi della categoria. La configurazione dell'ambiente (CAT5) e' solo il sintomo: l'ancora del bisogno e' la versione."
     },
     {
       "ID_porzione": "qiskit_1458_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT14",
-      "motivazione": "Caso isolato mergiato via estensione di CAT14 (stesso fenomeno di 1682)."
+      "motivazione": "Stesso fenomeno di 1682: l'utente vuole mostrare piu' grafici nella stessa cella del notebook e il tooling non glielo permette in modo ovvio. E' visualizzazione dell'output nell'ambiente di sviluppo, coperta da CAT14 con l'estensione fatta in questo merge. Non e' CAT7: i risultati li ha gia', e' la resa visiva che manca."
     },
     {
       "ID_porzione": "so_73979404_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT5",
-      "motivazione": "Setup: build da sorgente bloccata da toolchain (famiglia 1286/1224)."
+      "motivazione": "L'utente sta cercando di installarsi la libreria compilandola da sorgente e la build fallisce per la toolchain (Maven/JDK), con lui che dichiara di non sapere dove mettere le mani: e' il setup dell'ambiente di sviluppo di CAT5, nella stessa famiglia dei casi 1286 e 1224 dove si e' gia' stabilito che la causa tecnica 'classica' non conta, conta che l'oggetto del setup sia una libreria quantum. Nessuna dimensione di versione del framework (CAT9) nel bisogno espresso."
     },
     {
       "ID_porzione": "pennylane_5099_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Sintesi di stati dai costrutti disponibili (adjoint StatePrep con correzione di fase); alternativa CAT8 flaggata."
+      "motivazione": "L'utente deve preparare (e disfare) uno stato controllato da un'ancilla e la piattaforma glielo restituisce con una fase globale sbagliata; il rimedio che ha trovato rompe un'altra proprieta' che gli serve (la batchability). Sta sintetizzando stati dentro i vincoli espressivi della piattaforma, che e' la definizione di CAT12. L'alternativa CAT8 e' plausibile (il contesto sembra variazionale) ma il testo non rende il training l'oggetto del bisogno: per questo il caso e' flaggato per l'inter-rater."
     },
     {
       "ID_porzione": "qiskit_6468_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT2",
-      "motivazione": "Meccanica delle passate di ottimizzazione: prima porzione esterna alla famiglia 13574."
+      "motivazione": "L'utente osserva che il transpiler non rimuove rotazioni con angoli infinitesimali quando sono parametriche e auspica una pass che lo faccia: siamo nella meccanica interna delle passate di ottimizzazione, cioe' CAT2 — la transpilazione e' gia' in atto, la questione e' cosa le passate fanno e cosa dovrebbero fare. E' anche la prima porzione della categoria che non viene dal thread 13574 che l'aveva originata: segno che la categoria generalizza."
     },
     {
       "ID_porzione": "qiskit_10276_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT1",
-      "motivazione": "Vincoli hardware del backend target in transpilazione: copertura letterale."
+      "motivazione": "La transpilazione fallisce perche' il backend ha una topologia disgiunta che il livello 0 di ottimizzazione non sa gestire: e' il vincolo hardware del target che decide se e come il circuito puo' essere transpilato, cioe' CAT1 alla lettera. Non e' CAT2: il bisogno non e' comporre passate ma capire perche' la transpilazione si comporta cosi' rispetto al vincolo del backend."
     },
     {
       "ID_porzione": "qcse_39160_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT4",
-      "motivazione": "Ottimizzazione delle risorse e scelta del metodo di simulazione: copertura letterale."
+      "motivazione": "Il calcolo dell'utente funziona ma e' troppo lento per la scala a cui deve arrivare, e lui chiede sia come ridurre i tempi sia se dovrebbe usare un altro metodo: e' il dimensionamento e l'ottimizzazione delle risorse per la simulazione, con la scelta del metodo che CAT4 nomina espressamente. Non e' CAT6: la primitive e' gia' scelta e funziona, il problema e' la performance a scala."
     },
     {
       "ID_porzione": "qcse_35325_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT3",
-      "motivazione": "Validazione dell'output osservato contro l'atteso su simulatore; la convenzione di ordinamento e' la causa nella risposta, non il bisogno (distinzione da 41146->CAT12)."
+      "motivazione": "L'utente calcola a mano lo stato atteso, esegue sul simulatore e ottiene stati diversi da quelli previsti: il bisogno che esprime e' capire perche' l'osservato non coincide con l'atteso, cioe' validazione e debugging via simulazione, CAT3. La convenzione di ordinamento dei bit e' la spiegazione che arriva nella risposta, non cio' che l'utente chiede: per questo non va in CAT12 come il precedente 41146, dove invece l'utente chiedeva proprio il controllo sull'ordinamento."
     },
     {
       "ID_porzione": "qcse_17505_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT8",
-      "motivazione": "Semantica dei parametri variazionali: copertura letterale (bound in VQE)."
+      "motivazione": "L'utente ha costruito il suo circuito parametrico e vuole vincolare gli intervalli dei parametri liberi quando lo passa a VQE: e' la semantica dei parametri variazionali, che CAT8 nomina letteralmente. Non e' CAT12: il circuito e' gia' sintetizzato, la questione e' come parametrizzare il modello per l'ottimizzazione."
     },
     {
       "ID_porzione": "pennylane_553_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Sintesi di operatori dai costrutti disponibili (oggetto Hamiltonian)."
+      "motivazione": "L'utente prova a costruire un Hamiltoniano come combinazione di osservabili con il costrutto della libreria e ottiene un errore che non sa interpretare, ammettendo di non sapere se sbaglia lui: e' la sintesi di operatori dai costrutti disponibili, CAT12. Non e' CAT8: nel testo non ci sono training ne' parametri in gioco, c'e' l'uso corretto di un costrutto della piattaforma."
     },
     {
       "ID_porzione": "pennylane_553_p2",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Sintesi di osservabili tensor-product CV: limite espressivo della piattaforma."
+      "motivazione": "Tredici giorni dopo lo stesso utente chiede se nel paradigma a variabili continue si possano costruire osservabili tensor-product, mostrando cosa e' riuscito a fare e cosa no — e il maintainer conferma che la feature non esiste ancora. E' di nuovo sintesi di osservabili entro i vincoli espressivi della piattaforma (CAT12), con il limite qui confermato reale. Bisogno distinto da p1 perche' il paradigma (CV vs qubit) e la domanda sono diversi."
     },
     {
       "ID_porzione": "qiskit_1138_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT6",
-      "motivazione": "Adattamento del codice alle capacita' del target di esecuzione (simulatore vs device); alternativa CAT1 flaggata."
+      "motivazione": "L'utente vuole scrivere codice che giri bene sia sul device reale sia sul simulatore, e ha capito che il barrier prima della misura cambia cio' che il simulatore puo' fare: sta adattando il proprio codice alle capacita' del target di esecuzione, che e' il bisogno di CAT6. Non e' CAT1 perche' il meccanismo in gioco non e' la transpilazione ma il comportamento di esecuzione del backend — la lettura alternativa (CAT1 in senso largo) e' comunque flaggata per l'inter-rater."
     },
     {
       "ID_porzione": "qiskit_aer_2253_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT3",
-      "motivazione": "Ispezione degli stati per il debugging: copertura letterale (round-trip MPS)."
+      "motivazione": "L'utente carica uno stato MPS costruito secondo la convenzione documentata, e ispezionando statevector e stato salvato scopre che l'inizializzazione e' sbagliata, con una dipendenza dal segno dello zero che dichiara di non riuscire a spiegarsi: e' l'ispezione degli stati per il debugging che CAT3 nomina alla lettera. Non e' CAT4: il metodo MPS e' solo il contesto, il bisogno e' la correttezza dell'inizializzazione."
     },
     {
       "ID_porzione": "qcse_34359_p1",
       "verdetto": "MAPPATA",
       "categoria": "CAT12",
-      "motivazione": "Formulazione del problema per risolutori quantum (CQM->BQM su D-Wave)."
+      "motivazione": "L'utente ha modellato il suo problema come CQM, funziona, ma la conversione automatica a BQM (necessaria per il solver quantum/ibrido) peggiora la qualita' della soluzione nonostante tutti i tentativi fatti: e' la formulazione del problema per i risolutori quantum, CAT12, dove la difficolta' sta proprio nel riformulare senza perdere qualita'. Non e' CAT4: i ritocchi a tempi e variabili sono strumenti della sua indagine, non l'oggetto del bisogno."
     }
   ]
 }
