@@ -125,7 +125,7 @@
     "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/15048/conjugate-transpose-of-a-u-gate",
     "codice_COSA": "need for understanding why a circuit submitted to a backend results in an empty circuit after transpilation",
     "CHI": "Quantum Developer",
-    "QUANDO": "TEST"
+    "QUANDO": "BUILD;TEST"
   },
   {
     "ID_porzione": "pyquil_1762_p1",
@@ -165,7 +165,7 @@
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/6468",
     "codice_COSA": "need for eliminating near-zero parametric rotation gates during circuit optimization",
     "CHI": "Quantum Developer",
-    "QUANDO": "CODE"
+    "QUANDO": "BUILD"
   },
   {
     "ID_porzione": "qiskit_10276_p1",
@@ -173,7 +173,7 @@
     "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/10276",
     "codice_COSA": "need for understanding why transpilation fails on disjoint-connectivity targets at the lowest optimization level",
     "CHI": "Quantum Developer",
-    "QUANDO": "CODE;DEPLOY_CONFIGURE"
+    "QUANDO": "BUILD;DEPLOY_CONFIGURE"
   },
   {
     "ID_porzione": "qcse_39160_p1",
