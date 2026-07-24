@@ -1,0 +1,272 @@
+[
+    //https://quantumcomputing.stackexchange.com/questions/18371/custom-labelling-of-randomly-generated-unitaries-in-qiskit
+    {
+    "ID_porzione": "qcse_18371_p1",
+    "testo_verbatim": "I'm writing a program in Qiskit involving the generation of Haar-random unitaries. Is there a way to label each unitary such that the label appears instead of 'unitary' when I draw the circuit?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/18371/custom-labelling-of-randomly-generated-unitaries-in-qiskit",
+    "codice_COSA": "need for customizing the display label of circuit elements when drawing a quantum circuit",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://github.com/NVIDIA/cuda-quantum/issues/3573
+    {
+    "ID_porzione": "cuda_quantum_3573_p1",
+    "testo_verbatim": "the output of <cavity_photon_number> fluctuates between 10 photons and 9 photons (output figure attached), where I am expecting 20 and 19 photons. Also, the Rabi frequency doesn't corroborate the theory where we expect a ~4.5 times faster than 1 photon case. [...] I couldn't spot any obvious errors in the code, so I'm wondering if I'm missing something about the science in this simulation.",
+    "riferimento_thread": "https://github.com/NVIDIA/cuda-quantum/issues/3573",
+    "codice_COSA": "need for understanding why simulation results diverge from expected physical predictions",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+    },
+    //https://github.com/rigetti/pyquil/issues/136
+    {
+    "ID_porzione": "pyquil_136_p1",
+    "testo_verbatim": "First I tried without quotes. It raised: TypeError: op must be a string. Then after providing the quotes: [server error, Quil parse error] ... Anyway around this?",
+    "riferimento_thread": "https://github.com/rigetti/pyquil/issues/136",
+    "codice_COSA": "need for correctly constructing program instructions using the instruction syntax of a quantum programming library",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/33901/qiskit-with-our-own-backend
+    {
+    "ID_porzione": "qcse_33901_p1",
+    "testo_verbatim": "In our laboratory we have our own cryostat and quantum chips, so I wondered if is it even possible to mate our own hardware (HDAWG, etc.) with qiskit framework? It would be great to build pulse schedules for calibrations and measurements with such a great tool!",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/33901/qiskit-with-our-own-backend",
+    "codice_COSA": "need for integrating custom quantum hardware with a software framework to build pulse-level calibration and measurement schedules",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+    },
+    //https://stackoverflow.com/questions/64717329/usage-of-tensorflow-to-train-qiskit-circuits
+    {
+    "ID_porzione": "so_64717329_p1",
+    "testo_verbatim": "Unfortunately the toy model doesn't work and I get the following error: ValueError: No gradients provided for any variable. So I tried to calculate the gradient 'by myself' [...] But this works out neither :-( Does anybody have another idea to plug in Qiskit circuits into tensorflow and to deal with the fact that the automatic differentiation framework of tensorflow does not work in this case?",
+    "riferimento_thread": "https://stackoverflow.com/questions/64717329/usage-of-tensorflow-to-train-qiskit-circuits",
+    "codice_COSA": "need for computing gradients of a quantum circuit when integrating it as a differentiable component in a classical machine learning framework",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://github.com/Qiskit/qiskit-aer/issues/1520
+    {
+    "ID_porzione": "qiskit_aer_1520_p1",
+    "testo_verbatim": "I found a problem with my circuit and that's why I couldn't distribute it with MPI. I find the 'blocking_qubits' option confusing. Could you briefly explain what it does and how it relates to the total number of qubits?",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit-aer/issues/1520",
+    "codice_COSA": "need for understanding how to configure resource distribution parameters when parallelizing a large simulation across multiple processes",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/13626/run-circuit-n-times-in-q
+    {
+    "ID_porzione": "qcse_13626_p1",
+    "testo_verbatim": "I use dotnet run command to run my .qs quantum circuit. Is there a way to run my circuit N times, and get results of each run (like the shots parameter in Qiskit)?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/13626/run-circuit-n-times-in-q",
+    "codice_COSA": "need for repeatedly executing a quantum program and collecting results across runs, analogous to the shots concept in other frameworks",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/17363/drawing-the-circuit-in-qiskit-how-to-set-same-style-as-in-composer
+    {
+    "ID_porzione": "qcse_17363_p1",
+    "testo_verbatim": "I am wondering if there is a way to use the same symbols and colors as in IBM Quantum composer since none of the above allow me to do so.",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/17363/drawing-the-circuit-in-qiskit-how-to-set-same-style-as-in-composer",
+    "codice_COSA": "need for customizing the visual style of circuit drawings to match another tool in the ecosystem",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/14236/grovers-algorithm-with-matrix-product-state-method
+    {
+    "ID_porzione": "qcse_14236_p1",
+    "testo_verbatim": "I implemented Grover algorithm with matrix_product_state method in qiskit. But I found something strange. I designed the oracle part come out |1111⟩ but, real output was |0011⟩. I check out my code, but there is nothing wrong with it. Even simulating with the other simulation method (such as statevector, density_matrix etc.) I got correct output. I really don't understand why only matrix_product_state method's output is strange.",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/14236/grovers-algorithm-with-matrix-product-state-method",
+    "codice_COSA": "need for understanding why a specific simulation method produces different results than other methods for the same circuit",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+    },
+    //https://github.com/NVIDIA/cuda-quantum/issues/3471
+    {
+    "ID_porzione": "cuda_quantum_3471_p1",
+    "testo_verbatim": "we've run into an issue with CUDA 13 support. When installing with pip install cudaq, the installer still pulls in only *_cu12 wheels regardless of CUDA/13 being loaded. We also attempted to build from source, but the documentation mentions testing only with CUDA 11.8 and 12.0, and our build failed with configuration errors. Our request: We would like to request official CUDA-Q wheels built against CUDA 13 (cu13). Loosening the CuPy requirement (currently cupy-cuda12x <= 13.4.1) so that newer versions like cupy-cuda13x==13.6.0 are allowed.",
+    "riferimento_thread": "https://github.com/NVIDIA/cuda-quantum/issues/3471",
+    "codice_COSA": "need for obtaining official package builds and compatible dependency versions for a newer platform toolchain version",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/34047/converting-ising-hamiltonian-to-a-circuit-in-qiskit
+    {
+    "ID_porzione": "qcse_34047_p1",
+    "testo_verbatim": "Based on the shown Ising Hamiltonian, I built a circuit for the problem unitary as following [...] While 0110 and 1001, which are the solutions to the problem, outstand most of the others, 0000 has the highest counts, which is not correct. Have I done anything wrong with regards to building the circuit from the Hamiltonian?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/34047/converting-ising-hamiltonian-to-a-circuit-in-qiskit",
+    "codice_COSA": "need for verifying the correctness of a manually constructed problem-unitary circuit derived from an Ising Hamiltonian",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;TEST"
+    },
+    //https://github.com/Qiskit/qiskit/issues/1682
+    {
+    "ID_porzione": "qiskit_1682_p1",
+    "testo_verbatim": "The following does show a plot: [...] The issue here is that we had to close the figure instance before returning it, otherwise it would be rendered twice in the notebook. However, in doing so, it is not straightforward to reconstitute the figure, as its gui manager is destroyed. [...] If the example is run in a script, it works fine. I am currently not sure how to handle all the use cases simultaneously.",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/1682",
+    "codice_COSA": "need for reliably displaying visualization output when generated inside functions or loops in a notebook environment",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/29113/how-to-rewrite-this-cirq-problem-into-qiskit
+    {
+    "ID_porzione": "qcse_29113_p1",
+    "testo_verbatim": "I'd like to be able to rewrite this example into an equivalent code in Qiskit, where, as I'm aware is a different spin-orbital mapping, so that I switched 1st and 2nd qubits in ansatz. [...] Why are the expectation values different? Is the operator rewritten in an incorrect way or does the ansatz need different treatment, when rewritten to Qiskit?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/29113/how-to-rewrite-this-cirq-problem-into-qiskit",
+    "codice_COSA": "need for reconciling numerical discrepancies when porting an equivalent computation between two quantum programming frameworks",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;TEST"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/6365/implementation-of-grovers-algorithm-minimum-spanning-tree
+    {
+    "ID_porzione": "qcse_6365_p1",
+    "testo_verbatim": "I am trying to solve a minimum spanning tree problem using Grover's Algorithm. To accomplish this I would need to search a list for the minimum weight or edge for each point [...] I am trying to understand how this problem would be practically applied on either an actual quantum processor or the simulator. I know that an oracle is needed to give the values, but how would this be implemented. Any help is appreciated.",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/6365/implementation-of-grovers-algorithm-minimum-spanning-tree",
+    "codice_COSA": "need for designing an oracle-based search circuit to solve a specific graph optimization problem",
+    "CHI": "Quantum Developer",
+    "QUANDO": "PLAN"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/37901/gradient-free-optimization-in-qiskit-without-using-pre-defined-classes
+    {
+    "ID_porzione": "qcse_37901_p1",
+    "testo_verbatim": "I'm achieving somewhat okay-ish results, but they are way worse than the ones I can achieve using the VQC class. I was investigating the class a bit and found that they are using a NN to compute the gradients of the circuit, and then pass them to the optimizer. This would mean that the Nelder-Mead method in Qiskit is no longer gradient-free? Do you have any ideas on how to approach this issue and what other steps have to be taken, in order to achieve similar results as in the VQC class?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/37901/gradient-free-optimization-in-qiskit-without-using-pre-defined-classes",
+    "codice_COSA": "need for understanding why a manually built training loop underperforms a framework's built-in variational classifier implementation",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;TEST"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/15048/conjugate-transpose-of-a-u-gate
+    {
+    "ID_porzione": "qcse_15048_p1",
+    "testo_verbatim": "I want to be able to create the circuit depicted below, but running the code below results in an empty circuit when viewing the job afterwards.",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/15048/conjugate-transpose-of-a-u-gate",
+    "codice_COSA": "need for understanding why a transpiled circuit is optimized away to an empty circuit on a target backend",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+    },
+    //https://github.com/rigetti/pyquil/issues/1762
+    {
+    "ID_porzione": "pyquil_1762_p1",
+    "testo_verbatim": "When I run get_qc(\"2q-noisy-qvm\") I get an UnknownApiError. Is pyquil v3 still compatible with the QVM?",
+    "riferimento_thread": "https://github.com/rigetti/pyquil/issues/1762",
+    "codice_COSA": "need for diagnosing an opaque connection error when configuring a local QVM server for a specific framework version",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE;RELEASE"
+    },
+    //https://github.com/Qiskit/qiskit/issues/1458
+    {
+    "ID_porzione": "qiskit_1458_p1",
+    "testo_verbatim": "Is there a way to display multiple per cell using the figure object? [...] Or do we just have to ensure we only have one plot_histogram per Jupyter cell? For me doing fig.show() prints the error: UserWarning: matplotlib is currently using a non-GUI backend, so cannot show the figure",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/1458",
+    "codice_COSA": "need for displaying multiple visualization outputs within a single notebook cell",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://stackoverflow.com/questions/73979404/fatal-error-compiling-invalid-flag-release-packaging-redfx-quantum-strange
+    {
+    "ID_porzione": "so_73979404_p1",
+    "testo_verbatim": "attempting to build RedFX-Quantum/Strange. When running mvn package, I get \"Fatal error compiling: invalid flag: --release\". [...] How would I go about fixing it? [...] I'm assuming I have to change things in the file to fit what versions of java and maven I have but I'm pretty new to the both of them and don't really know what I'm looking for.",
+    "riferimento_thread": "https://stackoverflow.com/questions/73979404/fatal-error-compiling-invalid-flag-release-packaging-redfx-quantum-strange",
+    "codice_COSA": "need for resolving a build toolchain error when compiling a quantum simulator library from source",
+    "CHI": "Quantum Developer",
+    "QUANDO": "DEPLOY_CONFIGURE"
+    },
+    //https://github.com/PennyLaneAI/pennylane/issues/5099
+    {
+    "ID_porzione": "pennylane_5099_p1",
+    "testo_verbatim": "I need to perform the adjoint of StatePrep while being controlled by an ancilla qubit, so the global phase offset manifests into a problem. Manually adding a phase gate that corrects the phase with respect to the number of negative amplitudes in original state works, but leaves the circuit un-batchable.",
+    "riferimento_thread": "https://github.com/PennyLaneAI/pennylane/issues/5099",
+    "codice_COSA": "need for correcting a global phase offset in an adjoint state-preparation operation without breaking circuit batchability",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;TEST"
+    },
+    //https://github.com/Qiskit/qiskit/issues/6468
+    {
+    "ID_porzione": "qiskit_6468_p1",
+    "testo_verbatim": "small rotations in generated ansatz are not removed by the transpiler passes. [...] What is the expected behavior? the rotation with a small angle may be removed. Suggested solutions: add a transpile pass that check for this condition.",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/6468",
+    "codice_COSA": "need for eliminating near-zero parametric rotation gates during circuit optimization",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://github.com/Qiskit/qiskit/issues/10276
+    {
+    "ID_porzione": "qiskit_10276_p1",
+    "testo_verbatim": "When that demo is ran with optimization_level=0, this exception raises: TranspilerError: 'Chosen layout is not valid for the target disjoint connectivity'. [...] What should happen? it should work as in other optimization levels.",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/10276",
+    "codice_COSA": "need for understanding why transpilation fails on disjoint-topology backends at the lowest optimization level and how to work around it",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;DEPLOY_CONFIGURE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/39160/reducing-estimator-time-for-calculating-expectation-values
+    {
+    "ID_porzione": "qcse_39160_p1",
+    "testo_verbatim": "Is there any way to reduce the time taken by the Estimator to calculate the expectation values, or is it not possible at all? Should I be using any other method for this? [...] I haven't decomposed any of these into fundamental one or two-qubit gates, does that heavily affect the performance?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/39160/reducing-estimator-time-for-calculating-expectation-values",
+    "codice_COSA": "need for reducing the computation time of expectation value estimation for large parametrized simulation circuits",
+    "CHI": "Quantum Developer",
+    "QUANDO": "EVALUATE"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/35325/why-this-qc-probability-drop-to-01-and-11-instead-of-10-and-11
+    {
+    "ID_porzione": "qcse_35325_p1",
+    "testo_verbatim": "The final state before measure should be |1⟩⊗|−⟩, and it will be 1/√2(|10⟩−|11⟩), so the probability of this QC should be a half is |10⟩ and other half is |11⟩. But the result of this QC is a half is |01⟩ and other half is |11⟩. Can someone explain me why?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/35325/why-this-qc-probability-drop-to-01-and-11-instead-of-10-and-11",
+    "codice_COSA": "need for understanding why measured circuit output does not match the theoretically expected state",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/17505/set-the-bounds-for-ansatz-parameters-in-vqe
+    {
+    "ID_porzione": "qcse_17505_p1",
+    "testo_verbatim": "How can I make intervals for free parameters when I use VQE function? I have built a parametrized (θ1,...,θn) circuit without using ansatz in Qiskit Circuit Library and I would like to set e.g. θi∈[0,π].",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/17505/set-the-bounds-for-ansatz-parameters-in-vqe",
+    "codice_COSA": "need for constraining the value ranges of variational circuit parameters when configuring a VQE optimization",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://github.com/PennyLaneAI/pennylane/issues/553
+    {
+    "ID_porzione": "pennylane_553_p1",
+    "testo_verbatim": "When I try to create hamiltonian using 'H=qml.Hamiltonian(coeffs, obs)', I have an error 'AttributeError: 'Hamiltonian' object has no attribute 'name''. [...] PS. I do not actually know it is a bug or not. I suppose that I do not use Pennylane properly.",
+    "riferimento_thread": "https://github.com/PennyLaneAI/pennylane/issues/553",
+    "codice_COSA": "need for correctly using a Hamiltonian object as an observable within a QNode expectation value",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    {
+    "ID_porzione": "pennylane_553_p2",
+    "testo_verbatim": "Is it possible using Pennylane (or StrawberryFields) to construct CV-observables Obs1=a n_0 n_1+b n_1n_2 and Obs2=a q_0 q_1+b p_0p_1 where n_0, q_0, p_0 are number, position and momentum operators for mode-0 and a,b are constants? If yes, could you please send me an example? [...] I managed to create only a n_0+b n_1 term (see snippet). qml.NumberOperator(0,1) and qml.NumberOperator(0)@qml.NumberOperator(1) not working",
+    "riferimento_thread": "https://github.com/PennyLaneAI/pennylane/issues/553",
+    "codice_COSA": "need for constructing tensor-product observables for continuous-variable quantum computing",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE"
+    },
+    //https://github.com/Qiskit/qiskit/issues/1138
+    {
+    "ID_porzione": "qiskit_1138_p1",
+    "testo_verbatim": "I have a question is that, to make codes can be run on a device and a simulator efficiently. I need to do: On a device, do not explicitly put the barrier before the measurement. On a simulator, put the barrier before the measurement. Is it correct? Or the barrier won't change the efficiency on running a device?",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit/issues/1138",
+    "codice_COSA": "need for writing circuit code that behaves consistently and efficiently across both real devices and simulators",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;DEPLOY_CONFIGURE"
+    },
+    //https://github.com/Qiskit/qiskit-aer/issues/2253
+    {
+    "ID_porzione": "qiskit_aer_2253_p1",
+    "testo_verbatim": "If I use set_matrix_product_state to set an initial state in the simulator - it's not loaded properly. [...] Interesting to note that Aer simulator returns not even a correct statevector, since it's not normalized. [...] I dont see a reason why values written as 0.-0.j work whenever 0.+0.j does not.",
+    "riferimento_thread": "https://github.com/Qiskit/qiskit-aer/issues/2253",
+    "codice_COSA": "need for understanding why loading a matrix product state initializes the simulator incorrectly depending on the sign representation of zero-valued complex amplitudes",
+    "CHI": "Quantum Developer",
+    "QUANDO": "TEST"
+    },
+    //https://quantumcomputing.stackexchange.com/questions/34359/comparing-bqm-and-cqm-solving-for-a-tree-path-problem
+    {
+    "ID_porzione": "qcse_34359_p1",
+    "testo_verbatim": "Then I proceed to convert the CQM to BQM using the dwave function, it runs, but returns worse energy once the tree has 3+ levels. I've tried both full quantum BQM [...] and the hybrid BQM, but can't obtain nothing good. I've even tried splitting the problem in 2 phases [...] I've even tried to modify the lagrange multiplier [...] but did not obtain nothing too relevant [...] I wonder if there's something i can do to optimize it even further [...] Maybe i've just done something wrong and it's my fault or maybe the conversion function is not suitable for this project?",
+    "riferimento_thread": "https://quantumcomputing.stackexchange.com/questions/34359/comparing-bqm-and-cqm-solving-for-a-tree-path-problem",
+    "codice_COSA": "need for improving the solution quality of a constrained optimization problem after automatic conversion from a constrained to a binary quadratic model",
+    "CHI": "Quantum Developer",
+    "QUANDO": "CODE;TEST"
+    },
+
+]
