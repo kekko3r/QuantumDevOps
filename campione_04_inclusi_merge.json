@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "versione": "validazione_batch4_su_v3",
+    "protocollo": "Mappatura top-down delle 30 porzioni raffinate del Batch 4 sulla tassonomia v3. I 3 casi non coperti dalle definizioni v3 sono stati integrati come casi isolati (1 estensione di definizione, 1 nuova categoria a singola porzione), coerentemente con l'andamento di convergenza dei batch precedenti.",
+    "totale_porzioni_batch4": 30,
+    "esito": "30/30 mappate su 14 categorie: 27 su definizioni v3 invariate; qiskit_1682_p1 e qiskit_1458_p1 via estensione di CAT14; qcse_33901_p1 su CAT5 (lettura ampia della clausola di configurazione dell'ambiente, flaggata per inter-rater).",
+    "verdetto_saturazione": "SATURA: nessuna nuova categoria nel Batch 4; unica modifica un'estensione di definizione (CAT14). Trend di convergenza per batch: B2 = 3 nuove categorie + split + ridefinizioni; B3 = 2 nuove a singola porzione; B4 = 0 nuove, 1 estensione.",
+    "modifiche_alla_tassonomia": [
+      "CAT14 estesa: da 'visualizzazione della rappresentazione a diagramma del circuito' a 'visualizzazione di circuiti e output nell'ambiente di sviluppo' (diagrammi del circuito e output di visualizzazione dei risultati). Porzioni: 33566, 18371, 17363, 1682, 1458 (5)."
+    ],
+    "segnali": "CAT4 +2 dopo due batch a crescita zero; CAT11 al 2° esemplare; CAT2 prima porzione esterna alla famiglia d'origine; FEEDBACK 0/~400 su tutti i batch (finding RQ2).",
+    "note_fasi_v4": "Estensioni fasi al consolidamento: CAT12+TEST (34047, 5099, 34359); CAT11+TEST (29113); CAT8+TEST (37901); CAT4+DEPLOY_CONFIGURE (1520); CAT14+CODE (invariata).",
+    "inter_rater_batch4": [
+      "qcse_33901_p1 (mappatura CAT5, lettura ampia)",
+      "qiskit_10276_p1",
+      "pennylane_5099_p1 (CAT12 vs CAT8)",
+      "qiskit_aer_2253_p1",
+      "qcse_6365_p1",
+      "pyquil_136_p1",
+      "cuda_quantum_3471_p1",
+      "qiskit_1682_p1",
+      "qiskit_1138_p1 (CAT6 vs CAT1)"
+    ]
+  },
+  "mappature": [
+    {
+      "ID_porzione": "qcse_18371_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT14",
+      "motivazione": "Etichettatura degli elementi nel disegno del circuito: copertura letterale."
+    },
+    {
+      "ID_porzione": "cuda_quantum_3573_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT3",
+      "motivazione": "Validazione del comportamento simulato contro le predizioni attese (famiglia 12645/33208)."
+    },
+    {
+      "ID_porzione": "pyquil_136_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Convenzioni della piattaforma nella costruzione del programma (sintassi delle istruzioni)."
+    },
+    {
+      "ID_porzione": "qcse_33901_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT5",
+      "motivazione": "Configurazione dell'ambiente di lavoro necessaria al funzionamento degli strumenti (clausola letterale di CAT5): far funzionare il framework con il proprio setup di laboratorio; fase DEPLOY_CONFIGURE coincidente. Lettura ampia della clausola, flaggata per inter-rater."
+    },
+    {
+      "ID_porzione": "so_64717329_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT8",
+      "motivazione": "Componente QML custom conforme al contratto di differenziabilita' del framework ML."
+    },
+    {
+      "ID_porzione": "qiskit_aer_1520_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT4",
+      "motivazione": "Scalabilita' su infrastrutture HPC distribuite: copertura letterale (MPI, blocking_qubits)."
+    },
+    {
+      "ID_porzione": "qcse_13626_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT6",
+      "motivazione": "Capacita' dell'interfaccia di esecuzione (equivalente shots) e adattamento del codice."
+    },
+    {
+      "ID_porzione": "qcse_17363_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT14",
+      "motivazione": "Stile del disegno del circuito nell'ambiente di sviluppo: copertura letterale."
+    },
+    {
+      "ID_porzione": "qcse_14236_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT3",
+      "motivazione": "Validazione via simulazione, confronto tra metodi (famiglia 12645)."
+    },
+    {
+      "ID_porzione": "cuda_quantum_3471_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT5",
+      "motivazione": "Disponibilita' dei pacchetti per piattaforme specifiche: clausola letterale (1872/1286)."
+    },
+    {
+      "ID_porzione": "qcse_34047_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Sintesi di operatori e formulazione per risolutori quantum (problem unitary da Ising)."
+    },
+    {
+      "ID_porzione": "qiskit_1682_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT14",
+      "motivazione": "Caso isolato mergiato via estensione di CAT14 all'output di visualizzazione dei risultati."
+    },
+    {
+      "ID_porzione": "qcse_29113_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT11",
+      "motivazione": "Conversione di operatori/circuiti tra formati di framework diversi: copertura letterale, 2° esemplare."
+    },
+    {
+      "ID_porzione": "qcse_6365_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Formulazione del problema per risolutori quantum (oracolo per MST), fase PLAN prevista."
+    },
+    {
+      "ID_porzione": "qcse_37901_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT8",
+      "motivazione": "Training loop variazionale e semantica dei gradienti: cuore della definizione."
+    },
+    {
+      "ID_porzione": "qcse_15048_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT1",
+      "motivazione": "Effetti osservabili della transpilazione sui risultati: copertura letterale (gemello 12846)."
+    },
+    {
+      "ID_porzione": "pyquil_1762_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT9",
+      "motivazione": "Errore indotto da aggiornamento e compatibilita' di versione: copertura letterale."
+    },
+    {
+      "ID_porzione": "qiskit_1458_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT14",
+      "motivazione": "Caso isolato mergiato via estensione di CAT14 (stesso fenomeno di 1682)."
+    },
+    {
+      "ID_porzione": "so_73979404_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT5",
+      "motivazione": "Setup: build da sorgente bloccata da toolchain (famiglia 1286/1224)."
+    },
+    {
+      "ID_porzione": "pennylane_5099_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Sintesi di stati dai costrutti disponibili (adjoint StatePrep con correzione di fase); alternativa CAT8 flaggata."
+    },
+    {
+      "ID_porzione": "qiskit_6468_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT2",
+      "motivazione": "Meccanica delle passate di ottimizzazione: prima porzione esterna alla famiglia 13574."
+    },
+    {
+      "ID_porzione": "qiskit_10276_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT1",
+      "motivazione": "Vincoli hardware del backend target in transpilazione: copertura letterale."
+    },
+    {
+      "ID_porzione": "qcse_39160_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT4",
+      "motivazione": "Ottimizzazione delle risorse e scelta del metodo di simulazione: copertura letterale."
+    },
+    {
+      "ID_porzione": "qcse_35325_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT3",
+      "motivazione": "Validazione dell'output osservato contro l'atteso su simulatore; la convenzione di ordinamento e' la causa nella risposta, non il bisogno (distinzione da 41146->CAT12)."
+    },
+    {
+      "ID_porzione": "qcse_17505_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT8",
+      "motivazione": "Semantica dei parametri variazionali: copertura letterale (bound in VQE)."
+    },
+    {
+      "ID_porzione": "pennylane_553_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Sintesi di operatori dai costrutti disponibili (oggetto Hamiltonian)."
+    },
+    {
+      "ID_porzione": "pennylane_553_p2",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Sintesi di osservabili tensor-product CV: limite espressivo della piattaforma."
+    },
+    {
+      "ID_porzione": "qiskit_1138_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT6",
+      "motivazione": "Adattamento del codice alle capacita' del target di esecuzione (simulatore vs device); alternativa CAT1 flaggata."
+    },
+    {
+      "ID_porzione": "qiskit_aer_2253_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT3",
+      "motivazione": "Ispezione degli stati per il debugging: copertura letterale (round-trip MPS)."
+    },
+    {
+      "ID_porzione": "qcse_34359_p1",
+      "verdetto": "MAPPATA",
+      "categoria": "CAT12",
+      "motivazione": "Formulazione del problema per risolutori quantum (CQM->BQM su D-Wave)."
+    }
+  ]
+}
