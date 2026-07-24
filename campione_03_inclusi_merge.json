@@ -292,9 +292,9 @@
     },
     {
       "id_categoria": "CAT14",
-      "macro_categoria": "Visualizzazione della struttura del circuito nell'ambiente di sviluppo",
-      "descrizione": "Bisogni relativi alla visualizzazione della rappresentazione a diagramma del circuito quantistico associato al proprio programma, con gli strumenti disponibili nell'ambiente di sviluppo in uso.",
-      "need_aggregato": "Need for displaying the circuit-diagram representation of quantum programs within the tooling of the development environment in use.",
+      "macro_categoria": "Visualizzazione di circuiti e output nell'ambiente di sviluppo",
+      "descrizione": "Bisogni relativi alla visualizzazione, con gli strumenti disponibili nell'ambiente di sviluppo in uso, della rappresentazione a diagramma del circuito quantistico associato al proprio programma e dell'output di visualizzazione dei risultati (grafici e figure) prodotto durante lo sviluppo.",
+      "need_aggregato": "Need for displaying, within the tooling of the development environment in use, both the circuit-diagram representation of quantum programs and the visualization output of results (plots and figures) produced during development.",
       "n_porzioni_aggregate": 1,
       "fasi_devops_associate": [
         "CODE"

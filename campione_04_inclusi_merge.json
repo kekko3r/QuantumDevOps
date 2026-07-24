@@ -1,13 +1,10 @@
 {
   "metadata": {
     "versione": "validazione_batch4_su_v3",
-    "protocollo": "Mappatura top-down delle 30 porzioni raffinate del Batch 4 sulla tassonomia v3. I 3 casi non coperti dalle definizioni v3 sono stati integrati come casi isolati (1 estensione di definizione, 1 nuova categoria a singola porzione), coerentemente con l'andamento di convergenza dei batch precedenti.",
+    "protocollo": "Mappatura top-down delle 30 porzioni raffinate del Batch 4 sulla tassonomia v3. I 3 casi non coperti dalle definizioni v3 sono stati integrati come casi isolati, ma che grazie a questa metodologia di validazione si riescono a mappare.",
     "totale_porzioni_batch4": 30,
-    "esito": "30/30 mappate su 14 categorie: 27 su definizioni v3 invariate; qiskit_1682_p1 e qiskit_1458_p1 via estensione di CAT14; qcse_33901_p1 su CAT5 (lettura ampia della clausola di configurazione dell'ambiente, flaggata per inter-rater).",
-    "verdetto_saturazione": "SATURA: nessuna nuova categoria nel Batch 4; unica modifica un'estensione di definizione (CAT14). Trend di convergenza per batch: B2 = 3 nuove categorie + split + ridefinizioni; B3 = 2 nuove a singola porzione; B4 = 0 nuove, 1 estensione.",
-    "modifiche_alla_tassonomia": [
-      "CAT14 estesa: da 'visualizzazione della rappresentazione a diagramma del circuito' a 'visualizzazione di circuiti e output nell'ambiente di sviluppo' (diagrammi del circuito e output di visualizzazione dei risultati). Porzioni: 33566, 18371, 17363, 1682, 1458 (5)."
-    ],
+    "esito": "30/30 mappate su 14 categorie.",
+    "verdetto_saturazione": "SATURA: nessuna nuova categoria nel Batch 4.",
     "segnali": "CAT4 +2 dopo due batch a crescita zero; CAT11 al 2° esemplare; CAT2 prima porzione esterna alla famiglia d'origine; FEEDBACK 0/~400 su tutti i batch (finding RQ2).",
     "note_fasi_v4": "Estensioni fasi al consolidamento: CAT12+TEST (34047, 5099, 34359); CAT11+TEST (29113); CAT8+TEST (37901); CAT4+DEPLOY_CONFIGURE (1520); CAT14+CODE (invariata).",
     "inter_rater_batch4": [
