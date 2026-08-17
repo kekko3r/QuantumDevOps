@@ -4,7 +4,6 @@ Bug report puri senza bisogno informativo espresso
 https://github.com/Qiskit/qiskit/issues/12081
 Discussione interne di sviluppo delle librerie che non esprimono bisogni informativi operativi per aiutare practitioner estern
 
-
 https://github.com/unitaryfoundation/mitiq/issues/824
 Discussioni interne di sviluppo delle librerie che non esprimono bisogni informativi operativi per aiutare practitioner esterni 
 

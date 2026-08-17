@@ -1,23 +1,7 @@
 {
   "metadata": {
     "versione": "validazione_batch4_su_v3",
-    "protocollo": "Mappatura top-down delle 30 porzioni raffinate del Batch 4 sulla tassonomia v3. I 3 casi non coperti dalle definizioni v3 sono stati integrati come casi isolati, ma che grazie a questa metodologia di validazione si riescono a mappare.",
-    "totale_porzioni_batch4": 30,
-    "esito": "30/30 mappate su 14 categorie.",
-    "verdetto_saturazione": "SATURA: nessuna nuova categoria nel Batch 4.",
-    "segnali": "CAT4 +2 dopo due batch a crescita zero; CAT11 al 2° esemplare; CAT2 prima porzione esterna alla famiglia d'origine; FEEDBACK 0/~400 su tutti i batch (finding RQ2).",
-    "note_fasi_v4": "Estensioni fasi al consolidamento: CAT12+TEST (34047, 5099, 34359); CAT11+TEST (29113); CAT8+TEST (37901); CAT4+DEPLOY_CONFIGURE (1520); CAT14+CODE (invariata).",
-    "inter_rater_batch4": [
-      "qcse_33901_p1 (mappatura CAT5, lettura ampia)",
-      "qiskit_10276_p1",
-      "pennylane_5099_p1 (CAT12 vs CAT8)",
-      "qiskit_aer_2253_p1",
-      "qcse_6365_p1",
-      "pyquil_136_p1",
-      "cuda_quantum_3471_p1",
-      "qiskit_1682_p1",
-      "qiskit_1138_p1 (CAT6 vs CAT1)"
-    ]
+    "totale_porzioni_batch4": 30
   },
   "mappature": [
     {

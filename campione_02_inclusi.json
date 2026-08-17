@@ -1,5 +1,4 @@
 [
-    //https://github.com/Qiskit/qiskit-aer/issues/1872
     {
     "ID_porzione": "qiskit_aer_1872_p1",
     "testo_verbatim": "For running inside a Docker container, I have to either revert to the older version 0.12.0 or clone the repository and locally build the wheels.",
@@ -8,7 +7,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/27396/stim-how-are-the-signs-in-tableau-calculated-and-how-to-force-them-to
     {
     "ID_porzione": "qcse_27396_p1",
     "testo_verbatim": "Measuring the stabilizers gives the syndrome; if there are errors I'd like to know the syndrome exactly without worrying; the signs can really complicate things. That's why it would be good to be able to force them to +",
@@ -17,7 +15,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "PLAN;CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/12645/i-want-to-create-a-depolarizing-channel-on-ibm-qiskit
     {
     "ID_porzione": "qcse_12645_p1",
     "testo_verbatim": "I have looked at Qiskits documentation on the depolarizing_error function but it is not clear, or I don't understand the maths. Could anyone please shed more light on this?",
@@ -26,7 +23,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/9967/how-to-use-external-csv-data-file-in-quantum-support-vector-machine-qiskit-pyth
     {
     "ID_porzione": "qcse_9967_p1",
     "testo_verbatim": "How I can use .csv data file with Qiskit libraries to run quantum SVM ? I am following the code written below, where I should put my own .csv data file",
@@ -35,7 +31,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/13669/error-associated-with-httpsconnectionpool
     {
     "ID_porzione": "qcse_13669_p1",
     "testo_verbatim": "How can I solve this situation? [...] IBMQBackendApiError: 'Error sending job: \"HTTPSConnectionPool (host = \\ 'api .quantum -computing.ibm.com \\', port = 443): Reading timeout. [...] At this point, the entire simulation is permanently stopped. When I used Windows 10 this type of message did not appear but, recently, I changed the operating system to Ubuntu 20.04.",
@@ -44,7 +39,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/21051/what-is-the-input-for-the-interpret-of-quantum-variational-regressors
     {
     "ID_porzione": "qcse_21051_p1",
     "testo_verbatim": "I would like to understand how the interpret of a CircuitQNN works. I need to define an interpret that works on the amplitudes of a certain set of measured basis states. [...] I would like to execute all the S shots and then on the counts perform some operations. Any suggestions?",
@@ -53,7 +47,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://github.com/Qiskit/qiskit/issues/13172
     {
     "ID_porzione": "qiskit_13172_p1",
     "testo_verbatim": "storing the distribution values of each iteration of a Grover circuit. if a Grovers circuit has three iterations is there a way to store the distributions of each of the three iterations separately. the following block of code gives you the final distribution only",
@@ -62,7 +55,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/34739/retrieving-job-result-attributes-in-qiskit
     {
     "ID_porzione": "qcse_34739_p1",
     "testo_verbatim": "But after the job was done, I cannot get the value for res which was defined in the previous line of code. [...] And I tried using job.result() but that doesn't have the required attributes I got from the results of the simulator stored in variable 'res'. How can I get the attributes such as res.x from the already completed job?",
@@ -71,7 +63,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/40509/custom-feature-map-error-for-vqr-in-qiskit-input-data-has-incorrect-shape-last
     {
     "ID_porzione": "qcse_40509_p1",
     "testo_verbatim": "I made it work with ZFeatureMap but now I want to create my own feature maps to make experiments. [...] When I try to run this code I get below error. 'Input data has incorrect shape, last dimension is not equal to the number of inputs: 0, but got: 4.'",
@@ -80,7 +71,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/8269/backend-warning-the-skip-qobj-validation-does-not-work-for-ibmq-provider-disab
     {
     "ID_porzione": "qcse_8269_p1",
     "testo_verbatim": "While the code runs a message in red displays saying, 'The skip Qobj validation does not work for IBMQ provider. Disable it.' How do I do what this message is asking?",
@@ -89,7 +79,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/28266/how-to-read-data-from-multiple-qubits-and-feed-it-to-a-mlp
     {
     "ID_porzione": "qcse_28266_p1",
     "testo_verbatim": "how can I read my data from multiple qubits after passing through all gates in the quantum circuit and pass the output to a MLP network",
@@ -106,7 +95,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "PLAN;CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/33735/performing-binary-operations-on-classical-bits
     {
     "ID_porzione": "qcse_33735_p1",
     "testo_verbatim": "I need to check a condition like Σᵢaᵢ=0 mod 2 where aᵢ are the ancilla measurement results, and so it would be much easier to perform arithmetic on the bits in the classical register rather than checking all the possibilities one by one (which is exponential in the number of qubits). Is there a way to do that on Qiskit? I am trying different operations like '+' or '^' but these operations cannot be used with clbit type.",
@@ -115,7 +103,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/13421/how-to-get-state-vector-probabilities-in-q
     {
     "ID_porzione": "qcse_13421_p1",
     "testo_verbatim": "Is there a similare function in Q# like Statevector.probabilities in Qiskit to get state vector probability, for example, if my circuit contains one qubit with one H gate, the function returns something like [0.5, 0.5].",
@@ -124,7 +111,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/21395/what-is-an-algorithm-to-generate-random-error-in-depolarizing-channel
     {
     "ID_porzione": "qcse_21395_p1",
     "testo_verbatim": "I have a system of n qubits. I'd like to generate random errors from that channel. [...] Does anyone know of a tried and tested method for doing that. Python or any other language (or even pseudo-code) are fine.",
@@ -133,7 +119,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE;TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/24324/how-to-convert-pennylane-decompose-hamiltonian-to-cirq-paulistring
     {
     "ID_porzione": "qcse_24324_p1",
     "testo_verbatim": "Is there any simple way to convert the format of the returned operations, i.e. from Identity(wires=[0]) @ PauliZ(wires=[1]) (Pennylane syntax) to cirq.PauliString(cirq.I(qubits[0]), cirq.Z(qubits[1]))?",
@@ -142,7 +127,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://github.com/rigetti/pyquil/issues/387
     {
     "ID_porzione": "pyquil_387_p1",
     "testo_verbatim": "Is there a way to submit job(s) to the QPU and receive the results via email (this would be useful for submitting multiple jobs), or is it that we run a script and wait for it to complete?",
@@ -151,7 +135,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/17371/is-there-a-way-to-run-in-the-background-code-sent-to-the-ibm-backends
     {
     "ID_porzione": "qcse_17371_p1",
     "testo_verbatim": "Since the maximum number of shots is 2¹³, sometimes I need to send the same code several times with a 'different ticket'. I am wondering if there is an equivalent way to run in the background, similar to the command nohup, to run qiskit code so that it runs all the instances one would like (or waiting in the queue as they are sent!)",
@@ -160,7 +143,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/40890/how-to-solve-maximum-allowed-dimension-exceeded-while-trying-to-run-grovers-a
     {
     "ID_porzione": "qcse_40890_p1",
     "testo_verbatim": "The previous code was running fine but due to some recent changes in qiskit, I had to modify it. But I can't seem to fix this 'Maximum allowed dimension exceeded' error. [...] How do I go about fixing this?",
@@ -177,7 +159,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/37634/full-result-of-qiskit-sampler
     {
     "ID_porzione": "qcse_37634_p1",
     "testo_verbatim": "the quasi_dists from SamplerV1 and the get_counts() from SamplerV2 are much shorter. Is it because they omit the 0? If I do need the full result dictionary, is there any way I can access it? [...] What is the more efficient way to manipulate the individual results?",
@@ -186,7 +167,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/18001/solving-linear-system-ax-b-with-exponential-speed-up-via-binary-optimization
     {
     "ID_porzione": "qcse_18001_p1",
     "testo_verbatim": "In the end, we came to binary optimization task [...] Such minimization can be done with algorithms like QAOA or VQE, or a quantum annealing machine. [...] Does this idea make sense or is there some flaw? I would appreciate any comment and ideas.",
@@ -195,7 +175,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "PLAN;CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/12846/why-after-transpiling-a-qiskit-circuit-we-obtain-a-different-result
     {
     "ID_porzione": "qcse_12846_p1",
     "testo_verbatim": "although they should be the same because the circuit is just transpiled, I obtain completely different outcomes [...] I think that the problem is with the initialize command [...] Is it possible to use the initialize command with the transpile one? Is there any other option to obtain the transpiled circuit when it is initialized in a concrete state?",
@@ -204,7 +183,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD;TEST"
     },
-    //https://github.com/Qiskit/qiskit/issues/1712
     {
     "ID_porzione": "qiskit_1712_p1",
     "testo_verbatim": "matplotlib and ipywidgets are installed (other jupyter monitoring tools work fine), I just [get] an empty box in the case of %qiskit_backend_monitor [...] I have just tried creating a whole new conda environment with a clean install of qiskit, and it still doesn't work. I don't know what in my setup could be causing this.",
@@ -213,7 +191,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://quantumcomputing.stackexchange.com/questions/41003/trouble-initializing-sampler-in-qiskit-1-3-2
     {
     "ID_porzione": "qcse_41003_p1",
     "testo_verbatim": "When I try to initialize Sampler with any parameters (backend or session), I get a TypeError saying unexpected keyword arguments are passed. [...] How should one correctly initialize Sampler in Qiskit 1.3.2? Is there a specific method or workaround for this version?",
@@ -222,7 +199,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE;DEPLOY_CONFIGURE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/37220/ibmprovider-load-account-attributeerror-type-object-ibmprovider-has-no-attr
     {
     "ID_porzione": "qcse_37220_p1",
     "testo_verbatim": "I am trying to resolve the below deprecation warnings I am getting while using IBMQ framework. [...] Now, I have changed it below: IBMProvider.save_account('key', overwrite=True) IBMProvider.load_account() But now I am getting the error: AttributeError: type object 'IBMProvider' has no attribute 'load_account'.",
@@ -231,7 +207,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE;DEPLOY_CONFIGURE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/28649/implementing-controlled-rotation-for-frqi-by-using-controlled-ry-and-not-gate
     {
     "ID_porzione": "qcse_28649_p1",
     "testo_verbatim": "I would like to implement the controlled rotation Ri or R using C2nRy (controlled Ry) and X gate. [...] I think I have made some progress. [...] Please review my results and suggest me how to approach further.",
@@ -240,7 +215,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://github.com/PennyLaneAI/pennylane/issues/1242
     {
     "ID_porzione": "pennylane_1242_p1",
     "testo_verbatim": "Just a quick question: what should I use instead of qml.inv()?",
@@ -249,5 +223,4 @@
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE"
     }
-    
 ]

@@ -1,5 +1,4 @@
 [
-    //https://github.com/quantumlib/Cirq/issues/4163
     {
     "ID_porzione": "cirq_4163_p1",
     "testo_verbatim": "having a way to get a classical distribution over outcomes instead might be useful",
@@ -8,8 +7,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://github.com/Qiskit/qiskit-ibm-runtime/issues/1250
-    //COMMENTO QUESTO RIGUARDA LA DOCUMENTAZIONE. ORA GREZZO E’ SPECIFICO MA DIVENTERÀ NECESSITÀ DI AVERE UNA DOCUMENTAZIONE CORRETTA E COMPLETA
     {
     "ID_porzione": "qiskit_ibm_runtime_1250_p1",
     "testo_verbatim": "it would make more sense to me if the current implementation were left in place and the API docs were changed to match. It seems odd that a session wouldn't have an ID until it completed a job; rather, I would expect the session to have an ID as soon as it's opened",
@@ -18,9 +15,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/9310/unit-testing-for-quantum-programs
-    //potrebbero accorparsi in una categoria più ampia tipo:
-    ///"need for automated testing approaches for quantum programs"
     {
     "ID_porzione": "qcse_9310_p1",
     "testo_verbatim": "Does unit testing on real quantum computers make sense as any observation in the quantum system can cause the system to loose its superposition state?",
@@ -37,7 +31,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    // PER P3 bisogno di integrazione tra tooling classico e quantum, che per me è un bisogno diverso dai precedenti
     {
     "ID_porzione": "qcse_9310_p3",
     "testo_verbatim": "Q# supports creating unit tests for quantum programs, and which can run as tests within the xUnit unit testing framework",
@@ -46,7 +39,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/23866/what-does-the-qiskit-transpile-function-do-on-an-azure-quantum-ionq-provider
     {
     "ID_porzione": "qcse_23866_p1",
     "testo_verbatim": "I was wondering if I need to run the transpile function",
@@ -63,7 +55,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD"
     },
-    //3 è forse il più interessante dei tre perché tocca esattamente la dimensione DevOps del quantum cloud: la pipeline di build può essere locale (Qiskit transpiler) o delegata al provider cloud (IonQ pipeline). Questa è una decisione architetturale del workflow che impatta DEPLOY_CONFIGURE oltre che BUILD. 
     {
     "ID_porzione": "qcse_23866_p3",
     "testo_verbatim": "The IonQ provider provides access to the full IonQ Cloud backend, which includes its own transpilation and compilation pipeline.",
@@ -72,7 +63,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD;DEPLOY_CONFIGURE "
     },
-    //https://quantumcomputing.stackexchange.com/questions/21905/simulating-readout-errors-on-aer-simulator
     {
     "ID_porzione": "qcse_21905_p1",
     "testo_verbatim": "How can I set up the noise model for readout errors?",
@@ -81,7 +71,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/16419/memory-requirements-for-qiskit-aer-simulator
     {
     "ID_porzione": "qcse_16419_p1",
     "testo_verbatim": "I'm trying to work out how much memory is used for simulations of different sizes using the Aer simulator.",
@@ -114,7 +103,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/14261/depth-for-ucc-ansatz
     {
     "ID_porzione": "qcse_14261_p1",
     "testo_verbatim": "Can someone help me with how the two are different, viz, depth and Trotter step?",
@@ -123,8 +111,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //QUESTA MOLTO FORTE PERCHE SI PARLA DI MIGRAZIONE E LA MIGRAZIONE IN UN CONTESTO DEVOPS SI RICHIAMA
-    //UNA NUOVA RELEASE CHE PRIMA VA TESTATA ETC ETC
     {
     "ID_porzione": "qcse_14261_p2",
     "testo_verbatim": "in the new Qiskit release, \"depth\" is not called \"reps\" which, obviously, stands for repetition",
@@ -133,7 +119,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE"
     },
-    //https://github.com/Qiskit/qiskit-ibm-runtime/issues/1297
     {
     "ID_porzione": "qiskit_ibm_runtime_1297_p1",
     "testo_verbatim": "drop the memory argument and only expose the behavior of memory=True. Rationale: if you really want statistics, use the Sampler instead.",
@@ -150,7 +135,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "EVALUATE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/37411/hello-world-program-in-qiskit-1-0
     {
     "ID_porzione": "qcse_37411_p1",
     "testo_verbatim": "How do I write a \"Hello world\" program in Qiskit 1.0, which should be run on IBM cloud and require less than 600 seconds for implementation?",
@@ -159,7 +143,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //fa riferimento al tempo di deploy che è improtante per il devops
     {
     "ID_porzione": "qcse_37411_p2",
     "testo_verbatim": "if you want to run a simple circuit on one of the backends that requires minimum time to be executed",
@@ -168,7 +151,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "MONITOR"
     },
-    //https://github.com/Qiskit/qiskit/issues/13574
     {
     "ID_porzione": "qiskit_13574_p1",
     "testo_verbatim": "I wonder about the best way to combine the UnitarySynthesis and BasisTranslator passes: What is the difference between the 'translator' and 'synthesis' options? Which one would be best here?",
@@ -201,7 +183,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "BUILD"
     },
-    //https://quantumcomputing.stackexchange.com/questions/14659/simulator-dependent-implementations-in-q
     {
     "ID_porzione": "qcse_14659_p1",
     "testo_verbatim": "Is there some way to get the best of both worlds? For example, some way to say \"when testing correctness use this, when doing cost estimates use this\"? Some way to query \"Is the Hadamard available?\"?",
@@ -226,7 +207,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "CODE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/41878/qiskit-aer-multi-cpu-node
     {
     "ID_porzione": "qcse_41878_p1",
     "testo_verbatim": "I want to use the CPUs available and the memory available per node",
@@ -243,7 +223,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://github.com/Qiskit/qiskit/issues/6809
     {
     "ID_porzione": "qiskit_6809_p1",
     "testo_verbatim": "I have an IBMQJob object that I call circuit = IBMQjob.circuits()[0] on. The problem is that circuit._layout returns None. What is the expected behavior? I should be able to call circuit._layout.get_virtual_bits() to get back a dictionary of the mapping of logical --> physical qubits, like {'q0': 0, 'q1': 9, 'q2': 13, 'q3': 14}.",
@@ -252,7 +231,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE;MONITOR"
     },
-    //https://github.com/NVIDIA/cuda-quantum/issues/1393
     {
     "ID_porzione": "cuda_quantum_1393_p1",
     "testo_verbatim": "I expected pip install cuda-quantum to resolve all dependencies but I'm hitting the error below after installation >>> import cudaq Traceback (most recent call last): File \"<stdin>\", line 1, in <module> File \"/home/yangg/software/miniconda3/envs/cudaq/lib/python3.10/site-packages/cudaq/__init__.py\", line 28, in <module> from ._pycudaq import * ImportError: Invalid simulator requested: custatevec_fp32 >>> exit() I had to specifically install a few extra dependencies via pip install nvidia-cublas-cu11 nvidia-cuda-runtime-cu11 to be able to resolve this.",
@@ -261,7 +239,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "DEPLOY_CONFIGURE"
     },
-    //https://stackoverflow.com/questions/68919833/qiskit-simulator-intermediate-results
     {
     "ID_porzione": "so_68919833_p1",
     "testo_verbatim": "I would like to get the vector state after applying the H gate and then again after applying the Z gate. I can not use the measurement gate, because I would lose the qubit state. Can I query the qubit/vector for each step in a circuit?",
@@ -270,7 +247,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST"
     },
-    //https://quantumcomputing.stackexchange.com/questions/12183/ibmqfactory-initialize-providers-error
     {
     "ID_porzione": "qcse_12183_p1",
     "testo_verbatim": "After a successful first run without problems, I found that I cannot connect any longer. Code: from qiskit import IBMQ IBMQ.load_account() #previously enabled and saved, even updated IBMQ.providers()  # returns empty why??? provider = IBMQ.get_provider() backend = provider.get_backend('ibmq_16_melbourne') I re-added the token, overwrite the saved token and could successfully activate my account, but it seems that no provider can be found now. I get this error ibmqfactory.load_account:WARNING:2020-05-25 22:08:25,390: Credentials are already in use. The existing account in the session will be replaced. ibmqfactory._initialize_providers:WARNING:2020-05-25 22:08:29,324: Unable to instantiate provider for {'hub': 'ibm-q', 'group': 'open', 'project': 'main'}: \"{'online_date': ['Not a valid datetime.']}\" ibmqfactory.load_account:WARNING:2020-05-25 22:08:29,325: No Hub/Group/Projects could be found for this account.",
@@ -287,7 +263,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "RELEASE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/9966/why-i-am-getting-transpilation-error-while-executing-the-following-ibm-quantum-e
     {
     "ID_porzione": "qcse_9966_p1",
     "testo_verbatim": "While executing the following circuit (consisting 16 qubit and 4 classical bits) I am getting 'Error in transpilation process. [1003]' error.",
@@ -304,7 +279,6 @@
     "CHI": "Quantum Developer",
     "QUANDO": "TEST;BUILD;EVALUATE"
     },
-    //https://quantumcomputing.stackexchange.com/questions/22090/setting-the-textttstate-preparation-for-textttamplificationproblem-i
     {
     "ID_porzione": "qcse_22090_p1",
     "testo_verbatim": "What should I pass as the state_preparation parameter? I just need one specific QuantumRegister to be passed, but I do not have a circuit or operator for only that register",
@@ -320,5 +294,5 @@
     "codice_COSA": "need for handling non-unitary operations in quantum circuit state preparation for hybrid algorithms",
     "CHI": "Quantum Developer",
     "QUANDO": "PLAN;CODE"
-    },
+    }
 ]

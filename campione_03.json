@@ -3,13 +3,8 @@
     "data_creazione": "2026-07-12T16:13:07.867496+00:00",
     "corpus_sorgente": "corpus_completo.json",
     "batch_numero": 3,
-    "batch_precedenti": [
-      "campione_01.json",
-      "campione_02.json"
-    ],
     "dimensione_campione": 100,
-    "seed": 44,
-    "note": "Campione casuale per screening manuale e coding iterativo. Applicare i criteri qualitativi di inclusione/esclusione prima di procedere con il coding."
+    "seed": 44
   },
   "threads": [
     {
