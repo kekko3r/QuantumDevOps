@@ -8,7 +8,7 @@
   "categorie": [
     {
       "id_categoria": "CAT1",
-      "macro_categoria": "Compatibilità del circuito con provider e backend target",
+      "macro_categoria": "Circuit Compatibility with Provider and Target Backend",
       "descrizione": "Bisogni relativi a capire se, dove e quando un circuito necessita di essere transpilato per essere compatibile con un provider/backend specifico: vincoli sui gate set, vincoli hardware (numero di qubit, connettività), transpilazione implicita innescata dall'esecuzione e relativo impatto sulle risorse, e uso di backend simulati ('fake') per validare la transpilazione quando l'hardware reale non è disponibile.",
       "need_aggregato": "Need for determining whether, where, and when a circuit must be transpiled to satisfy the gate-set and hardware constraints of a target provider/backend — including implicit transpilation triggered at execution time — and for validating this via simulated ('fake') backends when real hardware is unavailable.",
       "n_porzioni_aggregate": 6,
@@ -29,7 +29,7 @@
     },
     {
       "id_categoria": "CAT2",
-      "macro_categoria": "Composizione e ottimizzazione delle passate di transpilazione",
+      "macro_categoria": "Composition and Optimization of Transpilation Passes",
       "descrizione": "Bisogni relativi alla meccanica interna del processo di transpilazione: quali passate combinare, in che ordine applicarle, e come ottimizzarne le prestazioni (es. caching), una volta stabilito che la transpilazione è necessaria.",
       "need_aggregato": "Need for correctly composing, ordering, and optimizing the internal transpilation passes (pass selection, sequencing, caching) once transpilation has been determined to be required.",
       "n_porzioni_aggregate": 4,
@@ -45,7 +45,7 @@
     },
     {
       "id_categoria": "CAT3",
-      "macro_categoria": "Verifica della correttezza tramite test e simulazione",
+      "macro_categoria": "Correctness Verification through Testing and Simulation",
       "descrizione": "Bisogni relativi alla validazione del comportamento di un circuito prima dell'esecuzione reale: unit testing, modellazione del rumore, ispezione di stati intermedi per il debugging, in un contesto in cui mancano ancora framework di test maturi e nativi per il quantum computing.",
       "need_aggregato": "Need for validating quantum circuit behavior before real execution through unit testing, noise modeling, and intermediate-state inspection, in the continued absence of mature quantum-native testing frameworks.",
       "n_porzioni_aggregate": 6,
@@ -63,7 +63,7 @@
     },
     {
       "id_categoria": "CAT4",
-      "macro_categoria": "Gestione delle risorse computazionali e scalabilità della simulazione",
+      "macro_categoria": "Computational Resource Management and Simulation Scalability",
       "descrizione": "Bisogni relativi al dimensionamento e all'ottimizzazione delle risorse di calcolo necessarie per simulare circuiti quantistici: requisiti di memoria, scelta del metodo di simulazione in funzione delle risorse disponibili, scalabilità su infrastrutture HPC distribuite.",
       "need_aggregato": "Need for understanding and optimizing the computational resources (memory, simulation method, distributed infrastructure) required to scale quantum circuit simulation.",
       "n_porzioni_aggregate": 4,
@@ -80,7 +80,7 @@
     },
     {
       "id_categoria": "CAT5",
-      "macro_categoria": "Setup e autenticazione dell'ambiente di sviluppo",
+      "macro_categoria": "Development Environment Setup and Authentication",
       "descrizione": "Bisogni relativi al provisioning iniziale dell'ambiente: installazione e risoluzione delle dipendenze software, autenticazione e connettività verso il provider quantum cloud.",
       "need_aggregato": "Need for correctly installing and resolving software dependencies and authenticating connectivity to a quantum cloud provider during environment setup.",
       "n_porzioni_aggregate": 2,
@@ -94,7 +94,7 @@
     },
     {
       "id_categoria": "CAT6",
-      "macro_categoria": "Selezione della primitive e gestione della sessione di esecuzione",
+      "macro_categoria": "Primitive Selection and Execution Session Management",
       "descrizione": "Bisogni relativi a quale interfaccia/primitive di esecuzione usare (sessione, Sampler, simulatore) e alle sue caratteristiche di ciclo di vita e capacità supportate, una volta che l'ambiente è già configurato.",
       "need_aggregato": "Need for selecting the appropriate execution primitive (session, Sampler, simulator) and understanding its lifecycle and supported capabilities, once the environment is already configured.",
       "n_porzioni_aggregate": 4,
@@ -111,7 +111,7 @@
     },
     {
       "id_categoria": "CAT7",
-      "macro_categoria": "Orchestrazione ed esecuzione distribuita dei job",
+      "macro_categoria": "Distributed Job Orchestration and Execution",
       "descrizione": "Bisogni relativi alla gestione operativa dei job una volta inviati per l'esecuzione: workflow di submission, vincoli di tempo, esecuzione distribuita su più nodi/CPU, e recupero di informazioni post-esecuzione (es. mapping qubit) per interpretare correttamente i risultati.",
       "need_aggregato": "Need for reliably orchestrating and monitoring job submission and execution across distributed or cloud-based quantum computing infrastructure, and for retrieving execution metadata needed to interpret results.",
       "n_porzioni_aggregate": 4,
@@ -128,7 +128,7 @@
     },
     {
       "id_categoria": "CAT8",
-      "macro_categoria": "Parametrizzazione e logica degli algoritmi ibridi",
+      "macro_categoria": "Parameterization and Logic of Hybrid Algorithms",
       "descrizione": "Bisogni relativi alla corretta implementazione della logica specifica degli algoritmi ibridi quantistico-classici: parametri degli algoritmi variazionali (depth/reps, Trotter step), selezione dell'implementazione in base al contesto di esecuzione, e preparazione di stati/registri parziali come input a componenti dell'algoritmo.",
       "need_aggregato": "Need for correctly parametrizing and adapting hybrid algorithm logic (variational form parameters, context-dependent operation selection, partial-state preparation) to the constraints of the underlying execution context.",
       "n_porzioni_aggregate": 5,
@@ -146,7 +146,7 @@
     },
     {
       "id_categoria": "CAT9",
-      "macro_categoria": "Compatibilità e migrazione tra versioni dei framework",
+      "macro_categoria": "Framework Version Compatibility and Migration",
       "descrizione": "Bisogni relativi alla gestione dei breaking change nelle API dei framework quantistici e alla compatibilità tra pacchetti di versioni diverse, necessari per mantenere stabile il codice nel tempo.",
       "need_aggregato": "Need for managing version compatibility and code migration across successive releases of quantum computing frameworks.",
       "n_porzioni_aggregate": 2,

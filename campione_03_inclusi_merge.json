@@ -12,7 +12,7 @@
   "categorie": [
     {
       "id_categoria": "CAT1",
-      "macro_categoria": "Compatibilità del circuito con provider e backend target",
+      "macro_categoria": "Circuit Compatibility with Provider and Target Backend",
       "descrizione": "Bisogni relativi a capire se, dove e quando un circuito debba essere transpilato per rispettare i vincoli di un provider/backend target (gate set, vincoli hardware, backend simulati), e a comprendere che cosa la transpilazione comporta quando scatta, anche implicitamente: impatto sulle risorse, rimappatura dei qubit, effetti osservabili sui risultati.",
       "need_aggregato": "Need for determining whether, where, and when a circuit must be transpiled to satisfy the constraints of a target provider/backend, and for understanding what transpilation entails when triggered, including implicitly: resource impact, qubit remapping, and observable effects on results.",
       "n_porzioni_aggregate": 8,
@@ -36,7 +36,7 @@
     },
     {
       "id_categoria": "CAT2",
-      "macro_categoria": "Composizione e ottimizzazione delle passate di transpilazione",
+      "macro_categoria": "Composition and Optimization of Transpilation Passes",
       "descrizione": "Bisogni relativi alla meccanica interna del processo di transpilazione: quali passate combinare, in che ordine applicarle, e come ottimizzarne le prestazioni, una volta stabilito che la transpilazione è necessaria.",
       "need_aggregato": "Need for correctly composing, ordering, and optimizing the internal transpilation passes once transpilation has been determined to be required.",
       "n_porzioni_aggregate": 4,
@@ -52,7 +52,7 @@
     },
     {
       "id_categoria": "CAT3",
-      "macro_categoria": "Verifica della correttezza tramite test e simulazione",
+      "macro_categoria": "Correctness Verification through Testing and Simulation",
       "descrizione": "Bisogni relativi alla validazione del comportamento di un circuito prima dell'esecuzione reale: unit testing, modellazione del rumore, ispezione degli stati intermedi per il debugging.",
       "need_aggregato": "Need for validating quantum circuit behavior before real execution through unit testing, noise modeling, and intermediate-state inspection.",
       "n_porzioni_aggregate": 13,
@@ -79,7 +79,7 @@
     },
     {
       "id_categoria": "CAT4",
-      "macro_categoria": "Gestione delle risorse computazionali e scalabilità della simulazione",
+      "macro_categoria": "Computational Resource Management and Simulation Scalability",
       "descrizione": "Bisogni relativi al dimensionamento e all'ottimizzazione delle risorse di calcolo necessarie per simulare circuiti quantistici: requisiti di memoria, scelta del metodo di simulazione in funzione delle risorse disponibili, scalabilità su infrastrutture HPC distribuite.",
       "need_aggregato": "Need for understanding and optimizing the computational resources (memory, simulation method, distributed infrastructure) required to scale quantum circuit simulation.",
       "n_porzioni_aggregate": 4,
@@ -96,7 +96,7 @@
     },
     {
       "id_categoria": "CAT5",
-      "macro_categoria": "Setup e autenticazione dell'ambiente di sviluppo",
+      "macro_categoria": "Development Environment Setup and Authentication",
       "descrizione": "Bisogni relativi al provisioning e alla configurazione iniziale dell'ambiente di sviluppo: installazione e risoluzione delle dipendenze (inclusa la disponibilità dei pacchetti per piattaforme e ambienti specifici), autenticazione verso il provider quantum cloud, e configurazione dell'ambiente di lavoro necessaria al funzionamento degli strumenti.",
       "need_aggregato": "Need for installing and resolving software dependencies (including package availability for specific platforms and environments), authenticating to a quantum cloud provider, and configuring the working environment required for tooling during initial setup.",
       "n_porzioni_aggregate": 10,
@@ -119,7 +119,7 @@
     },
     {
       "id_categoria": "CAT6",
-      "macro_categoria": "Selezione della primitive di esecuzione e adattamento ad essa",
+      "macro_categoria": "Execution Primitive Selection and Adaptation",
       "descrizione": "Bisogni relativi alla scelta della primitive o interfaccia di esecuzione, alla configurazione delle sue opzioni, alla comprensione del suo ciclo di vita e delle capacità supportate, e all'adattamento del proprio codice alla primitive selezionata, una volta che l'ambiente è già configurato.",
       "need_aggregato": "Need for selecting and configuring the execution primitive/interface, understanding its lifecycle and supported capabilities, and adapting one's code to the selected primitive, once the environment is already configured.",
       "n_porzioni_aggregate": 6,
@@ -139,7 +139,7 @@
     },
     {
       "id_categoria": "CAT7",
-      "macro_categoria": "Orchestrazione ed esecuzione distribuita dei job",
+      "macro_categoria": "Distributed Job Orchestration and Execution",
       "descrizione": "Bisogni relativi alla gestione operativa dei job inviati in esecuzione: affidabilità della submission, vincoli di tempo e di shots, esecuzione distribuita, e recupero e interpretazione di risultati e metadati post-esecuzione.",
       "need_aggregato": "Need for reliably orchestrating job submission and execution on distributed or cloud-based quantum infrastructure, and for retrieving and interpreting results and execution metadata after execution.",
       "n_porzioni_aggregate": 11,
@@ -163,7 +163,7 @@
     },
     {
       "id_categoria": "CAT8",
-      "macro_categoria": "Parametrizzazione e componenti custom dei modelli variazionali e QML",
+      "macro_categoria": "Parameterization and Custom Components of Variational Models and QML",
       "descrizione": "Bisogni relativi alla costruzione e parametrizzazione dei componenti dei modelli variazionali e di quantum machine learning: semantica dei parametri variazionali, componenti custom conformi ai contratti dei framework, e dimensionamento del modello rispetto ai dati.",
       "need_aggregato": "Need for building and parametrizing the components of variational/QML models: variational parameter semantics, custom components conforming to framework contracts, and model sizing with respect to the data.",
       "n_porzioni_aggregate": 5,
@@ -182,7 +182,7 @@
     },
     {
       "id_categoria": "CAT9",
-      "macro_categoria": "Compatibilità e migrazione tra versioni dei framework",
+      "macro_categoria": "Framework Version Compatibility and Migration",
       "descrizione": "Bisogni relativi alla gestione dei breaking change e delle deprecazioni nelle API dei framework quantistici: compatibilità tra versioni dei pacchetti, migrazione del codice verso nuove API non equivalenti, e risoluzione degli errori indotti dagli aggiornamenti.",
       "need_aggregato": "Need for managing version compatibility, deprecations, and code migration across successive releases of quantum computing frameworks, including resolving errors induced by breaking API changes.",
       "n_porzioni_aggregate": 10,
@@ -205,7 +205,7 @@
     },
     {
       "id_categoria": "CAT10",
-      "macro_categoria": "Interfacciamento dei dati tra componenti classiche e quantistiche",
+      "macro_categoria": "Data Interfacing between Classical and Quantum Components",
       "descrizione": "Bisogni relativi al passaggio dei dati attraverso il confine classico-quantistico nei workflow ibridi: caricamento e strutturazione di dataset classici esterni come input di algoritmi quantum, ed estrazione degli output di misura multi-qubit come input di componenti classiche a valle.",
       "need_aggregato": "Need for moving data across the classical-quantum boundary in hybrid workflows: loading external classical datasets as inputs to quantum algorithms, and extracting multi-qubit measurement outputs as inputs to downstream classical components.",
       "n_porzioni_aggregate": 2,
@@ -219,7 +219,7 @@
     },
     {
       "id_categoria": "CAT11",
-      "macro_categoria": "Interoperabilità e conversione tra framework quantum",
+      "macro_categoria": "Interoperability and Conversion between Quantum Frameworks",
       "descrizione": "Bisogni relativi all'interoperabilità tra framework quantum diversi nello stesso workflow: conversione di rappresentazioni di circuiti e operatori tra i formati/object model di librerie differenti.",
       "need_aggregato": "Need for converting circuit and operator representations between the formats of different quantum frameworks in multi-framework workflows.",
       "n_porzioni_aggregate": 1,
@@ -232,7 +232,7 @@
     },
     {
       "id_categoria": "CAT12",
-      "macro_categoria": "Progettazione della logica algoritmica sotto vincoli del formalismo e della piattaforma",
+      "macro_categoria": "Algorithmic Logic Design under Formalism and Platform Constraints",
       "descrizione": "Bisogni relativi a esprimere la logica del proprio algoritmo o componente entro i vincoli espressivi del formalismo quantistico e della piattaforma: sintesi di stati e operatori dai costrutti disponibili, formulazione del problema per i risolutori quantum, e rispetto delle convenzioni del formalismo e della piattaforma nella costruzione del circuito.",
       "need_aggregato": "Need for expressing the intended algorithm or component logic within the constraints of the quantum formalism and the platform: synthesizing states and operators from the available constructs, formulating problems for quantum solvers, and complying with formalism and platform conventions in circuit construction.",
       "n_porzioni_aggregate": 7,
@@ -252,7 +252,7 @@
     },
     {
       "id_categoria": "CAT13",
-      "macro_categoria": "Stima preventiva della qualità dell'esecuzione su hardware rumoroso",
+      "macro_categoria": "Preemptive Execution Quality Estimation on Noisy Hardware",
       "descrizione": "Bisogni relativi alla valutazione ex-ante, prima dell'esecuzione, della qualità attesa di un circuito su un dispositivo quantistico reale: stima sistematica dell'error rate complessivo atteso a partire dai dati di caratterizzazione hardware (T1, T2, tassi d'errore di gate e misura), per via analitica e senza ricorso a simulazione o test empirici.",
       "need_aggregato": "Need for systematically estimating, prior to execution, the expected overall error rate of a specific circuit on a specific noisy quantum device from hardware characterization data, analytically and without resorting to empirical simulation or testing.",
       "n_porzioni_aggregate": 1,
@@ -265,7 +265,7 @@
     },
     {
       "id_categoria": "CAT14",
-      "macro_categoria": "Visualizzazione di circuiti e output nell'ambiente di sviluppo",
+      "macro_categoria": "Circuit and Output Visualization in the Development Environment",
       "descrizione": "Bisogni relativi alla visualizzazione, con gli strumenti disponibili nell'ambiente di sviluppo in uso, della rappresentazione a diagramma del circuito quantistico associato al proprio programma e dell'output di visualizzazione dei risultati (grafici e figure) prodotto durante lo sviluppo.",
       "need_aggregato": "Need for displaying, within the tooling of the development environment in use, both the circuit-diagram representation of quantum programs and the visualization output of results (plots and figures) produced during development.",
       "n_porzioni_aggregate": 1,
